@@ -1,0 +1,51 @@
+.Images {
+  .wrapper {
+    .column-1 {
+      width: 505px;
+
+      .data {
+        .label {
+          width: 117px;
+        }
+      }
+
+      .circle {
+        bottom: 0;
+        right: -80px;
+      }
+
+      .cover {
+        z-index: 2;
+      }
+
+      .dots {
+        z-index: 2;
+      }
+    }
+
+    .column-2 {
+      width: 395px;
+      margin-right: -80px;
+
+      .title {
+        margin-right: 110px;
+      }
+
+      .dots {
+        width: 110px;
+        height: auto;
+        margin-right: 110px;
+      }
+
+      .image {
+        width: 300px;
+        z-index: 2;
+      }
+    }
+  }
+
+  .caption {
+    max-width: 100%;
+    width: 740px;
+  }
+}

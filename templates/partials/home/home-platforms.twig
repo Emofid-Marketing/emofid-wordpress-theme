@@ -1,0 +1,101 @@
+<section class="HomePlatforms py-7">
+    <div class="container">
+        <div class="titles flex-column text-white text-center mb-7">
+            <h2 class="mb-2">مفید آنلاین</h2>
+            <span>معاملات و اوراق بهادار</span>
+        </div>
+        <div class="boxes flex justify-center text-white mb-7">
+            {% for box in boxes %}
+                <div class="item px-4">
+                    <div class="inner flex-column text-center">
+                        <div class="circle circle-{{box.id}} radius-full mb-2"></div>
+                        <span class="label">{{ box.label }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="content flex-column align-center mb-8">
+            <p class="text-white text-center mb-6">
+                اگر تمایل دارید خودتان به صورت مستقیم به خرید و فروش سهام شرکت ها بپردازید، ما با ارائه خدمات متنوعی مانند
+                سامانه معاملاتی حرفه ای، پیشنهاد سهام، پشتیبانی ۲۴ ساعته، تخفیف کارمزد، بسته های اعتباری و سامانه تحلیل بازار سرمایه در کنار شما هستیم.
+            </p>
+            <div class="footer flex justify-center align-center">
+                <a class="Button medium ml-6" href="#">دریافت کد بورسی</a>
+                <a class="more text-white flex align-center" href="#">بیشتر بدانید</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="easytrader mb-8">
+        <h3 class="title text-center text-white mb-6">ایزی تریدر، ساده امّا حرفه ای</h3>
+        <div class="screenshots-wrapper w-100 hide-scrollbar mb-7">
+            <div class="inner flex align-start">
+                <img src="{{theme.link}}/dist/images/trader-shots/shot-1.jpg" />
+                <img src="{{theme.link}}/dist/images/trader-shots/shot-2.jpg" />
+                <img src="{{theme.link}}/dist/images/trader-shots/shot-3.jpg" />
+                <img src="{{theme.link}}/dist/images/trader-shots/shot-4.jpg" />
+                <img src="{{theme.link}}/dist/images/trader-shots/shot-5.jpg" />
+            </div>
+        </div>
+        <div class="details-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-xs-12 flex-column align-center">
+                        <img class="logo mb-4" src="{{theme.link}}/dist/images/easytrader-large.svg" />
+                        <span class="symbol text-white text-center flex">
+                            <strong>Easy</strong>
+                            Trader
+                        </span>
+                    </div>
+                    <div class="col-lg-8 col-xs-12 flex-column align-start justify-center contents text-white">
+                        <p class="mb-4">
+                            ایزی تریدر یکی از قدرتمند ترین سامانه های معاملاتی است که هم افراد حرفه ای و هم افراد مبتدی می توانند به راحتی از آن استفاده کنند.
+                        </p>
+                        <a class="flex align-center more text-white" href="#">بیشتر بدانید</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grids">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xs-12 flex-column column align-center">
+                    <div class="wrapper">
+                        <div class="top flex align-center mb-4">
+                            <span class="icon icon-hami radius-full ml-3"></span>
+                            <div class="texts text-white">
+                                <h4 class="mb-2">حامی</h4>
+                                <span>کیف پول خود را همیشه شارژ کنید.</span>
+                            </div>
+                        </div>
+                        <div class="main flex-column">
+                            <p class="text-white mb-3">
+                                با فعالسازی طرح حامی، به مانده حساب شما نزد کارگزاری مفید، سود روزشمار تقریبا ۲۰ درصدی تعلق میگیرد.
+                            </p>
+                            <a class="more flex align-center text-white" href="#">بیشتر بدانید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xs-12 flex-column column align-center">
+                    <div class="wrapper">
+                        <div class="top flex align-center mb-4">
+                            <span class="icon icon-karmozd radius-full ml-3"></span>
+                            <div class="texts text-white">
+                                <h4 class="mb-2">تخفیف کارمزد</h4>
+                                <span>کیف پول خود را همیشه شارژ کنید.</span>
+                            </div>
+                        </div>
+                        <div class="main flex-column">
+                            <p class="text-white mb-3">
+                                با فعالسازی طرح حامی، به مانده حساب شما نزد کارگزاری مفید، سود روزشمار تقریبا ۲۰ درصدی تعلق میگیرد.
+                            </p>
+                            <a class="more flex align-center text-white" href="#">بیشتر بدانید</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

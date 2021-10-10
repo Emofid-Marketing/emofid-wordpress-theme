@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link href="{{ theme.link }}/dist/images/favicon.ico" rel="icon">
+		<script>
+			window.EMOFID = {};
+			window.EMOFID.home_url = "{{ site.url }}";
+			window.EMOFID.theme_url = "{{ theme.link }}";
+		</script>
+		{{function('wp_head')}}
+	</head>
+	<body class="{{ body_class }}">
+		{{ include('partials/header.twig') }}
+		<div id="content">
+			{% block content %}{% endblock %}
+		</div>
+		{{ include('partials/footer.twig') }}
+	</body>
+</html>

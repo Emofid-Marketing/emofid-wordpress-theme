@@ -1,0 +1,21 @@
+.HomeCta {
+  .wrapper {
+    width: 560px;
+    max-width: 100%;
+
+    h2 {
+      font-size: var(--size-text-32);
+      color: var(--color-text-darker);
+    }
+
+    p {
+      font-size: var(--size-text-16);
+      color: var(--color-text-darker);
+    }
+
+    .footer {
+    }
+  }
+}
+
+@import "./HomeCta.responsive.scss";

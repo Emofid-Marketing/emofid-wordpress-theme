@@ -1,0 +1,107 @@
+.Navigation {
+  > ul {
+    .mobile-nav-btn {
+      display: none;
+    }
+    > li {
+      position: relative;
+      line-height: 35px;
+      > ul {
+        position: absolute;
+        top: 32px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: var(--radius-small);
+        width: 360px;
+        max-width: 100vw;
+        box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.07);
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.15s ease-in-out;
+
+        > li {
+          > a {
+            padding: 16px 16px 16px 45px;
+            transition: var(--transition);
+            position: relative;
+
+            &::after {
+              position: absolute;
+              content: "";
+              width: 10px;
+              height: 10px;
+              left: 17px;
+              top: 50%;
+              margin: 0 auto;
+              transform: translateY(-50%);
+              background: url("../images/icons/arrow-left-green.svg") no-repeat
+                scroll center / cover;
+              opacity: 0;
+              transition: var(--transition);
+            }
+
+            i {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              flex-shrink: 0;
+              box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.07);
+              background-color: var(--color-white);
+            }
+
+            .content {
+              padding-right: 10px;
+
+              .title,
+              .caption {
+                transition: var(--transition);
+              }
+            }
+
+            &:hover {
+              background-color: var(--color-mofid-green-light);
+
+              &::after {
+                opacity: 1;
+              }
+
+              .content {
+                .title {
+                  color: var(--color-mofid-green);
+                }
+
+                .caption {
+                  color: var(--color-mofid-blue);
+                }
+              }
+            }
+          }
+
+          > ul.footer {
+            background-color: var(--color-gray-lighter);
+            margin: 16px -16px -16px;
+
+            > li {
+              width: 50%;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        > ul {
+          opacity: 1;
+          top: 36px;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+@import "./Navigation.responsive.scss";

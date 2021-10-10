@@ -1,0 +1,39 @@
+.Button {
+  background-color: var(--color-mofid-green);
+  color: var(--color-white);
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-small);
+  border: 2px solid var(--color-mofid-green);
+
+  &.outline {
+    background-color: transparent;
+    color: var(--color-mofid-green);
+  }
+
+  &.blue {
+    background-color: var(--color-mofid-blue);
+    border-color: var(--color-mofid-blue);
+
+    &.outline {
+      background-color: transparent;
+      color: var(--color-mofid-blue);
+    }
+  }
+
+  &.gray {
+    background-color: var(--color-gray-light);
+    border-color: var(--color-gray-light);
+    color: var(--color-mofid-green);
+
+    &.outline {
+      background-color: transparent;
+      color: var(--color-gray-light);
+    }
+  }
+
+  &.medium {
+    padding: var(--space-2) var(--space-4);
+  }
+}
+
+@import "./Button.responsive.scss";

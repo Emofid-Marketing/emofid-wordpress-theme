@@ -1,0 +1,83 @@
+@media only screen and (max-width: 576px) {
+  .HomePlatforms {
+    .titles {
+      h2 {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 16px;
+      }
+    }
+    .boxes {
+      flex-wrap: wrap;
+
+      .item {
+        margin-bottom: var(--space-5);
+        padding: 0 var(--space-3);
+        width: 33.3333%;
+
+        .inner {
+          align-items: center;
+
+          .circle {
+            width: 60px;
+            height: 60px;
+          }
+
+          .label {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+
+    .content {
+      p {
+        font-size: 14px;
+        line-height: 30px;
+      }
+    }
+
+    .easytrader {
+      .details-row {
+        .symbol {
+          margin-bottom: var(--space-4);
+        }
+
+        .contents {
+          p {
+            font-size: 14px;
+            line-height: 30px;
+            text-align: center;
+          }
+
+          a {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .grids {
+      .wrapper {
+        max-width: 100%;
+      }
+
+      .icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      .column {
+        margin-bottom: var(--space-6);
+      }
+
+      .main {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

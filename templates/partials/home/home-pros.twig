@@ -1,0 +1,43 @@
+<section class="HomePros py-7">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-xs-12 right flex-column align-center">
+                <div class="top-box flex-column mb-7">
+                    <h2 class="mb-2">مدیریت دارایی مفید</h2>
+                    <h3 class="mb-5">شروع سرمایه گذاری برای ساختن آینده بهتر</h3>
+                    <p class="mb-5">
+                        سرمایه گذاری موفق نیازمند دانش بورسی بالا و صرف زمان برای تحلیل روزانه دارایی های مختلف است.<br>
+                        اگر فرصت کافی ندارید، صندوق های سرمایه گذاری مفید راه بهتری برای ورود به بورس و استفاده از مزایای آن است.
+                    </p>
+                    <div class="footer flex align-center">
+                        <a class="Button blue medium ml-6" href="#">مشاوره رایگان سرمایه گذاری</a>
+                        <a class="more flex align-center" href="#">بیشتر بدانید</a>
+                    </div>
+                </div>
+
+                <div class="pros-box flex-column">
+                    <h3 class="mb-4">مزیت های سرمایه گذاری</h3>
+                    <div class="pros pros-wrapper flex-column">
+
+                        {% set firstItem = advantages|first %}
+                        {% for advantage in advantages %}
+
+                            <div class="item mb-4 {% if firstItem.title == advantage.title %}active{% endif %}">
+                                <div class="progress"></div>
+                                <div class="content pr-4">
+                                    <h3 class="my-2">{{ advantage.title }}</h3>
+                                    <p>{{ advantage.content }}</p>
+                                </div>
+                            </div>
+                            
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xs-12 left flex justify-center align-end">
+                <img class="cover-image" src="{{theme.link}}/dist/images/home-pros-1.jpg" />
+            </div>
+        </div>
+    </div>
+</section>

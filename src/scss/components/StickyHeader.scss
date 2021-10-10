@@ -1,0 +1,19 @@
+.StickyHeader {
+    background-color: var(--color-gray-light);
+    z-index: 3;
+
+    .wrapper {
+
+        .logo {
+            width: 155px;
+            height: auto;
+        }
+
+        .navigation {
+
+            a {
+                font-size: var(--size-text-14);
+            }
+        }
+    }
+}

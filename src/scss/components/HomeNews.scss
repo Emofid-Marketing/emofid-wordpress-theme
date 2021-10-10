@@ -1,0 +1,84 @@
+.HomeNews {
+  .right {
+    .texts {
+      width: 450px;
+      max-width: 100%;
+
+      p {
+        font-size: var(--size-text-16);
+        line-height: var(--size-line-height-32);
+        color: var(--color-text-medium);
+      }
+
+      .boxes {
+        .item {
+          width: 110px;
+
+          .circle {
+            width: 96px;
+            height: 96px;
+            background-color: var(--color-mofid-blue);
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 106px;
+            color: #fff;
+            text-align: center;
+
+            .i-user {
+              &::before {
+                content: "";
+                width: 13px;
+                height: 13px;
+                background-color: var(--color-white);
+                border-radius: 50%;
+                margin-bottom: 1px;
+              }
+
+              &::after {
+                content: "";
+                width: 24px;
+                height: 16px;
+                background-color: var(--color-white);
+                border-radius: 50% 50% 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .left {
+    .news-column {
+      width: 440px;
+
+      h3 {
+        font-size: var(--size-text-20);
+        color: var(--color-text-darker);
+      }
+
+      .item {
+        .image {
+          img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-small);
+          }
+        }
+
+        .content {
+          .title {
+            color: var(--color-text-medium);
+          }
+
+          .date {
+            color: var(--color-text-light);
+            font-size: var(--size-text-12);
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "./HomeNews.responsive.scss";

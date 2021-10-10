@@ -1,0 +1,64 @@
+<div class="FundsTabs">
+    <img class="cover w-100 h-auto mb-4" src="{{ theme.link }}/dist/images/Mofid-Fund-Box-1.png">
+    <div class="container-sm">
+        <div class="flex-column mb-7">
+            <p class="t-20 strong text-center text-darker mb-4">
+                چه ریسک پذیر باشید و چه ریسک گریز، صندوقی مناسب برای شما وجود دارد
+            </p>
+            <p class="t-16 text-center text-medium lh-26">
+                هلدینگ مالی مفید، با ارائه 2 صندوق با درآمد ثابت، 1 صندوق مختلط، 4 صندوق سهامی و 1 صندوق مبتنی بر طلا، طیف وسیعی از گزینه های سرمایه گذاری را در اختیار شما قرار می دهد.
+            </p>
+        </div>
+    </div>
+
+    <div class="container-md">
+        <div class="tabs-wrapper flex-column">
+            <div class="tabs row">
+                {% for fundsGroup in fundsGroups %}
+                <div class="tab col-xs-3 flex-column align-center cursor-pointer py-3" data-tab-type="1" data-tab-id="{{fundsGroup.id}}">
+                    <img class="mb-3" src="{{theme.link}}/dist/images/funds/fund-{{fundsGroup.id}}.svg" />
+                    <h2 class="t-16 lh-30 text-darker">{{ fundsGroup.title }}</h2>
+                    <span class="t-12 lh-26 text-medium">{{ fundsGroup.subtitle }}</span>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="content flex-column align-center py-4">
+                <p class="caption text-center t-14 lh-26 text-medium mb-6">
+                    صندوق های سرمایه گذاری کارگزاری مفید، دارای انواع مختلفی هستند. برخی از آن ها بیشتر دارایی خود را در 
+                    «سهام»
+                    و برخی دیگر بیشتر دارایی خود را در
+                    «اوراق با درامد ثابت»
+                    سرمایه گذاری میکنند.         
+                </p>
+                <div class="tabs-content">
+                    {% for fundsGroup in fundsGroups %}
+                        <div class="tab-content-item" data-content-type="1" data-content-id="{{fundsGroup.id}}">
+                            <div class="funds-tabs flex justify-center strong mb-3">
+                                {% for fund in fundsGroup.funds %}
+                                    <div class="fund-name t-12 lh-32 text-darker px-3 mx-1 cursor-pointer transition" data-tab-type="fg-{{fundsGroup.id}}" data-tab-id="{{ fund.id }}">صندوق {{ fund.title }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="funds-contents">
+                                {% for fund in fundsGroup.funds %}
+                                    <div class="funds-content-item" data-content-type="fg-{{fundsGroup.id}}" data-content-id="{{ fund.id }}">
+                                        <div class="bars-wrapper flex justify-space-between">
+                                            {% for darayi in fund.darayi %}
+                                                <div class="bar-item flex-column align-center justify-end">
+                                                    <div class="bar-wrapper flex-column justify-end">
+                                                        <span class="percent text-center t-12 lh-18 text-darker">{{ darayi.value }}%</span>
+                                                        <div class="bar radius-large w-100" style="height: {{ darayi.value * 2 }}px;"></div>
+                                                    </div>
+                                                    <span class="bar-label t-12 lh-18 text-center text-light">{{ darayi.label }}</span>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

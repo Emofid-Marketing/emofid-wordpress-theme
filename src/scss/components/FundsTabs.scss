@@ -1,0 +1,60 @@
+.FundsTabs {
+  .tabs-wrapper {
+    .tabs {
+      .tab {
+        border-bottom: 3px solid var(--color-gray-2);
+
+        &.active {
+          border-bottom-color: var(--color-mofid-green);
+
+          h2 {
+            color: var(--color-mofid-green);
+          }
+        }
+      }
+    }
+
+    .content {
+      .caption {
+        width: 700px;
+        max-width: 100%;
+      }
+
+      .tabs-content {
+        .tab-content-item {
+          .funds-tabs {
+            .fund-name {
+              border-radius: 40px;
+
+              &.active {
+                background-color: var(--color-mofid-green-light);
+                color: var(--color-mofid-green);
+              }
+            }
+          }
+
+          .funds-contents {
+            .bar-item {
+              width: 100px;
+
+              .bar-wrapper {
+                height: 218px;
+                width: 32px;
+                margin-bottom: 10px;
+
+                .bar {
+                  height: 100px;
+                  background-color: var(--color-red);
+                }
+              }
+
+              .bar-label {
+                height: 54px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

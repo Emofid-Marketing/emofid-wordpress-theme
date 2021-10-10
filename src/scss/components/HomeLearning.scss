@@ -1,0 +1,150 @@
+.HomeLearning {
+  h2 {
+    font-size: var(--size-text-32);
+    color: var(--color-text-darker);
+  }
+
+  p {
+    font-size: var(--size-text-16);
+    line-height: var(--size-line-height-26);
+    color: var(--color-text-medium);
+    width: 670px;
+    max-width: 100%;
+  }
+
+  .tab-view {
+    width: 900px;
+    max-width: 100%;
+
+    h3 {
+      font-size: var(--size-text-20);
+      color: var(--color-text-darker);
+    }
+
+    .tabs {
+      button {
+        background-color: transparent;
+        border: none;
+
+        .day {
+          font-size: var(--size-text-16);
+          color: var(--color-text-darker);
+        }
+
+        .date {
+          font-size: var(--size-text-12);
+          color: var(--color-text-medium);
+        }
+
+        &.active {
+          .day {
+            color: var(--color-mofid-green);
+          }
+
+          .date {
+            color: var(--color-mofid-green);
+          }
+        }
+      }
+    }
+
+    .class-item {
+      border-bottom: 1px solid var(--color-gray-light);
+      display: none;
+
+      .content {
+        .time {
+          font-size: var(--size-text-16);
+          color: var(--color-text-dark);
+
+          &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: url("../images/icons/clock-black.svg") no-repeat scroll
+              center/ cover;
+            margin-left: var(--space-2);
+          }
+        }
+
+        .title {
+          font-size: var(--size-text-16);
+          color: var(--color-text-darker);
+        }
+
+        .level {
+          font-size: var(--size-text-14);
+          color: var(--color-text-light);
+        }
+
+        .view {
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+
+          &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            margin-right: var(--space-2);
+            background: url("../images/icons/arrow-left-green.svg") no-repeat
+              scroll center;
+          }
+        }
+      }
+
+      &.active {
+        display: inherit;
+      }
+    }
+  }
+
+  .data-boxes {
+    .box {
+      background-color: var(--color-gray-light);
+
+      .top {
+        .icon {
+          width: 80px;
+          height: 80px;
+          background-color: var(--color-white);
+          background-position: center;
+          background-repeat: no-repeat;
+
+          &.icon-articles {
+            background-image: url("../images/icons/learning/articles.svg");
+          }
+
+          &.icon-courses {
+            background-image: url("../images/icons/learning/courses.svg");
+          }
+        }
+
+        h3 {
+          font-size: var(--size-text-20);
+          color: var(--color-text-darker);
+        }
+      }
+
+      p {
+        font-size: var(--size-text-16);
+        color: var(--color-text-darker);
+      }
+
+      .more {
+        color: var(--color-mofid-blue-dark);
+
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          margin-right: var(--space-2);
+          background: url("../images/icons/arrow-left.svg") no-repeat scroll
+            center;
+        }
+      }
+    }
+  }
+}
+
+@import "./HomeLearning.responsive.scss";

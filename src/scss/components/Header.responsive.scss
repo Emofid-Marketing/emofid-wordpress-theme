@@ -1,0 +1,29 @@
+@media only screen and (max-width: 576px) {
+  .Header {
+    background-color: var(--color-white);
+    position: relative;
+    padding-bottom: 12px;
+
+    .logo {
+      img {
+        width: 140px;
+        height: auto;
+        margin-left: var(--space-3);
+      }
+    }
+
+    .phone {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  .Header {
+    .logo {
+      img {
+        width: 120px;
+      }
+    }
+  }
+}

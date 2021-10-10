@@ -1,0 +1,50 @@
+* {
+  user-select: none;
+}
+body,
+a,
+input,
+select,
+textarea,
+button {
+  font-family: dana;
+  font-size: var(--size-body-font);
+  color: var(--color-mofid-blue);
+  line-height: var(--size-body-line-height);
+}
+
+.container {
+  width: 1320px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container-md {
+  width: 1142px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container-sm {
+  width: 820px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#content {
+  padding-top: 83px;
+}
+
+body.home #content {
+  padding-top: 0;
+}
+
+@media only screen and (max-width: 48em) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+}
+
+[data-content-type] {
+  display: none;
+}

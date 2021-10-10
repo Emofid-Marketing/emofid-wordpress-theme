@@ -1,0 +1,72 @@
+<section class="IntroFunds py-6">
+    <div class="wrapper flex-column">
+        <h2 class="t-24 text-darker text-center mb-7">صندوق های سرمایه گذاری مفید</h2>
+        <div class="scroller hide-scrollbar">
+            <div class="inner flex align-start px-7">
+                {% for fund in funds %}
+                    <div class="item {{ fund.id }} radius-small bg-white shadow-small-center mx-3 flex-column align-center">
+                        <img class="logo" src="{{ theme.link }}/dist/images/funds/mofid/{{ fund.id }}.svg" />
+                        <div class="header w-100 relative overflow-hidden"></div>
+                        <div class="content relative overflow-hidden flex-column w-100 px-4 py-4">
+                            <div class="top flex-column pb-4">
+                                <div class="heading flex justify-space-between align-center mb-4">
+                                    <h3 class="t-12 text-darker">صندوق سرمایه گذاری {{ fund.title }}</h3>
+                                    <a class="t-10 flex align-center strong" href="{{ fund.url }}">مشاهده صندوق</a>
+                                </div>
+                                <div class="details flex justify-center align-center">
+                                    <div class="option flex-column align-center mx-5">
+                                        <span class="value t-14 text-darker mb-1 strong">{{ fund.type }}</span>
+                                        <span class="key t-12 text-light">نوع صندوق</span>
+                                    </div>
+                                    <div class="option flex-column align-center mx-5">
+                                        <span class="value t-14 text-darker mb-1 strong">{{ fund.darayi }}</span>
+                                        <span class="key t-12 text-light">دارایی کل صندوق</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom flex-column pt-4">
+                                <div class="performances flex align-center justify-center mb-5">
+                                    <div class="data flex-column mx-4">
+                                        <span class="value t-14 mb-1 strong ltr {{fund.performances["6months"]["type"]}}">{{ fund.performances["6months"]["value"] }}%</span>
+                                        <span class="key t-12 text-lighter">6 ماهه</span>
+                                    </div>
+                                    <div class="data flex-column mx-4">
+                                        <span class="value t-14 mb-1 strong ltr {{fund.performances["1year"]["type"]}}">{{ fund.performances["1year"]["value"] }}%</span>
+                                        <span class="key t-12 text-lighter">1 ساله</span>
+                                    </div>
+                                    <div class="data flex-column mx-4">
+                                        <span class="value t-14 mb-1 strong ltr {{fund.performances["5years"]["type"]}}">{{ fund.performances["5years"]["value"] }}%</span>
+                                        <span class="key t-12 text-lighter">5 ساله</span>
+                                    </div>
+                                </div>
+                                <div class="list flex-column">
+                                    <div class="list-item flex align-center justify-space-between mb-4">
+                                        <div class="label t-12 text-light">شماره حساب بانک ملت</div>
+                                        <input class="ltr t-12 text-darker strong" type="text" readonly="" value="123456789" />
+                                    </div>
+                                    <div class="list-item flex align-center justify-space-between mb-4">
+                                        <div class="label t-12 text-light">شماره شبا</div>
+                                        <input class="ltr t-12 text-darker strong" type="text" readonly="" value="IR030120225325600001795" />
+                                    </div>
+                                    <div class="list-item flex align-center justify-space-between mb-4">
+                                        <div class="label t-12 text-light">همبستگی با افت شاخص (سه سال اخیر)</div>
+                                        <input class="ltr t-12 text-darker small strong" type="text" readonly="" value="75.2%" />
+                                    </div>
+                                    <div class="list-item flex align-center justify-space-between mb-4">
+                                        <div class="label t-12 text-light">همبستگی با رشد شاخص (سه سال اخیر)</div>
+                                        <input class="ltr t-12 text-darker small strong" type="text" readonly="" value="83%" />
+                                    </div>
+                                    <div class="list-item flex align-center justify-space-between mb-4">
+                                        <div class="label t-12 text-light">شاخص ریسک بتا (سه سال اخیر)</div>
+                                        <input class="ltr t-12 text-darker small strong" type="text" readonly="" value="91.4%" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="fund-extend-btn"></button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

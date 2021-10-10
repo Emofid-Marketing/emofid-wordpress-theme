@@ -1,0 +1,35 @@
+.HomeSlider {
+  height: 600px;
+  width: 100%;
+  position: relative;
+
+  .slide-1 {
+    padding-top: 90px;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(
+      180deg,
+      #edfbff 0%,
+      rgba(237, 251, 255, 0.43) 100%
+    );
+
+    .right {
+      .texts {
+        width: 465px;
+        max-width: 100%;
+
+        h2 {
+          font-size: var(--size-text-32);
+        }
+
+        p {
+          font-size: var(--size-text-16);
+          color: var(--color-text-dark);
+          line-height: var(--size-line-height-32);
+        }
+      }
+    }
+  }
+}
+
+@import "./HomeSlider.responsive.scss";

@@ -1,0 +1,56 @@
+.Contacts {
+  .wrapper {
+    .cols {
+      .col {
+        width: 255px;
+
+        .box {
+          height: 198px;
+
+          .circle-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-duo);
+            margin-top: -40px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 32px auto;
+          }
+
+          &.phone {
+            .circle-icon {
+              background-image: url("../images/icons/contact/Phone.svg");
+            }
+          }
+
+          &.chat {
+            .circle-icon {
+              background-image: url("../images/icons/contact/Chat.svg");
+            }
+          }
+
+          &.mail {
+            .circle-icon {
+              background-image: url("../images/icons/contact/Email.svg");
+            }
+          }
+
+          .value {
+            background-color: var(--color-gray-light);
+          }
+        }
+
+        .small-box {
+          &:after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: url("../images/icons/arrow-left.svg") no-repeat scroll
+              center;
+            margin-right: var(--space-2);
+          }
+        }
+      }
+    }
+  }
+}

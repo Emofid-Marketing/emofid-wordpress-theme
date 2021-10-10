@@ -1,0 +1,24 @@
+.Calculator {
+  .chartIcon {
+    width: 20px;
+    height: 16px;
+    background: url("../../../../../images/icons/chart.svg") no-repeat scroll
+      center/ cover;
+  }
+
+  .fundAttr {
+    color: var(--color-text-medium);
+
+    span {
+      &:first-child {
+      }
+    }
+
+    .helpIcon {
+      width: 16px;
+      height: 16px;
+      background: url("../../../../../images/icons/help.svg") no-repeat scroll
+        center/ cover;
+    }
+  }
+}
