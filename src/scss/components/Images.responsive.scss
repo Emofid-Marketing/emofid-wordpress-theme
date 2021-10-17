@@ -1,0 +1,55 @@
+@media only screen and (max-width: 576px) {
+    .Images {
+        padding-top: 0;
+
+        .wrapper {
+            width: 100%;
+            padding: 0 10px;
+            position: relative;
+            padding-top: var(--space-6);
+
+            .column-1 {
+                width: 80%;
+
+                .circle {
+                    display: none;
+                }
+
+                .dots {
+                    position: absolute;
+                    left: 0;
+                    top: 40%;
+                    transform: rotate(90deg);
+                    margin-left: 20px;
+                }
+
+                > div {
+                    justify-content: flex-start;
+                    padding-right: 10px;
+                }
+            }
+
+            .column-2 {
+                width: 50%;
+
+                .title {
+                    position: absolute;
+                    right: 0;
+                    margin: 0;
+                    top: 0;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 900;
+                }
+
+                .dots {
+                    display: none;
+                }
+
+                .image {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

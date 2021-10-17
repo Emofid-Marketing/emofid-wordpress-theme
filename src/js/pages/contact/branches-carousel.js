@@ -2,8 +2,15 @@ import Swiper from 'swiper';
 
 new Swiper(".gallery", {
   loop: true,
-  slidesPerView: 5,
+  slidesPerView: 2.5,
+  spaceBetween: 26,
   centeredSlides: true,
   mousewheel: true,
-  spaceBetween: 30,
+
+  breakpoints: {
+    576: {
+      slidesPerView: 5,
+      spaceBetween: 30
+    }
+  }
 });

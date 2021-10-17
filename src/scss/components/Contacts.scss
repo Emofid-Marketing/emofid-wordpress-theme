@@ -39,18 +39,26 @@
             background-color: var(--color-gray-light);
           }
         }
+      }
+    }
 
-        .small-box {
-          &:after {
-            content: "";
-            width: 10px;
-            height: 10px;
-            background: url("../images/icons/arrow-left.svg") no-repeat scroll
-              center;
-            margin-right: var(--space-2);
-          }
+    .others {
+      
+      .small-box {
+        width: 255px;
+        max-width: 100%;
+
+        &:after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          background: url("../images/icons/arrow-left.svg") no-repeat scroll
+            center;
+          margin-right: var(--space-2);
         }
       }
     }
   }
 }
+
+@import "./Contacts.responsive.scss";

@@ -1,0 +1,31 @@
+@media only screen and (max-width: 576px) {
+    .Companies {
+        .tabs-wrapper {
+            .tabs {
+                width: 100%;
+                overflow-x: auto;
+
+                .head {
+                    width: 640px;
+                }
+            }
+
+            .body {
+                .tab-content-item {
+                    > img {
+                        display: none;
+                    }
+
+                    .contact-details {
+                        padding: 0 var(--space-3);
+                        width: 100%;
+
+                        .item {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
