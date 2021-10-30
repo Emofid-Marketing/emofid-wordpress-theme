@@ -22,3 +22,38 @@
     }
   }
 }
+
+@media only screen and (max-width: 576px) {
+  .Calculator {
+    padding-bottom: 0 !important;
+
+    .innerData {
+      flex-direction: column;
+      position: relative;
+    }
+
+    .fundAttr {
+      margin-left: 0;
+      margin-bottom: 20px;
+      padding-right: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .helpIcon {
+        display: none;
+      }
+    }
+
+    .chartIcon {
+      position: absolute;
+      right: 0;
+      top: 64px;
+
+      &:first-of-type {
+        top: 8px;
+      }
+    }
+  }
+}

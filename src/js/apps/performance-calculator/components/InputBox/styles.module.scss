@@ -2,3 +2,9 @@
   width: 315px;
   max-width: 100%;
 }
+
+@media only screen and (max-width: 576px) {
+  .InputBox {
+    order: 2;
+  }
+}

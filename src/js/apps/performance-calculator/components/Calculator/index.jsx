@@ -24,14 +24,14 @@ function Calculator({ fundId }) {
         "py-5"
       )}
     >
-      <div className="flex align-center mb-7">
+      <div className={classNames(styles.data, "flex", "align-center", "mb-7")}>
         <img
           src={`${window.EMOFID.theme_url}/dist/images/funds/mofid/${fund.iconName}.svg`}
           width="70"
           height="70"
           className="ml-5"
         />
-        <div className="flex align-center">
+        <div className={classNames(styles.innerData, "flex", "align-center")}>
           <span className={classNames(styles.chartIcon, "ml-3")}></span>
           <div className={classNames(styles.fundAttr, "flex-column", "ml-5")}>
             <span className="flex t-12">

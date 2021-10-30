@@ -5,6 +5,12 @@
   width: 700px;
   max-width: 100%;
 }
+
+@media only screen and (max-width: 576px) {
+  .zmYuI {
+    padding: var(--space-5) 0 0 !important;
+  }
+}
 /*!******************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/js/apps/performance-calculator/components/TabBarItem/styles.module.scss ***!
   \******************************************************************************************************************************************************************************************************************************/
@@ -21,6 +27,18 @@
   width: 22px;
   height: 22px;
 }
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/js/apps/performance-calculator/components/TabBar/styles.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************/
+@media only screen and (max-width: 576px) {
+  ._zZ3L {
+    width: 100%;
+    overflow-x: auto;
+  }
+  ._zZ3L .okP8T {
+    width: 640px;
+  }
+}
 /*!******************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/js/apps/performance-calculator/components/Calculator/styles.module.scss ***!
   \******************************************************************************************************************************************************************************************************************************/
@@ -36,6 +54,35 @@
   width: 16px;
   height: 16px;
   background: url(../images/help-908d4.svg) no-repeat scroll center/cover;
+}
+
+@media only screen and (max-width: 576px) {
+  .byJ6J {
+    padding-bottom: 0 !important;
+  }
+  .byJ6J .sNojN {
+    flex-direction: column;
+    position: relative;
+  }
+  .byJ6J ._Hbh6 {
+    margin-left: 0;
+    margin-bottom: 20px;
+    padding-right: 30px;
+  }
+  .byJ6J ._Hbh6:last-child {
+    margin-bottom: 0;
+  }
+  .byJ6J ._Hbh6 .CqPlh {
+    display: none;
+  }
+  .byJ6J ._prZC {
+    position: absolute;
+    right: 0;
+    top: 64px;
+  }
+  .byJ6J ._prZC:first-of-type {
+    top: 8px;
+  }
 }
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/js/apps/performance-calculator/components/Slider/styles.module.scss ***!
@@ -125,6 +172,12 @@
   width: 315px;
   max-width: 100%;
 }
+
+@media only screen and (max-width: 576px) {
+  .sFo8Z {
+    order: 2;
+  }
+}
 /*!********************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/js/apps/performance-calculator/components/PriceViewBox/styles.module.scss ***!
   \********************************************************************************************************************************************************************************************************************************/
@@ -137,6 +190,12 @@
   background-color: var(--color-mofid-green-medium);
   border: 1px solid var(--color-mofid-green-top);
 }
+
+@media only screen and (max-width: 576px) {
+  .wHFld {
+    order: 1;
+  }
+}
 /*!******************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/js/apps/performance-calculator/components/CaptionBox/styles.module.scss ***!
   \******************************************************************************************************************************************************************************************************************************/
@@ -148,6 +207,13 @@
 ._VRw0 strong {
   margin: 0 0.25rem;
   display: inline-block;
+}
+
+@media only screen and (max-width: 576px) {
+  ._VRw0 {
+    order: 3;
+    border-radius: 0 !important;
+  }
 }
 /*!*******************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/scss/libs/swiper-bundle.min.css ***!
@@ -3199,6 +3265,11 @@ body.home #content {
   font-size: var(--size-text-14);
 }
 
+@media only screen and (max-width: 576px) {
+  .StickyHeader {
+    display: none;
+  }
+}
 .IntroVideo .wrapper h1 {
   font-size: 24px;
   color: var(--color-text-darker);
@@ -3235,6 +3306,32 @@ body.home #content {
   color: var(--color-text-medium);
 }
 
+@media only screen and (max-width: 576px) {
+  .IntroVideo .wrapper h1 {
+    font-size: var(--size-text-20);
+  }
+  .IntroVideo .wrapper .video-wrapper .inner {
+    border-radius: 0;
+  }
+  .IntroVideo .wrapper .video-wrapper .play-btn {
+    width: 96px;
+    height: 96px;
+    left: 38px;
+    bottom: -48px;
+  }
+  .IntroVideo .wrapper .video-wrapper .play-btn::before {
+    width: 80px;
+    height: 80px;
+  }
+  .IntroVideo .wrapper .video-wrapper .play-btn button {
+    width: 64px;
+    height: 64px;
+    background-size: 19px auto;
+  }
+  .IntroVideo .wrapper p {
+    font-size: var(--size-text-14);
+  }
+}
 .FundsTabs .tabs-wrapper .tabs .tab {
   border-bottom: 3px solid var(--color-gray-2);
 }
@@ -3271,6 +3368,54 @@ body.home #content {
   height: 54px;
 }
 
+@media only screen and (max-width: 576px) {
+  .FundsTabs .texts .caption {
+    font-size: var(--size-text-14);
+  }
+  .FundsTabs .tabs-wrapper .tabs {
+    overflow-x: auto;
+  }
+  .FundsTabs .tabs-wrapper .tabs .inner {
+    width: 600px;
+  }
+  .FundsTabs .tabs-wrapper .tabs .inner .tab span {
+    display: none;
+  }
+  .FundsTabs .tabs-wrapper .tabs .inner .tab h2 {
+    font-size: var(--size-text-14);
+    text-align: center;
+    width: 90px;
+  }
+  .FundsTabs .tabs-wrapper .content .caption {
+    order: 2;
+    padding: 0 var(--space-2);
+  }
+  .FundsTabs .tabs-wrapper .content .tabs-content {
+    order: 1;
+    margin-bottom: var(--space-5);
+    width: 100%;
+  }
+  .FundsTabs .tabs-wrapper .content .tabs-content .tab-content-item .outer {
+    width: 100%;
+    overflow-x: auto;
+    padding: 0 var(--space-3);
+  }
+  .FundsTabs .tabs-wrapper .content .tabs-content .tab-content-item .outer .funds-tabs {
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: -o-fit-content;
+  }
+  .FundsTabs .tabs-wrapper .content .tabs-content .tab-content-item .outer .funds-tabs .fund-name {
+    white-space: nowrap;
+  }
+  .FundsTabs .tabs-wrapper .content .tabs-content .tab-content-item .funds-contents .bar-item .bar-wrapper {
+    width: 26px;
+  }
+  .FundsTabs .tabs-wrapper .content .tabs-content .tab-content-item .funds-contents .bar-item .bar-label {
+    width: 62px;
+  }
+}
 .Calculators {
   background-color: var(--color-light-bg);
 }
@@ -3301,6 +3446,15 @@ body.home #content {
   line-height: 37px;
 }
 
+@media only screen and (max-width: 576px) {
+  .Calculators .wrapper h2 {
+    font-size: var(--size-text-18);
+  }
+  .Calculators .wrapper .calculators-wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
 .Images .wrapper .column-1 {
   width: 505px;
 }
@@ -3630,6 +3784,30 @@ body.home #content {
   background: var(--color-mofid-green) url(../images/check-large-white-0de92.svg) no-repeat scroll center;
 }
 
+@media only screen and (max-width: 576px) {
+  .Trust .wrapper h2 {
+    font-size: var(--size-text-18);
+  }
+  .Trust .wrapper .rows-container {
+    max-width: 100%;
+    padding: 0 var(--space-3);
+    margin: 0 !important;
+  }
+  .Trust .wrapper .rows-container > div {
+    padding: 0 !important;
+    width: 100%;
+  }
+  .Trust .wrapper .rows-container > div:first-child {
+    order: 2;
+  }
+  .Trust .wrapper .rows-container > div:last-child {
+    order: 1;
+    margin-bottom: var(--space-5);
+  }
+  .Trust .wrapper .rows-container .logo {
+    width: 100%;
+  }
+}
 .IntroFunds .wrapper .scroller {
   width: 100%;
   overflow-x: auto;
@@ -3748,6 +3926,17 @@ body.home #content {
   background: linear-gradient(to bottom, rgba(79, 45, 134, 0.5), rgba(79, 45, 134, 0));
 }
 
+@media only screen and (max-width: 576px) {
+  .IntroFunds .wrapper .scroller .inner {
+    padding: 0 !important;
+  }
+  .IntroFunds .wrapper .scroller .inner .item {
+    width: 290px;
+  }
+  .IntroFunds .wrapper .scroller .inner .item .option {
+    margin: 0 var(--space-3) !important;
+  }
+}
 .bg-white {
   background-color: var(--color-white);
 }

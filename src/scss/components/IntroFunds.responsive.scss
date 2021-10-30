@@ -1,0 +1,19 @@
+@media only screen and (max-width: 576px) {
+  .IntroFunds {
+    .wrapper {
+      .scroller {
+        .inner {
+          padding: 0 !important;
+
+          .item {
+            width: 290px;
+
+            .option {
+              margin: 0 var(--space-3) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
