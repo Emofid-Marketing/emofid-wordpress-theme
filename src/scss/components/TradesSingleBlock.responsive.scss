@@ -1,0 +1,29 @@
+@media only screen and (max-width: 576px) {
+  .TradesSingleBlock {
+    .wrapper {
+      padding: 0 var(--space-3);
+    }
+
+    .footer {
+      justify-content: center;
+    }
+
+    .right {
+      order: 1;
+
+      h3 {
+        text-align: center;
+      }
+    }
+
+    .left {
+      order: 0;
+      margin-bottom: var(--space-5);
+
+      .cover {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

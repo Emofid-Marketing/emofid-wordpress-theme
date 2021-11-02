@@ -1,0 +1,45 @@
+.TradesTop {
+  .icon-item {
+    .icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: var(--color-duo);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70px auto;
+
+      &.icon-1 {
+        background-image: url("../images/icons/trades/ico-1.svg");
+      }
+
+      &.icon-2 {
+        background-image: url("../images/icons/trades/ico-2.svg");
+      }
+
+      &.icon-3 {
+        background-image: url("../images/icons/trades/ico-3.svg");
+      }
+
+      &.icon-4 {
+        background-image: url("../images/icons/trades/ico-4.svg");
+      }
+
+      &.icon-5 {
+        background-image: url("../images/icons/trades/ico-5.svg");
+      }
+    }
+
+    .label {
+    }
+  }
+
+  .texts {
+    p {
+      width: 730px;
+      max-width: 100%;
+    }
+  }
+}
+
+@import "./TradesTop.responsive.scss";

@@ -1,0 +1,30 @@
+.TradesAtiBlock {
+  background-color: var(--color-light-bg);
+
+  .right {
+    p {
+      width: 450px;
+      max-width: 100%;
+    }
+
+    .footer {
+      .more {
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          margin-right: var(--space-2);
+          background: url("../images/icons/arrow-left.svg") no-repeat scroll
+            center;
+        }
+      }
+    }
+  }
+
+  .left {
+    .item {
+    }
+  }
+}
+
+@import "./TradesAtiBlock.responsive.scss";

@@ -1,0 +1,42 @@
+.TradesSingleBlock {
+  .right {
+    p {
+      width: 460px;
+      max-width: 100%;
+    }
+
+    ul {
+      li {
+        &::before {
+          content: "";
+          border-radius: 50%;
+          margin-left: var(--space-2);
+          width: 18px;
+          height: 18px;
+          background: var(--color-mofid-green)
+            url("../images/icons/check-white.svg") no-repeat scroll center;
+        }
+      }
+    }
+
+    .footer {
+      .more {
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          margin-right: var(--space-2);
+          background: url("../images/icons/arrow-left.svg") no-repeat scroll
+            center;
+        }
+      }
+    }
+  }
+
+  .left {
+    .cover {
+    }
+  }
+}
+
+@import "./TradesSingleBlock.responsive.scss";

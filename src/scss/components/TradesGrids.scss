@@ -1,0 +1,64 @@
+.TradesGrids {
+  .grid-item {
+    max-width: 100%;
+
+    .inner:not(.first) {
+      height: 700px;
+    }
+
+    .cover {
+      height: auto;
+
+      &.mobile {
+        display: none;
+      }
+
+      &.onlinePlus {
+        width: 85%;
+        margin: 0 auto;
+      }
+
+      &.mofidTrader {
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+
+    .content {
+      &.fixed-height {
+        height: 420px;
+      }
+
+      .right {
+        width: 50%;
+      }
+
+      .left {
+        width: 50%;
+        background: url("../images/easy-mockup.png") no-repeat scroll center /
+            625px auto,
+          url("../images/easy-bg.svg") no-repeat scroll center / cover;
+      }
+
+      p {
+        width: 450px;
+        max-width: 100%;
+      }
+
+      .footer {
+        .more {
+          &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            margin-right: var(--space-2);
+            background: url("../images/icons/arrow-left.svg") no-repeat scroll
+              center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "./TradesGrids.responsive.scss";
