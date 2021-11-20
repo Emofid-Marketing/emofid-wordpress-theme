@@ -22,7 +22,8 @@ import "./modules/investment-calculators-tabs";
 import "./modules/investment-trust";
 import "./modules/investment-funds-slider";
 
-import "./modules/mobile-navigation-menu"
+import "./modules/mobile-navigation-menu";
 
 import "./pages/contact";
+import "./pages/about";
 
