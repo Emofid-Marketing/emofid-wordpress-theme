@@ -1,0 +1,30 @@
+.AboutCircles {
+    height: 524px;
+    background: url("../images/circles-background.svg") no-repeat scroll center /
+      cover;
+  
+    .circle-item {
+      width: 200px;
+  
+      .circle {
+        width: 140px;
+        height: 140px;
+        background-color: var(--color-mofid-blue);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 60px auto;
+  
+        @for $i from 1 to 4 {
+          &.circle-#{$i} {
+            background-image: url("../images/icons/circles/i-#{$i}.svg");
+          }
+        }
+      }
+  
+      label {
+      }
+    }
+  }
+  
+  @import "./AboutCircles.responsive.scss";
+  

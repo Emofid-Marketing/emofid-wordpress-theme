@@ -1,0 +1,9 @@
+.AboutOverTime {
+    .left {
+        .cover-image {
+          border-radius: var(--radius-small);
+        }
+      }
+}
+
+@import "./AboutOverTime.responsive.scss";

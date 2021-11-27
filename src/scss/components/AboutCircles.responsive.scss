@@ -1,0 +1,19 @@
+@media only screen and (max-width: 576px) {
+    .AboutCircles {
+      padding: var(--space-3) 0;
+  
+      .wrapper {
+        justify-content: center;
+  
+        .circle-item {
+          margin-bottom: var(--space-5);
+  
+          .circle {
+            width: 90px;
+            height: 90px;
+          }
+        }
+      }
+    }
+  }
+  
