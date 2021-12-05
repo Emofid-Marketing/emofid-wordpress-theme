@@ -1,0 +1,30 @@
+.AboutCareers {
+    .collapse-wrapper {
+        .collapse-item {
+            h3 {
+                padding: 15px;
+                position: relative;
+                font-size: 14px;
+                line-height: 22px;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+                border-radius: 4px;
+            }
+
+            .content {
+                font-size: 14px;
+                line-height: 26px;
+                display: none;
+                padding: 20px 15px;
+
+                p {
+                    margin-bottom: 16px;
+                    padding-right: 13px;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+@import "./AboutCareers.responsive.scss";

@@ -1,0 +1,18 @@
+.AboutSocialResponsibility {
+    .box {
+        background-color: var(--color-mofid-green-medium);
+        
+        .more {
+            &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            margin-right: var(--space-2);
+            background: url("../images/icons/arrow-left.svg") no-repeat scroll
+                center;
+            }
+        }
+    }
+}
+
+@import "./AboutSocialResponsibility.responsive.scss";
