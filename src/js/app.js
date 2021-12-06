@@ -9,6 +9,7 @@ import "./apps";
 // global modules
 import "./modules/global/tabs";
 import "./modules/stiky-mobile-header";
+import "./modules/pjax";
 
 
 // pages modules
