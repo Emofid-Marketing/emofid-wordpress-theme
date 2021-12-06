@@ -17,7 +17,7 @@ $templates = array( 'index.twig' );
 if (is_home()) {
     array_unshift(
         $templates,
-        'home.twig'
+        'pages/home.twig'
     );
 }
 

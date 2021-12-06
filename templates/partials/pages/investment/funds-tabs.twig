@@ -1,5 +1,5 @@
 <div class="FundsTabs">
-    <img class="cover w-100 h-auto mb-4" src="{{ theme.link }}/dist/images/Mofid-Fund-Box-1.png">
+    <img class="cover w-100 h-auto mb-4" src="{{ theme.link }}/assets/images/Mofid-Fund-Box-1.png">
     <div class="container-sm">
         <div class="texts flex-column mb-7">
             <p class="title t-20 strong text-center text-darker mb-4">
@@ -17,7 +17,7 @@
                 <div class="inner row">
                     {% for fundsGroup in fundsGroups %}
                     <div class="tab col-xs-3 flex-column align-center cursor-pointer py-3" data-tab-type="1" data-tab-id="{{fundsGroup.id}}">
-                        <img class="mb-3" src="{{theme.link}}/dist/images/funds/fund-{{fundsGroup.id}}.svg" />
+                        <img class="mb-3" src="{{theme.link}}/assets/images/funds/fund-{{fundsGroup.id}}.svg" />
                         <h2 class="t-16 lh-30 text-darker">{{ fundsGroup.title }}</h2>
                         <span class="t-12 lh-26 text-medium">{{ fundsGroup.subtitle }}</span>
                     </div>

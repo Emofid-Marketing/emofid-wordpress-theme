@@ -7,7 +7,7 @@ module.exports = {
     './src/scss/app.scss'
   ],
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/assets/dist',
     filename: 'js/app.min.js',
     publicPath: '../',
     // assetModuleFilename: 'images/[hash][ext][query]'

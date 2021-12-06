@@ -11,4 +11,3 @@ if (!defined('_EMF_VERSION')) {
         define('_EMF_VERSION', $version);
     }
 }
-

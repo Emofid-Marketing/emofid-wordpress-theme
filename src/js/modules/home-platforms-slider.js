@@ -23,7 +23,7 @@ $(document).ready(function () {
       // $(".HomePlatforms .easytrader .screenshots-wrapper .inner img:nth-child(1)").remove();
       let newImage = document.createElement("img");
       let newImageIndex = (imgIndex % imagesCount) + 1;
-      newImage.src = `${window.EMOFID.theme_url}/dist/images/trader-shots/shot-${newImageIndex}.jpg`;
+      newImage.src = `${window.EMOFID.theme_url}/assets/images/trader-shots/shot-${newImageIndex}.jpg`;
       innerWrapper.append(newImage);
 
       imgIndex++;

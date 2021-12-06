@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 60 60">
-    <path fill="#fff" fill-opacity=".3" d="M45 16H6v19h39V16z"/>
-    <path fill="#fff" fill-opacity=".8" d="M50 21H11v19h39V21z"/>
-    <path fill="#fff" d="M54 26H15v19h39V26z"/>
-    <path fill="#004C6A" d="M24 28h-6v2h6v-2zM52 41h-6v2h6v-2zM42 35.5c0 3.596-3.148 6.5-7 6.5-3.873 0-7-2.923-7-6.5 0-3.596 3.148-6.5 7-6.5 3.873-.02 7 2.904 7 6.5z"/>
-</svg>

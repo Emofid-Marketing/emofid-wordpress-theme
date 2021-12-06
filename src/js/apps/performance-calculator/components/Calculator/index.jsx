@@ -26,7 +26,7 @@ function Calculator({ fundId }) {
     >
       <div className={classNames(styles.data, "flex", "align-center", "mb-7")}>
         <img
-          src={`${window.EMOFID.theme_url}/dist/images/funds/mofid/${fund.iconName}.svg`}
+          src={`${window.EMOFID.theme_url}/assets/images/funds/mofid/${fund.iconName}.svg`}
           width="70"
           height="70"
           className="ml-5"

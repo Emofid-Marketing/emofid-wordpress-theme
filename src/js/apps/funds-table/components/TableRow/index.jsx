@@ -20,7 +20,7 @@ function TableRow({ fund }) {
       <div className={styles.cell}>
         <img
           className={styles.fundIcon}
-          src={`${window.EMOFID.theme_url}/dist/images/funds/mofid/${iconName}.svg`}
+          src={`${window.EMOFID.theme_url}/assets/images/funds/mofid/${iconName}.svg`}
         />
         <span className={styles.fundName}>صندوق {title}</span>
       </div>
