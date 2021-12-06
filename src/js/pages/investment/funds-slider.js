@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import horizontalScroller from '../modules/global/horizontalScroller';
+import horizontalScroller from '../../modules/global/horizontalScroller';
 
 
 horizontalScroller(".scroller");
