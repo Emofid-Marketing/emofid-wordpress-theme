@@ -28,7 +28,13 @@ composer install
 npm install
 ```
 
-4) Open **wordpress Admin Panel** and active **Emofid Theme** as default theme.
+4) Now, you should build assets by this command:
+
+```
+npm run build
+```
+
+5) Open **wordpress Admin Panel** and active **Emofid Theme** as default theme.
 
 ---
 
