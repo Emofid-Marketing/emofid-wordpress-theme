@@ -4,6 +4,11 @@
       .tab {
         border-bottom: 3px solid var(--color-gray-2);
 
+        .icon {
+          width: 67px;
+          height: auto;
+        }
+
         &.active {
           border-bottom-color: var(--color-mofid-green);
 
