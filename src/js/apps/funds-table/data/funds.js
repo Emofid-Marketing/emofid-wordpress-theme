@@ -11,7 +11,7 @@ const funds = [
     fundLink: "#%",
   },
   {
-    iconName: "PISHRO",
+    iconName: "pishro",
     title: "پیشرو",
     type: "سهامی",
     year: 1392,
