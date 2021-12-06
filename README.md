@@ -71,7 +71,7 @@ git add .
 
 git commit -m "<Commit comment>"
 
-git push origin <branch name>
+git push origin <Branch name>
 ```
 
 4) Open github in browser and make a **merge/push** request to master branch.
