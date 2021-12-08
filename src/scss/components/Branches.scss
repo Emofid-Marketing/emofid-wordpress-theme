@@ -17,6 +17,7 @@
         rgba(242, 243, 246, 0)
       );
       z-index: 999;
+      transition : all 1s;
     }
     &:after {
       content: "";
@@ -31,6 +32,7 @@
         rgba(242, 243, 246, 0)
       );
       z-index: 999;
+      transition : all 1s;
     }
 
     .gallery-wrapper {

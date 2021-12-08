@@ -1,0 +1,62 @@
+.Abouthonors {
+    .swiper.honors {
+        width: 100%;
+        overflow: hidden;
+
+        .swiper-wrapper {
+            width: 100%;
+
+            .swiper-slide {
+                cursor: pointer;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .more {
+                    &::after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    margin-right: var(--space-2);
+                    background: url("../images/icons/arrow-left.svg") no-repeat scroll
+                        center;
+                    }
+                }
+            }
+        }
+
+        .honors-scrollbar {
+            width: 76%;
+            left: 14%;
+            margin-bottom: 7px;
+            height: 3px;
+        }
+
+        .next-honor {
+            background-color: var(--color-gray-light);
+            cursor: pointer;
+            z-index: 1000;
+            position: inherit;
+            width: 24px;
+            height: 24px;
+            border-radius: 24px;
+            padding-top: 7px;
+            float: left;
+            left: 10%;
+
+            &::after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                margin-right: var(--space-2);
+                background: url("../images/icons/arrow-left.svg") no-repeat scroll
+                    center;
+            }
+        }
+    }
+}
+
+@import "./Abouthonors.responsive.scss";

@@ -8,12 +8,13 @@
   .tabs {
     .head {
       .inner {
-        width: 505px;
-        max-width: 100%;
+        width: 100%;
 
         .tab {
           border-bottom: 2px solid var(--color-gray-2);
           padding-bottom: var(--space-2);
+          font-size: 16px;
+          height: 70px;
 
           &::before {
             content: '';
@@ -22,19 +23,22 @@
             height: 18px;
             right: 0px;
             background-color: var(--color-gray-2);
-            top: 39px;
+            top: 60px;
             border-radius: 50%;
             z-index: 1;
             display: block;
           }
 
           &.active {
-            color: var(--color-mofid-green);
-            border-color: var(--color-mofid-green);
             
             &::before {
               background-color: var(--color-mofid-green);
             }
+          }
+
+          span {
+            margin-right: -10px;
+            color: var(--color-text-darker);
           }
         }
       }
