@@ -7,12 +7,18 @@
     align-items: center;
     justify-content: center;
     padding: 14px 0;
-    width: calc(100% / 8);
+    width: calc(100% / 8.25);
     font-size: 14px;
     color: var(--color-text-light);
 
     &:last-child {
-      width: calc((100% / 8) * 2);
+      width: calc((100% / 8.25) * 2);
+    }
+
+    &:first-child {
+      width: calc((100% / 8.25) * 1.25);
+      justify-content: flex-start;
+      padding: 14px 10px;
     }
 
     .fundIcon {

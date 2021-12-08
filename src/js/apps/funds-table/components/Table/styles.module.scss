@@ -17,10 +17,14 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: calc(100% / 8);
+      width: calc(100% / 8.25);
 
       &:last-child {
-        width: calc((100% / 8) * 2);
+        width: calc((100% / 8.25) * 2);
+      }
+
+      &:first-child {
+        width: calc((100% / 8.25) * 1.25);
       }
 
       span {
