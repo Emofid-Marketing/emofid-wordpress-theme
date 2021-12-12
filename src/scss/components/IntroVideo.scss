@@ -1,51 +1,54 @@
 .IntroVideo {
-
-    .wrapper {
-
-        h1 {
-            font-size: 24px;
-            color: var(--color-text-darker);
-        }
-
-        .video-wrapper {
-
-            video {
-                width: 100%;
-            }
-
-            .play-btn {
-                width: 126px;
-                height: 126px;
-                bottom: -63px;
-                left: 75px;
-                border: 1px solid rgba(255, 255, 255, 0.2);
-
-                &::before {
-                    content: "";
-                    width: 104px;
-                    height: 104px;
-                    background-color: rgba(255, 255, 255, 0.2);
-                    position: absolute;
-                    z-index: 1;
-                    border-radius: 50%;
-                }
-
-                button {
-                    width: 84px;
-                    height: 84px;
-                    border: none;
-                    background: #fff url("../images/icons/play.svg") no-repeat scroll center / 25px auto;
-                    z-index: 2;
-                }
-            }
-        }
-
-        p {
-            line-height: var(--size-line-height-26);
-            font-size: var(--size-text-16);
-            color: var(--color-text-medium);
-        }
+  .wrapper {
+    h1 {
+      font-size: 24px;
+      color: var(--color-text-darker);
     }
+
+    .video-wrapper {
+      video {
+        width: 100%;
+      }
+
+      .play-btn {
+        width: 126px;
+        height: 126px;
+        bottom: -63px;
+        left: 75px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        &::before {
+          content: "";
+          width: 104px;
+          height: 104px;
+          background-color: rgba(255, 255, 255, 0.2);
+          position: absolute;
+          z-index: 1;
+          border-radius: 50%;
+        }
+
+        button {
+          width: 84px;
+          height: 84px;
+          border: none;
+          background: #fff url("../images/icons/play.svg") no-repeat scroll
+            center / 25px auto;
+          z-index: 2;
+        }
+      }
+
+      .play-btn-right {
+        left: inherit;
+        right: 75px;
+      }
+    }
+
+    p {
+      line-height: var(--size-line-height-26);
+      font-size: var(--size-text-16);
+      color: var(--color-text-medium);
+    }
+  }
 }
 
 @import "./IntroVideo.responsive.scss";

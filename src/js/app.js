@@ -16,6 +16,7 @@ import "./modules/pjax";
 import "./pages/home";
 import "./pages/contact";
 import "./pages/investment";
+import "./pages/about";
 
 
 import "./modules/mobile-navigation-menu";
