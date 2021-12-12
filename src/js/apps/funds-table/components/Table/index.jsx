@@ -1,13 +1,20 @@
 import classNames from "classnames";
 import React, { useEffect, useState } from "react";
-import fundsTableColumns from "../../data/fundsTableColumns";
+import TableHead from "../TableHead/index.jsx";
 import TableRow from "../TableRow/index.jsx";
-import funds from "../../data/funds";
+import Loading from "../Loading/index.jsx";
+import filters from "../../data/filters.js";
 import styles from "./styles.module.scss";
+import FiltersStore from "../../store/FiltersStore.js";
 import numeral from "numeral";
 
 function Table() {
   const [fundsData, setFundsData] = useState(false);
+  const [performanceRage, setPerformanceRange] = useState("return1M");
+
+  function changePerformanceRange(value) {
+    setPerformanceRange(value);
+  }
 
   useEffect(async () => {
     let response = await fetch(
@@ -18,25 +25,31 @@ function Table() {
       let jsonData = await response.json();
       jsonData.forEach((fund) => {
         if (!fund.staticInfo) return;
-        // console.log(fund.staticInfo.enName);
+        FiltersStore.addFilterType(fund.staticInfo.fundType);
         let thisFund = {
+          fundCode: fund.fundCode,
           iconName: fund.staticInfo.enName.toLowerCase(),
           title: fund.title,
           type: fund.staticInfo.fundType,
           year: fund.staticInfo.startDateFa.split("-")[0],
           totalFund: numeral(Math.floor(fund.aum / 1000000000)).format("0,0"),
           investers: numeral(fund.currentInvestorsNumber).format("0,0"),
-          performance: fund.return1Y,
+          performance: {},
           tradeLink: "#$",
           fundLink: "#%",
         };
+
+        filters.forEach((item) => {
+          thisFund.performance[item.value] = fund[item.value];
+        });
+
         data.push(thisFund);
       });
       setFundsData(data);
     }
   }, []);
 
-  if (!fundsData) return <div>Loading</div>;
+  if (!fundsData) return <Loading />;
 
   return (
     <div
@@ -48,18 +61,16 @@ function Table() {
       )}
     >
       <div className={classNames(styles.inner, "flex-column")}>
-        <div className={styles.head}>
-          {fundsTableColumns.map((item, index) => {
-            return (
-              <div className={styles.item} key={index}>
-                <span>{item.label}</span>
-              </div>
-            );
-          })}
-        </div>
+        <TableHead filterHandler={changePerformanceRange} />
         <div className={styles.body}>
           {fundsData.map((fund, index) => {
-            return <TableRow key={index} fund={fund} />;
+            return (
+              <TableRow
+                key={index}
+                fund={fund}
+                performanceRage={performanceRage}
+              />
+            );
           })}
         </div>
       </div>

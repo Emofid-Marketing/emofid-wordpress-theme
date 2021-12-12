@@ -1,9 +1,12 @@
 import React from "react";
 import classNames from "classnames";
+import { observer } from "mobx-react-lite";
+import FiltersStore from "../../store/FiltersStore";
 import styles from "./styles.module.scss";
 
-function TableRow({ fund }) {
+function TableRow({ fund, performanceRage }) {
   const {
+    fundCode,
     iconName,
     title,
     type,
@@ -15,8 +18,26 @@ function TableRow({ fund }) {
     fundLink,
   } = fund;
 
+  const performanceValue = performance[performanceRage];
+
+  const performanceValueString =
+    performance[performanceRage] !== null
+      ? `${performance[performanceRage]}%`
+      : "-";
+
+  function filterRow() {
+    if (FiltersStore.activeFilter === "همه صندوق ها") return false;
+    console.log(FiltersStore.activeFilter, type);
+    return FiltersStore.activeFilter != type;
+  }
+
   return (
-    <div className={styles.TableRow}>
+    <div
+      className={classNames(styles.TableRow, {
+        [styles.deactive]: filterRow(),
+      })}
+      id={`fund-${fundCode}`}
+    >
       <div className={styles.cell}>
         <img
           className={styles.fundIcon}
@@ -33,12 +54,12 @@ function TableRow({ fund }) {
           styles.cell,
           styles.cellPrice,
           {
-            [styles.positive]: performance >= 0,
+            [styles.positive]: performanceValue >= 0,
           },
-          { [styles.negative]: performance < 0 }
+          { [styles.negative]: performanceValue < 0 }
         )}
       >
-        {performance}%
+        {performanceValueString}
       </div>
       <div className={styles.cell}>
         <a className="Button outline ml-3" href={tradeLink}>
@@ -55,4 +76,4 @@ function TableRow({ fund }) {
   );
 }
 
-export default TableRow;
+export default observer(TableRow);

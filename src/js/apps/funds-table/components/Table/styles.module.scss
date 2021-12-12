@@ -3,37 +3,7 @@
   overflow-x: auto;
 
   .inner {
-    min-width: 860px;
-  }
-
-  .head {
-    display: flex;
-    justify-content: stretch;
-    border-bottom: 1px solid var(--color-gray-2);
-    padding-bottom: 16px;
-
-    .item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: calc(100% / 8.25);
-
-      &:last-child {
-        width: calc((100% / 8.25) * 2);
-      }
-
-      &:first-child {
-        width: calc((100% / 8.25) * 1.25);
-      }
-
-      span {
-        text-align: center;
-        font-size: 12px;
-        color: var(--color-text-darker);
-        width: 112px;
-      }
-    }
+    min-width: 1024px;
   }
 
   .body {

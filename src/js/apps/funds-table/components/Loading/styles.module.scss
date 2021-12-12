@@ -1,0 +1,27 @@
+.Loading {
+  width: 240px;
+
+  .spinner {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #eee #eee #ddd;
+    animation-name: spin;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
