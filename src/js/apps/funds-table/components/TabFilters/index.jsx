@@ -13,7 +13,7 @@ function TabFilters() {
   }
 
   return (
-    <div className={classNames(styles.TabFilters)}>
+    <div className={classNames(styles.TabFilters, "hide-scrollbar")}>
       <div className={classNames(styles.inner, "flex")}>
         {FiltersStore.filterTypes.map((fundType, index) => {
           return (
