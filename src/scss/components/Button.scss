@@ -4,6 +4,7 @@
   padding: var(--space-1) var(--space-4);
   border-radius: var(--radius-small);
   border: 2px solid var(--color-mofid-green);
+  cursor: pointer;
 
   &.outline {
     background-color: transparent;

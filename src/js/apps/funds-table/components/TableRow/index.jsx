@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { observer } from "mobx-react-lite";
 import FiltersStore from "../../store/FiltersStore";
+import ModalStore from "../../store/ModalStore";
 import styles from "./styles.module.scss";
 
 function TableRow({ fund, performanceRage }) {
@@ -29,6 +30,10 @@ function TableRow({ fund, performanceRage }) {
     if (FiltersStore.activeFilter === "همه صندوق ها") return false;
     console.log(FiltersStore.activeFilter, type);
     return FiltersStore.activeFilter != type;
+  }
+
+  function openAppModal() {
+    ModalStore.toggleModal();
   }
 
   return (
@@ -62,7 +67,7 @@ function TableRow({ fund, performanceRage }) {
         {performanceValueString}
       </div>
       <div className={styles.cell}>
-        <a className="Button outline ml-3" href={tradeLink}>
+        <a className="Button outline ml-3" onClick={openAppModal}>
           خرید و فروش
         </a>
         <a
