@@ -41,7 +41,7 @@ const funds = [
   {
     id: 4,
     title: 'امید توسعه',
-    iconName: 'omidtosee',
+    iconName: 'omid',
     fundType: "سهامی",
     risk: 3,
     ratios: {

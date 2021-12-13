@@ -186,7 +186,7 @@ $funds = [
     ],
     [
         "title" => "امید توسعه",
-        "id" => "omidtosee",
+        "id" => "omid",
         "url" => "#!",
         "type" => "مختلط",
         "darayi" => 1.687,

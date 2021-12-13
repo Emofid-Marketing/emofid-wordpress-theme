@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const path = require('path');
 
 module.exports = {
   entry: [
@@ -9,7 +8,7 @@ module.exports = {
   output: {
     path: __dirname + '/assets/dist',
     filename: 'js/app.min.js',
-    publicPath: '../',
+    publicPath: "auto",
     // assetModuleFilename: 'images/[hash][ext][query]'
   },
   module: {
