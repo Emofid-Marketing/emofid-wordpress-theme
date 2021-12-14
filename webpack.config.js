@@ -9,6 +9,7 @@ module.exports = {
     path: __dirname + '/assets/dist',
     filename: 'js/app.min.js',
     publicPath: "auto",
+    clean: true,
     // assetModuleFilename: 'images/[hash][ext][query]'
   },
   module: {
