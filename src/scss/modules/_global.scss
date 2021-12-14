@@ -10,6 +10,10 @@ button {
   line-height: var(--size-body-line-height);
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 select {
   cursor: pointer;
 }

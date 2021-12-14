@@ -6,6 +6,12 @@
   width: 100%;
   z-index: 999;
 
+  .nav-wrapper {
+    .mobile-nav-btn {
+      display: none;
+    }
+  }
+
   .phone {
     &::after {
       content: "";

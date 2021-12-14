@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="89px" height="58px" viewBox="0 0 89 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>EasyTraderLogo</title>
+    <defs>
+        <path d="M79.141,0.524 C78.886,1.082 78.583,1.659 78.261,2.286 C76.016,6.548 72.032,13.057 65.731,19.771 C54.708,31.542 34.37,46.13 0.001,49.093 L0.001,57.712 C37.522,54.675 59.872,38.6 72.007,25.656 C78.958,18.243 83.38,11.018 85.88,6.271 C86.901,4.304 87.828,2.356 88.568,0.525 L79.141,0.525 L79.141,0.524 Z" id="path-1"></path>
+        <linearGradient x1="-0.00904421461%" y1="49.9750554%" x2="99.9783401%" y2="49.9750554%" id="linearGradient-3">
+            <stop stop-color="#EF404A" offset="0%"></stop>
+            <stop stop-color="#F0494A" offset="3.73%"></stop>
+            <stop stop-color="#F3624B" offset="9.88%"></stop>
+            <stop stop-color="#F88B4C" offset="17.7%"></stop>
+            <stop stop-color="#FEC34E" offset="26.8%"></stop>
+            <stop stop-color="#FFCC4E" offset="28.14%"></stop>
+            <stop stop-color="#AFC476" offset="41.09%"></stop>
+            <stop stop-color="#00B1CD" offset="67.93%"></stop>
+            <stop stop-color="#04B1C8" offset="74.45%"></stop>
+            <stop stop-color="#10B3BA" offset="82.03%"></stop>
+            <stop stop-color="#24B5A3" offset="90.13%"></stop>
+            <stop stop-color="#40B882" offset="98.54%"></stop>
+            <stop stop-color="#45B97C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="EasyTraderLogo">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="SVGID_1_"></g>
+            <rect id="Rectangle" fill="url(#linearGradient-3)" fill-rule="nonzero" mask="url(#mask-2)" x="0.001" y="0.524" width="88.568" height="57.188"></rect>
+        </g>
+    </g>
+</svg>

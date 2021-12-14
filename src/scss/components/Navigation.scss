@@ -1,11 +1,40 @@
 .Navigation {
   > ul {
-    .mobile-nav-btn {
-      display: none;
-    }
     > li {
       position: relative;
       line-height: 35px;
+
+      &.header-apps-links {
+        display: none;
+        align-items: center;
+        z-index: 2;
+
+        &::before {
+          content: "";
+          width: 0;
+          height: 24px;
+          border-right: 1px solid var(--color-gray);
+          margin-left: var(--space-3);
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          padding-left: 20px;
+        }
+
+        .easytrader {
+          &::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: url("../images/easy-logo.svg") no-repeat scroll center/
+              100% auto;
+            margin-left: var(--space-2);
+          }
+        }
+      }
+
       > ul {
         position: absolute;
         top: 32px;
@@ -98,6 +127,26 @@
           opacity: 1;
           top: 36px;
           visibility: visible;
+        }
+      }
+    }
+  }
+  .call-box {
+    display: none;
+
+    .box {
+      width: 320px;
+      max-width: 100%;
+      background-color: var(--color-light-bg);
+
+      .tell-btn {
+        &::after {
+          content: "";
+          width: 16px;
+          height: 16px;
+          background: url("../images/icons/phone.svg") no-repeat scroll center/
+            100% auto;
+          margin-right: var(--space-2);
         }
       }
     }

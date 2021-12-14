@@ -4,7 +4,12 @@
 			<a class="logo" href="{{site.link}}" title="{{site.title}}">
 				<img src="{{theme.link}}/assets/images/logo.svg" class="ml-5" width="177" height="27" alt="{{site.title}}">
 			</a>
-			{{ include('partials/navigation.twig') }}
+			<div class="nav-wrapper flex align-center">
+				<button class="mobile-nav-btn">
+					<span></span>
+				</button>
+				{{ include('partials/navigation.twig') }}
+			</div>
 			<a class="phone mr-4 flex align-center" href="tel:02191008700">۰۲۱-۹۱۰۰۸۷۰۰</a>
 			{{ include('partials/header-auth.twig') }}
 		</div>

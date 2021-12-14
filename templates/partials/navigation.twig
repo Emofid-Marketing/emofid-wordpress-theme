@@ -1,10 +1,8 @@
-<nav role="navigation" class="Navigation hide-scrollbar">
+<nav role="navigation" class="Navigation hide-scrollbar flex">
     <ul class="flex nav-mobile-scroller align-center">
-        <button class="mobile-nav-btn">
-            <span></span>
-        </button>
         <a class="mx-auto easytrader-mobile-link display-none" href="#">
             <img src="{{ theme.link }}/assets/images/easytrader-menu-mobile.svg" />
+            <span>ورود به ایزی تریدر</span>
         </a>
         {% for item in header_menu.items %}
             <li class="ml-5 {{ item.classes|join(' ') }}">
@@ -37,5 +35,19 @@
                 {% endif %}
             </li>
         {% endfor %}
+        <li class="header-apps-links">
+            <a class="easytrader" href="#">ایزی تریدر</a>
+        </li>
     </ul>
+    <div class="call-box align-center">
+        <div class="box flex justify-space-between align-center mx-auto p-3">
+            <div class="flex-column align-center">
+                <span class="t-16 text-darker strong mb-2">تماس و پشتیبانی</span>
+                <span class="t-12 text-medium">۲۴ ساعت، ۷ روز هفته</span>
+            </div>
+            <div class="flex">
+                <a href="tel:02191008700" class="tell-btn Button outline medium blue flex align-center">۰۲۱-۹۱۰۰۸۷۰۰</a>
+            </div>
+        </div>
+    </div>
 </nav>
