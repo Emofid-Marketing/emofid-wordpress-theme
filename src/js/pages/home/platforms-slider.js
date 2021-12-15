@@ -1,33 +1,27 @@
-import $ from "jquery";
+import Swiper, { Autoplay } from 'swiper';
+Swiper.use([Autoplay]);
 
-function getImagesOuterWidth() {
-  var elWidth = $(".HomePlatforms .easytrader .screenshots-wrapper .inner img").width();
-  return elWidth;
-}
-
-$(document).ready(function () {
-
-  var innerWrapper = $(".HomePlatforms .easytrader .screenshots-wrapper .inner");
-
-  var index = 0;
-  var imgIndex = 0;
-  var imagesCount = 5;
-
-  getImagesOuterWidth();
-
-  setInterval(function () {
-    innerWrapper.css("margin-right", `-${index}px`);
-    index++;
-
-    if (index % (getImagesOuterWidth() + 48) === 0) {
-      // $(".HomePlatforms .easytrader .screenshots-wrapper .inner img:nth-child(1)").remove();
-      let newImage = document.createElement("img");
-      let newImageIndex = (imgIndex % imagesCount) + 1;
-      newImage.src = `${window.EMOFID.theme_url}/assets/images/trader-shots/shot-${newImageIndex}.jpg`;
-      innerWrapper.append(newImage);
-
-      imgIndex++;
+new Swiper(".easytrader-screenshots-wrapper", {
+  centeredSlides: true,
+  slidesPerView: 1.25,
+  spaceBetween: 20,
+  freeMode: true,
+  loop: true,
+  draggable: false,
+  speed: 4000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1600: {
+      slidesPerView: 4,
     }
-
-  }, window.EMOFID.home_platform_shots_delay);
+  }
 });
+
+console.log("v-1");
