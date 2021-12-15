@@ -23,5 +23,3 @@ new Swiper(".easytrader-screenshots-wrapper", {
     }
   }
 });
-
-console.log("v-1");
