@@ -3,7 +3,7 @@ Swiper.use([Autoplay]);
 
 new Swiper(".easytrader-screenshots-wrapper", {
   centeredSlides: true,
-  slidesPerView: 1.4,
+  slidesPerView: 1.25,
   spaceBetween: 20,
   freeMode: true,
   loop: true,
