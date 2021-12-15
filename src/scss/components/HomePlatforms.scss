@@ -58,17 +58,9 @@
       font-size: var(--size-text-24);
     }
 
-    .screenshots-wrapper {
-      overflow-x: auto;
-
-      .inner {
-        img {
-          width: 480px;
-          height: auto;
-          border-radius: var(--radius-small);
-          max-width: 50%;
-          margin: 0 var(--space-4);
-        }
+    .swiper-container-free-mode {
+      > .swiper-wrapper {
+        transition-timing-function: linear;
       }
     }
 
