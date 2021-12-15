@@ -28,7 +28,6 @@ function TableRow({ fund, performanceRage }) {
 
   function filterRow() {
     if (FiltersStore.activeFilter === "همه صندوق ها") return false;
-    console.log(FiltersStore.activeFilter, type);
     return FiltersStore.activeFilter != type;
   }
 
