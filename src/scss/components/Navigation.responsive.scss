@@ -45,22 +45,6 @@
         align-items: flex-start;
         padding: 15px 0;
 
-        .mobile-nav-btn {
-          margin-right: 10px;
-
-          span {
-            opacity: 0;
-          }
-
-          &::before {
-            transform: rotate(45deg);
-          }
-
-          &::after {
-            transform: rotate(-45deg);
-          }
-        }
-
         .easytrader-mobile-link {
           display: block;
           margin-bottom: var(--space-3);

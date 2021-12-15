@@ -9,7 +9,6 @@ $(document).ready(function () {
   });
 
   $('.Navigation > ul > li').click(function (e) {
-    console.log("actived");
     $(this).toggleClass('active');
   });
 
