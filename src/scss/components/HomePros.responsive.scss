@@ -26,5 +26,15 @@
         }
       }
     }
+
+    .footer {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      > a {
+        margin-left: 0;
+        margin-bottom: var(--space-4);
+      }
+    }
   }
 }
