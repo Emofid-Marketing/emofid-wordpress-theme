@@ -15,7 +15,6 @@ function TableRow({ fund, performanceRage }) {
     totalFund,
     investers,
     performance,
-    tradeLink,
     fundLink,
   } = fund;
 
@@ -71,6 +70,7 @@ function TableRow({ fund, performanceRage }) {
         </a>
         <a
           className={classNames(styles.more, "flex align-center t-12")}
+          target="_blank"
           href={fundLink}
         >
           مشاهده صندوق
