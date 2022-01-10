@@ -9,6 +9,7 @@ $fundsGroups = [
             [
                 "id" => 1,
                 "title" => "پیشتاز",
+                "label" => "pishtaz",
                 "darayi" => [
                     [
                         "label" => "اوراق مشارکتی",
@@ -35,6 +36,7 @@ $fundsGroups = [
             [
                 "id" => 2,
                 "title" => "پیشرو",
+                "label" => "pishro",
                 "darayi" => [
                     [
                         "label" => "اوراق مشارکتی",
@@ -61,6 +63,7 @@ $fundsGroups = [
             [
                 "id" => 3,
                 "title" => "امید توسعه",
+                "label" => "omid",
                 "darayi" => [
                     [
                         "label" => "اوراق مشارکتی",
@@ -87,6 +90,7 @@ $fundsGroups = [
             [
                 "id" => 4,
                 "title" => "اطلس",
+                "label" => "atlas",
                 "darayi" => [
                     [
                         "label" => "اوراق مشارکتی",
@@ -120,6 +124,7 @@ $fundsGroups = [
             [
                 "id" => 1,
                 "title" => "نامی",
+                "label" => "nami",
                 "darayi" => [
                     [
                         "label" => "اوراق مشارکتی",
@@ -153,6 +158,7 @@ $fundsGroups = [
             [
                 "id" => 1,
                 "title" => "عیار",
+                "label" => "ayar",
                 "darayi" => [
                     [
                         "label" => "اوراق مشارکتی",
@@ -186,6 +192,7 @@ $fundsGroups = [
             [
                 "id" => 1,
                 "title" => "ممتاز",
+                "label" => "momtaz",
                 "darayi" => [
                     [
                         "label" => "اوراق مشارکتی",
