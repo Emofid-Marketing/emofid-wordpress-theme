@@ -6,6 +6,7 @@ import Loading from "../Loading/index.jsx";
 import filters from "../../data/filters.js";
 import styles from "./styles.module.scss";
 import FiltersStore from "../../store/FiltersStore.js";
+import fundsDetails from "../../data/funds";
 import numeral from "numeral";
 
 function Table() {
@@ -35,8 +36,7 @@ function Table() {
           totalFund: numeral(Math.floor(fund.aum / 1000000000)).format("0,0"),
           investers: numeral(fund.currentInvestorsNumber).format("0,0"),
           performance: {},
-          tradeLink: "#$",
-          fundLink: "#%",
+          fundLink: fundsDetails[fund.fundCode] || "#",
         };
 
         filters.forEach((item) => {
