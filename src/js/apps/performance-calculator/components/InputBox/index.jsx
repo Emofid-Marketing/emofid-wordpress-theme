@@ -8,7 +8,7 @@ function InputBox() {
   return (
     <div className={classNames(styles.InputBox, "flex-column")}>
       <Slider
-        label="مبلغ سرمایه گذاری"
+        label="مبلغ سرمایه گذاری (تومان)"
         initValue={calculator.investment}
         handler={(value) => calculator.setInvestment(value)}
         min={1000000}
