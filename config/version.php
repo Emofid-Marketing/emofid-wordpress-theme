@@ -11,3 +11,7 @@ if (!defined('_EMF_VERSION')) {
         define('_EMF_VERSION', $version);
     }
 }
+
+function get_current_version() {
+    return _EMF_VERSION;
+}
