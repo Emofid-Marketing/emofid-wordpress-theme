@@ -6,5 +6,5 @@ horizontalScroller(".scroller");
 
 
 $(".fund-extend-btn").click(function () {
-  $(this).closest(".item").addClass("collapsed");
+  $(this).closest(".item").toggleClass("collapsed");
 })
