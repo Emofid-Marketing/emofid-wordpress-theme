@@ -27,7 +27,9 @@
               height: inherit;
 
               .fund-extend-btn {
-                display: none;
+                &::before {
+                  transform: translateY(20px) rotate(180deg);
+                }
               }
             }
           }
@@ -154,6 +156,7 @@
                 background: url("../images/icons/chevron-down.svg") no-repeat
                   scroll center / cover;
                 transform: translateY(20px);
+                transition: var(--transition);
               }
             }
           }
