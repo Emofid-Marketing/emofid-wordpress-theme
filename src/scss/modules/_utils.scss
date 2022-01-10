@@ -111,3 +111,52 @@
 .display-none {
   display: none;
 }
+
+/* funds color schema */
+.fund-pishtaz {
+  --fund-color: var(--color-pishtaz);
+  --fund-color-medium: var(--color-pishtaz-medium);
+  --fund-color-light: var(--color-pishtaz-light);
+}
+
+.fund-pishro {
+  --fund-color: var(--color-pishro);
+  --fund-color-medium: var(--color-pishro-medium);
+  --fund-color-light: var(--color-pishro-light);
+}
+
+.fund-atlas {
+  --fund-color: var(--color-atlas);
+  --fund-color-medium: var(--color-atlas-medium);
+  --fund-color-light: var(--color-atlas-light);
+}
+
+.fund-momtaz {
+  --fund-color: var(--color-momtaz);
+  --fund-color-medium: var(--color-momtaz-medium);
+  --fund-color-light: var(--color-momtaz-light);
+}
+
+.fund-hami {
+  --fund-color: var(--color-hami);
+  --fund-color-medium: var(--color-hami-medium);
+  --fund-color-light: var(--color-hami-light);
+}
+
+.fund-nami {
+  --fund-color: var(--color-nami);
+  --fund-color-medium: var(--color-nami-medium);
+  --fund-color-light: var(--color-nami-light);
+}
+
+.fund-ayar {
+  --fund-color: var(--color-ayar);
+  --fund-color-medium: var(--color-ayar-medium);
+  --fund-color-light: var(--color-ayar-light);
+}
+
+.fund-omid {
+  --fund-color: var(--color-omid);
+  --fund-color-medium: var(--color-omid-medium);
+  --fund-color-light: var(--color-omid-light);
+}

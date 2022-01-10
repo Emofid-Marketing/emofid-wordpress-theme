@@ -32,8 +32,8 @@
               border-radius: 40px;
 
               &.active {
-                background-color: var(--color-mofid-green-light);
-                color: var(--color-mofid-green);
+                background-color: var(--fund-color-light);
+                color: var(--fund-color);
               }
             }
           }
@@ -49,7 +49,7 @@
 
                 .bar {
                   height: 100px;
-                  background-color: var(--color-red);
+                  background-color: var(--fund-color);
                 }
               }
 

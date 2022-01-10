@@ -35,13 +35,13 @@
                             <div class="outer hide-scrollbar">
                                 <div class="funds-tabs flex justify-center strong mb-3">
                                     {% for fund in fundsGroup.funds %}
-                                        <div class="fund-name t-12 lh-32 text-darker px-3 mx-1 cursor-pointer transition" data-tab-type="fg-{{fundsGroup.id}}" data-tab-id="{{ fund.id }}">صندوق {{ fund.title }}</div>
+                                        <div class="fund-name fund-{{fund.label}} t-12 lh-32 text-darker px-3 mx-1 cursor-pointer transition" data-tab-type="fg-{{fundsGroup.id}}" data-tab-id="{{ fund.id }}">صندوق {{ fund.title }}</div>
                                     {% endfor %}
                                 </div>
                             </div>
                             <div class="funds-contents">
                                 {% for fund in fundsGroup.funds %}
-                                    <div class="funds-content-item" data-content-type="fg-{{fundsGroup.id}}" data-content-id="{{ fund.id }}">
+                                    <div class="funds-content-item fund-{{fund.label}}" data-content-type="fg-{{fundsGroup.id}}" data-content-id="{{ fund.id }}">
                                         <div class="bars-wrapper flex justify-space-between">
                                             {% for darayi in fund.darayi %}
                                                 <div class="bar-item flex-column align-center justify-end">
