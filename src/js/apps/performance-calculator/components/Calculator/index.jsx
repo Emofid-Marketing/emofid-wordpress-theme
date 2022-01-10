@@ -32,17 +32,15 @@ function Calculator({ fundId }) {
           className="ml-5"
         />
         <div className={classNames(styles.innerData, "flex", "align-center")}>
-          <span className={classNames(styles.chartIcon, "ml-3")}></span>
           <div className={classNames(styles.fundAttr, "flex-column", "ml-5")}>
-            <span className="flex t-12">
+            <span className="flex t-12 mb-1">
               <span>نوع صندوق</span>
               <i className={classNames(styles.helpIcon, "mr-2")}></i>
             </span>
             <span className="t-14 strong">{fund.fundType}</span>
           </div>
-          <span className={classNames(styles.chartIcon, "ml-3")}></span>
           <div className={classNames(styles.fundAttr, "flex-column")}>
-            <span className="flex t-12">
+            <span className="flex t-12 mb-1">
               <span>میزان ریسک</span>
               <i className={classNames(styles.helpIcon, "mr-2")}></i>
             </span>
