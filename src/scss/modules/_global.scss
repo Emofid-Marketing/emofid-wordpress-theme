@@ -10,6 +10,10 @@ button {
   line-height: var(--size-body-line-height);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body.no-scroll {
   overflow: hidden;
 }
