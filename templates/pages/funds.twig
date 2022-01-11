@@ -2,6 +2,7 @@
 
 {% block content %}
 	<script>window.EMOFID.current_page_id = 'funds';</script>
+	{% include('partials/pages/funds/sticky-header.twig') %}
 	{% include('partials/pages/funds/funds-top.twig') %}
 	{% include('partials/pages/funds/funds-table.twig') %}
 {% endblock %}
