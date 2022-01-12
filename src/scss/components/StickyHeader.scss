@@ -1,21 +1,19 @@
 .StickyHeader {
-    background-color: var(--color-gray-light);
-    z-index: 3;
+  background-color: var(--color-gray-light);
+  z-index: 3;
 
-    .wrapper {
-
-        .logo {
-            width: 155px;
-            height: auto;
-        }
-
-        .navigation {
-
-            a {
-                font-size: var(--size-text-14);
-            }
-        }
+  .wrapper {
+    .logo {
+      width: auto;
+      height: 18px;
     }
+
+    .navigation {
+      a {
+        font-size: var(--size-text-14);
+      }
+    }
+  }
 }
 
 @import "./StickyHeader.responsive.scss";

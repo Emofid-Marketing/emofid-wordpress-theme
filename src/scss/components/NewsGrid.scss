@@ -1,0 +1,16 @@
+.NewsGrid {
+  .footer {
+    .more {
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: url("../images/icons/arrow-left.svg") no-repeat scroll
+          center/ cover;
+        margin-right: var(--space-2);
+      }
+    }
+  }
+}
+
+@import "./NewsGrid.responsive.scss";

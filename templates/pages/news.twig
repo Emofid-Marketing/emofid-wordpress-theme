@@ -1,0 +1,11 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+	<script>window.EMOFID.current_page_id = 'news';</script>
+	{% include('partials/pages/news/sticky-header.twig') %}
+	{% include('partials/pages/news/notifications.twig') %}
+	{% include('partials/pages/news/slider.twig') %}
+	{% include('partials/pages/news/tags.twig') %}
+	{% include('partials/pages/news/grids.twig') %}
+	{% include('partials/pages/news/multimedia.twig') %}
+{% endblock %}

@@ -1,0 +1,12 @@
+@media only screen and (max-width: 64em) {
+  .NewsTags {
+    .wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+
+      span {
+        margin-bottom: var(--space-4);
+      }
+    }
+  }
+}
