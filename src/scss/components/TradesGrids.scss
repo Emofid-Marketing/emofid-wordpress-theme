@@ -2,25 +2,19 @@
   .grid-item {
     max-width: 100%;
 
-    .inner:not(.first) {
-      height: 700px;
+    .first {
+      .cover {
+        width: 100%;
+      }
     }
 
     .cover {
       height: auto;
+      width: 80%;
+      margin: 0 auto;
 
       &.mobile {
         display: none;
-      }
-
-      &.onlinePlus {
-        width: 85%;
-        margin: 0 auto;
-      }
-
-      &.mofidTrader {
-        width: 60%;
-        margin: 0 auto;
       }
     }
 
@@ -42,6 +36,7 @@
 
       p {
         width: 450px;
+        height: 130px;
         max-width: 100%;
       }
 
