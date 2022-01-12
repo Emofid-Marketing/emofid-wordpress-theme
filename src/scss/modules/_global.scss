@@ -38,6 +38,12 @@ select {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 1142px) {
+  .container-md {
+    padding: 0 var(--space-4);
+  }
+}
+
 .container-sm {
   width: 820px;
   max-width: 100%;
