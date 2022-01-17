@@ -40,11 +40,11 @@ function Slider(props) {
           "flex",
           "justify-space-between",
           "align-center",
-          "mb-1"
+          "mb-2"
         )}
       >
         <span className="t-14 lh-30">{label}</span>
-        <span className="t-14 lh-30">{computedLabel()}</span>
+        <span className="t-14 lh-30 strong">{computedLabel()}</span>
       </div>
       <input
         type="range"
