@@ -1,20 +1,10 @@
 .InvestmentPortfolioManagement {
-    background-color: var(--color-amour);
     background: var(--color-amour) url("../images/portfolio-bg.png") no-repeat bottom;
-
-
-    .right {
-        .Button.sherpa-blue {
-            background-color: var(--color-sherpa-blue);
-            border-color: var(--color-sherpa-blue);
-        }
-    }
 
     .investment-portfolio-list {
         li {
             color: var(--color-text-lighter);
             transition: var(--transition);
-            margin-bottom: var(--space-4);
             font-size: var(--size-text-16);
     
             &:before {
