@@ -20,13 +20,13 @@ function CaptionBox() {
       <p className="t-16 lh-26 text-medium text-center mb-4">
         اگر از
         <strong>{calculator.years}</strong>
-        سال اخیر تا امروز در صندوق
+        سال گذشته تا به امروز در صندوق
         <strong>{calculator.getFundData().title}</strong>
-        سرمایه گذاری کرده بودید،
+        سرمایه‌گذاری کرده بودید، با کسب
         <strong>
           {calculator.getFundData().ratios[calculator.years] * 100}%
         </strong>
-        بازدهی کسب می کردید و سرمایه شما به مبلغ
+        درصد، بازدهی سرمایه شما به مبلغ
         <strong>{formatNumber(calculator.getFundValue())} تومان</strong>
         رسیده بود.
       </p>

@@ -5,6 +5,10 @@
       &:first-child {
         color: var(--color-text-light);
       }
+
+      &:last-child {
+        color: var(--color-text-dark);
+      }
     }
   }
 
