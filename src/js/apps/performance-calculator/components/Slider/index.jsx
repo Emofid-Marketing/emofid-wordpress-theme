@@ -33,7 +33,7 @@ function Slider(props) {
   }
 
   return (
-    <div className={classNames(styles.Slider, "flex-column", className)}>
+    <div className={classNames(styles.Slider, "flex-column", "px-3", className)}>
       <div
         className={classNames(
           styles.label,
