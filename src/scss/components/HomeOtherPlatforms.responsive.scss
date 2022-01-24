@@ -4,10 +4,8 @@
       font-size: var(--size-text-20);
     }
     .cover {
-      img {
-        max-width: 100%;
-        height: auto;
-      }
+      max-width: 100%;
+      height: auto;
     }
 
     .tab-view {
