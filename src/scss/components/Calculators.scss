@@ -36,16 +36,6 @@
             }
         }
     }
-
-    .tab-header {
-        img {
-            margin-left: var(--space-5);
-        }
-
-        div {
-            margin-bottom: 0 !important;
-        }
-    }
 }
 
 @import "./Calculators.responsive.scss";

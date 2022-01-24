@@ -1,6 +1,7 @@
 .Calculator {
   .fundAttr {
     color: var(--color-text-medium);
+    padding-right: 30px;
 
     span {
       &:first-child {
@@ -28,7 +29,7 @@
 
     .fundAttr {
       margin-left: 0;
-      margin-bottom: 20px;
+      margin-bottom: 0;
       padding-right: 30px;
 
       &:last-child {
