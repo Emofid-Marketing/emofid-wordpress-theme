@@ -31,7 +31,7 @@
       }
       .content {
         flex-direction: column;
-        padding: var(--space-6) var(--space-3);
+        padding: var(--space-6) var(--space-4);
 
         &.fixed-height {
           height: auto;
@@ -52,6 +52,16 @@
 
           .footer {
             justify-content: center;
+            flex-direction: column;
+
+            a {
+              margin-left: 0;
+            }
+
+            .more {
+              padding: var(--space-2) var(--space-3);
+              margin-top: var(--space-3);
+            }
           }
         }
 
