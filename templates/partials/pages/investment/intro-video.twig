@@ -1,15 +1,13 @@
-<div class="IntroVideo mb-7">
+<div class="IntroVideo mb-7 mt-3">
     <div class="container-sm">
         <div class="wrapper flex-column">
             <h1 class="mb-4 text-center">چرا سرمایه گذاری غیر مستقیم</h1>
-            <div class="video-wrapper relative mb-7">
-                <div class="inner overflow-hidden radius-small flex">
-                    <video id="investment-video-intro">
-                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="play-btn absolute flex align-center justify-center radius-full">
-                    <button id="play-investment-video-intro-btn" class="radius-full shadow-small"></button>
+            <div class="mb-5">
+                <div class="image flex align-center">
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="{{ theme.link }}/assets/images/pages/investment/investment-intro-mobile.jpg">
+                        <img src="{{theme.link}}/assets/images/pages/investment/investment-intro.jpg" />
+                    </picture>
                 </div>
             </div>
             <p class="mb-4 px-3 text-center">

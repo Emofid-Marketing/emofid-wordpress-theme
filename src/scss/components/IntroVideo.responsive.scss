@@ -33,6 +33,16 @@
             p {
                 font-size: var(--size-text-14);
             }
+
+            .image {
+                picture {
+                    width: 100%;
+                    
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
