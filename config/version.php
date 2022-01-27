@@ -1,6 +1,6 @@
 <?php
 
-$version = '0.1.4';
+$version = '0.1.5';
 
 
 if (!defined('_EMF_VERSION')) {
