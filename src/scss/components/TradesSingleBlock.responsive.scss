@@ -1,7 +1,7 @@
 @media only screen and (max-width: 576px) {
   .TradesSingleBlock {
     .wrapper {
-      padding: 0 var(--space-3);
+      padding: 0;
     }
 
     .footer {
@@ -10,10 +10,17 @@
 
     .right {
       order: 1;
+      padding: 0;
 
       h3 {
         text-align: center;
       }
+
+      p {
+        font-size: var(--size-text-14);
+        padding: var(--space-3) 0;
+        text-align: center;
+      }  
     }
 
     .left {
