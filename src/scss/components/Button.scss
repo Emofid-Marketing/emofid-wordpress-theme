@@ -35,6 +35,11 @@
   &.medium {
     padding: var(--space-2) var(--space-4);
   }
+
+  &.sherpa-blue {
+    background-color: var(--color-sherpa-blue);
+    border-color: var(--color-sherpa-blue);
+  }
 }
 
 @import "./Button.responsive.scss";
