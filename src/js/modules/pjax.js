@@ -2,7 +2,7 @@ import Pjax from "pjax";
 import topbar from 'topbar';
 
 var pjax = new Pjax({
-  elements: "a",
+  elements: "a:not([target='_blank'])",
   selectors: ["body"],
   cacheBust: false,
 });

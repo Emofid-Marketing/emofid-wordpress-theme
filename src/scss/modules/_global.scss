@@ -39,8 +39,9 @@ select {
 }
 
 @media only screen and (max-width: 1142px) {
-  .container-md {
-    padding: 0 var(--space-4);
+  .container-md,
+  .container-sm {
+    padding: 0 var(--space-3);
   }
 }
 
