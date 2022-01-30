@@ -23,6 +23,11 @@ require_once(__DIR__ . '/config/menus.php');
 /* Config Post Thumbnails */
 require_once(__DIR__ . '/config/thumbnail.php');
 
+
 /* Config Post Types */
 require_once(__DIR__ . '/config/post-types.php');
+
+
+/* Utils */
+require_once(__DIR__ . '/config/utils.php');
 

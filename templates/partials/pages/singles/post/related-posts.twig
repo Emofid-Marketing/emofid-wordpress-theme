@@ -1,0 +1,24 @@
+{% if related_posts %}
+<section class="SinglePost__related-posts mb-8">
+    <div class="container-md">
+        <div class="flex-column">
+            <h2 class="t-20 text-darker mb-4">اخبار مرتبط</h2>
+            <div class="row">
+                {% for related_post in related_posts %}
+                    <div class="post-item col-xs-12 col-sm-6 col-lg-4">
+                        <a class="inner flex-column" href="{{ related_post.link }}" alt="{{ related_post.title }}">
+                            <picture class="thumbnail flex mb-3">
+                                <source srcset="{{ related_post.thumbnail.src|towebp }}" type="image/webp">
+                                <source srcset="{{ related_post.thumbnail.src|tojpg }}" type="image/jpeg">
+                                <img class="w-100 h-auto radius-small" src="{{ related_post.thumbnail.src|tojpg }}" alt="{{ related_post.title }}">
+                            </picture>
+                            <h3 class="t-16 text-dark mb-2">{{ related_post.title }}</h3>
+                            <span class="t-12 text-light">{{ related_post.date }}</span>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
