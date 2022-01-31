@@ -1,0 +1,21 @@
+<div class="Pagination">
+    <div class="flex justify-center align-center">
+        {% if posts.pagination.prev %}
+            <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}"></a>
+        {% endif %}
+        <ul class="pages flex align-center">
+            {% for page in posts.pagination.pages %}
+                <li class="flex">
+                    {% if page.link %}
+                        <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+                    {% else %}
+                        <span class="{{page.class}}">{{page.title}}</span>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        {% if posts.pagination.next %}
+            <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}"></a>
+        {% endif %}
+    </div>
+</div>
