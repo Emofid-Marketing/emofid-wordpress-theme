@@ -1,0 +1,24 @@
+.Archive__list {
+  .thumbnail {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .Archive__list {
+    margin-bottom: var(--space-7);
+
+    .thumbnail {
+      width: 120px;
+    }
+
+    h2 {
+      font-size: var(--size-text-14);
+    }
+
+    p {
+      font-size: var(--size-text-14);
+      color: var(--color-text-medium);
+    }
+  }
+}
