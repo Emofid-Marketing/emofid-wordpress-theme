@@ -1,0 +1,49 @@
+.SelectDropDown {
+  top: 54px;
+  right: 0;
+  background-color: var(--color-white);
+  border-radius: var(--radius-small);
+  border: 1px solid var(--color-gray);
+  width: 100%;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 3px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  .item {
+    padding: 9px 20px;
+    border-radius: var(--radius-small);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    .name {
+      font-size: var(--size-text-14);
+      color: var(--color-text-darker);
+      font-weight: bold;
+      margin-left: var(--space-5);
+    }
+
+    .data {
+      color: var(--color-text-lighter);
+      font-size: var(--size-text-12);
+
+      span {
+        margin-left: var(--space-3);
+      }
+    }
+
+    &:hover {
+      background-color: var(--color-mofid-green-light);
+
+      .name {
+        color: var(--color-mofid-green);
+      }
+    }
+  }
+}

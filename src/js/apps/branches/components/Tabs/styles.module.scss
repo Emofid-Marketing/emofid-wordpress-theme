@@ -1,0 +1,31 @@
+.Tabs {
+  width: 360px;
+  max-width: 100%;
+  display: flex;
+  margin-bottom: var(--space-6);
+
+  .tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 50%;
+    border-bottom: 3px solid var(--color-gray-2);
+    padding-bottom: var(--space-2);
+    color: var(--color-text-darker);
+
+    &.active {
+      border-color: var(--color-mofid-green);
+      color: var(--color-mofid-green);
+    }
+  }
+
+  .statistics {
+    font-size: var(--size-text-14);
+  }
+
+  .title {
+    font-size: var(--size-text-16);
+    font-weight: bold;
+  }
+}

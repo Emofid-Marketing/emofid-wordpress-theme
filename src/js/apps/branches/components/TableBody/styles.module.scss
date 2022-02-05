@@ -1,0 +1,37 @@
+.TableBody {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .tableHead {
+    display: flex;
+    border-bottom: 1px solid var(--color-gray-2);
+  }
+
+  .column {
+    width: calc(100% / 6);
+    font-size: 14px;
+    color: var(--color-text-light);
+    padding-bottom: var(--space-3);
+
+    &:nth-child(1) {
+      width: 25%;
+    }
+
+    &:nth-child(2) {
+      width: 30%;
+    }
+
+    &:nth-child(3) {
+      width: 15%;
+    }
+
+    &:nth-child(4) {
+      width: 15%;
+    }
+
+    &:nth-child(5) {
+      width: 15%;
+    }
+  }
+}

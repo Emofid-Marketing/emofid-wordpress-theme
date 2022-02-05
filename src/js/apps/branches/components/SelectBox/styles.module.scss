@@ -1,0 +1,22 @@
+.SelectBox {
+  width: 400px;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url("../../../../../images/icons/search-gray.svg") no-repeat
+      scroll center/ cover;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  input {
+    border: 1px solid var(--color-gray);
+    background-color: var(--color-light-bg);
+    padding: 0.75rem 3rem 0.75rem;
+    height: 51px;
+  }
+}
