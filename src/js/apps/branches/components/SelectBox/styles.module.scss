@@ -1,5 +1,6 @@
 .SelectBox {
   width: 400px;
+  max-width: 100%;
 
   &::before {
     content: "";

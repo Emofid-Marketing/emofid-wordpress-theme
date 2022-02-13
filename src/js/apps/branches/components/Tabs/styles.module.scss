@@ -29,3 +29,15 @@
     font-weight: bold;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .Tabs {
+    .statistics {
+      font-size: var(--size-text-12);
+    }
+
+    .title {
+      font-size: var(--size-text-14);
+    }
+  }
+}

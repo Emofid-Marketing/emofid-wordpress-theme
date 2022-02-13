@@ -1,4 +1,4 @@
-.TableBody {
+.OfficesTable {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -12,26 +12,22 @@
     width: calc(100% / 6);
     font-size: 14px;
     color: var(--color-text-light);
-    padding-bottom: var(--space-3);
+    padding: 0 var(--space-4) var(--space-3);
 
     &:nth-child(1) {
-      width: 25%;
+      width: 20%;
     }
 
     &:nth-child(2) {
-      width: 30%;
+      width: 40%;
     }
 
     &:nth-child(3) {
-      width: 15%;
+      width: 20%;
     }
 
     &:nth-child(4) {
-      width: 15%;
-    }
-
-    &:nth-child(5) {
-      width: 15%;
+      width: 20%;
     }
   }
 
@@ -43,7 +39,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .TableBody {
+  .OfficesTable {
     .tableHead {
       display: none;
     }

@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import React, { useState, useRef, useEffect } from "react";
+import DataStore from "../../store/DataStore.js";
 import SelectDropDown from "../SelectDropDown/index.jsx";
 import styles from "./styles.module.scss";
 
@@ -23,14 +24,14 @@ function SelectBox() {
   }
 
   function selectHandler(item) {
-    console.log("selected", item.id);
+    DataStore.setActiveCityId(item.id);
     setInputValue(item.name);
     inputEl.current.blur();
   }
 
   useEffect(async () => {
     let response = await fetch(
-      `http://localhost/api/cities.php?name=${inputValue}`
+      `https://emofid.arsamnet.com/api/cities?name=${inputValue}`
     );
     if (response.ok) {
       response = await response.json();

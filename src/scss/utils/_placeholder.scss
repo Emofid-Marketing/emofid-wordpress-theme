@@ -1,0 +1,21 @@
+.placeholder-loading {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.08) 0,
+    rgba(0, 0, 0, 0.15) 15%,
+    rgba(0, 0, 0, 0.08) 30%
+  );
+  overflow: hidden;
+  animation: placeholderShimmer 2s linear;
+  animation-iteration-count: infinite;
+  background-size: 1200px 100%;
+}
+
+@keyframes placeholderShimmer {
+  from {
+    background-position: -1200px 0;
+  }
+  to {
+    background-position: 1200px 0;
+  }
+}

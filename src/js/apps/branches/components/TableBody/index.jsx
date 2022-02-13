@@ -1,18 +1,11 @@
-import React, { useEffect } from "react";
-import { useState } from "react/cjs/react.development";
+import React from "react";
+import { observer } from "mobx-react-lite";
+import DataStore from "../../store/DataStore";
 import cols from "../../data/branchesColumns";
 import TableRow from "../TableRow/index.jsx";
 import styles from "./styles.module.scss";
 
 function TableBody() {
-  const [rows, setRows] = useState([]);
-
-  useEffect(async () => {
-    let response = await fetch(`http://localhost/api/city.php?city_id=1`);
-    response = await response.json();
-    setRows(response.data.branches.data);
-  }, [rows]);
-
   const columns = cols.map((item, index) => {
     return (
       <div className={styles.column} key={index}>
@@ -21,9 +14,14 @@ function TableBody() {
     );
   });
 
-  const Rows = rows.map((branch) => {
-    return <TableRow branch={branch} key={branch.id} />;
-  });
+  const Rows =
+    DataStore.branches.count !== 0 ? (
+      DataStore.branches.data.map((branch) => {
+        return <TableRow branch={branch} key={branch.id} />;
+      })
+    ) : (
+      <div className={styles.noResult}>هیچ شعبه ای در این شهر یافت نشد.</div>
+    );
 
   return (
     <div className={styles.TableBody}>
@@ -33,4 +31,4 @@ function TableBody() {
   );
 }
 
-export default TableBody;
+export default observer(TableBody);

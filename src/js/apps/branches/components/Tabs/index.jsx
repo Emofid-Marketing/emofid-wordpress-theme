@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+import { observer } from "mobx-react-lite";
+import DataStore from "../../store/DataStore";
 import styles from "./styles.module.scss";
 
-function Tabs() {
+function Tabs({ handlerFunction }) {
   const [selectedTab, setSelectedTab] = useState(1);
 
   const tabs = [
-    { id: 1, title: "شعب کارگزاری مفید" },
-    { id: 2, title: "دفاتر پیشخوان" },
+    { id: 1, title: "شعب کارگزاری مفید", name: "branches" },
+    { id: 2, title: "دفاتر پیشخوان", name: "offices" },
   ];
 
   function selectTab(tabId) {
     setSelectedTab(tabId);
+    handlerFunction(tabId);
   }
 
   const TabsMap = tabs.map((item) => {
@@ -23,7 +26,9 @@ function Tabs() {
         onClick={() => selectTab(item.id)}
         key={item.id}
       >
-        <span className={styles.statistics}>(8 مورد)</span>
+        <span className={styles.statistics}>
+          ({DataStore[item.name].count} مورد)
+        </span>
         <span className={styles.title}>{item.title}</span>
       </div>
     );
@@ -32,4 +37,4 @@ function Tabs() {
   return <div className={styles.Tabs}>{TabsMap}</div>;
 }
 
-export default Tabs;
+export default observer(Tabs);

@@ -1,0 +1,27 @@
+.ModalAddress {
+  .label {
+    &::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("../../../../../images/icons/pin-dark.svg") no-repeat
+        scroll center/ auto 100%;
+      margin-left: var(--space-2);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ModalAddress {
+    padding: 0 var(--space-3);
+
+    .address {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .label {
+      margin-bottom: var(--space-2);
+    }
+  }
+}
