@@ -10,11 +10,15 @@ function ModalTopImages() {
     return <img src={shot.src} title={shot.title} key={index} />;
   });
 
+  function handleClose() {
+    DataStore.setActiveBranch(null);
+  }
+
   return (
     <div className={styles.ModalTopImages}>
       <img className={styles.coverImage} src={images.cover} alt={title} />
       <div className={styles.shots}>{shots}</div>
-      <span className={styles.close}></span>
+      <span className={styles.close} onClick={handleClose}></span>
     </div>
   );
 }
