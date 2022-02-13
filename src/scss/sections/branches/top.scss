@@ -1,0 +1,73 @@
+.Branches__top {
+  .inner {
+    height: 530px;
+    background: url("../images/top-cover.png") no-repeat scroll left center/
+      auto 100%;
+  }
+
+  .wrapper {
+    width: 450px;
+    max-width: 100%;
+  }
+
+  .mobile-cover {
+    display: none;
+
+    h2 {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .Branches__top {
+    .container-md {
+      padding: 0 var(--space-2);
+    }
+    .inner {
+      background: none;
+      height: auto;
+    }
+
+    h1 {
+      display: none;
+    }
+
+    .mobile-cover {
+      display: inherit;
+      height: 236px;
+      background: url("../images/top-cover.png") no-repeat scroll left center/
+        auto 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 var(--space-4);
+
+      h2 {
+        display: inherit;
+      }
+    }
+
+    .wrapper {
+      padding: var(--space-3);
+
+      p {
+        font-size: var(--size-text-14);
+        text-align: center;
+        margin-bottom: var(--space-5);
+      }
+
+      label {
+        font-size: var(--size-text-14);
+      }
+    }
+  }
+
+  .page-template-branches #content {
+    padding-top: 50px;
+  }
+
+  #branches-select-city-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+}

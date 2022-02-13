@@ -13,6 +13,9 @@ function loadPageModules() {
       import("./investment");
       import("../apps/performance-calculator");
       break;
+    case "branches":
+      import("../apps/branches");
+      break;
     case "funds":
       import("../apps/funds-table");
       break;

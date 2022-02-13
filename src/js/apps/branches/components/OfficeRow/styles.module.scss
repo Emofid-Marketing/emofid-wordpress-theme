@@ -1,0 +1,93 @@
+.OfficeRow {
+  padding: var(--space-4) 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-gray-2);
+  cursor: pointer;
+
+  &:nth-child(odd) {
+    background-color: var(--color-light-bg);
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .cell {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-4);
+    font-size: 14px;
+    color: var(--color-text-darker);
+
+    &:nth-child(1) {
+      width: 20%;
+    }
+
+    &:nth-child(2) {
+      width: 40%;
+    }
+
+    &:nth-child(3) {
+      width: 20%;
+    }
+
+    &:nth-child(4) {
+      width: 20%;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .city {
+    font-size: var(--size-text-12);
+    color: var(--color-text-medium);
+    margin-bottom: var(--space-1);
+  }
+
+  .code {
+    font-size: 14px;
+    color: var(--color-text-darker);
+    font-weight: bold;
+    line-height: 22px;
+  }
+
+  .onMap {
+    font-size: 12px;
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    color: var(--color-mofid-green);
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      margin-left: var(--space-1);
+      background: var(--color-gray-light)
+        url("../../../../../images/icons/pin.svg") no-repeat scroll center /
+        auto 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .OfficeRow {
+    flex-direction: column;
+
+    .cell {
+      width: 100% !important;
+      margin-bottom: var(--space-3);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
