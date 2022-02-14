@@ -53,6 +53,28 @@ select {
 
 #content {
   padding-top: 83px;
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease 0.1s, visibility 1s ease 0.1s;
+  }
+}
+
+#content.overaly {
+  &::before {
+    opacity: 1;
+    visibility: visible;
+    z-index: inherit;
+    transition: opacity 0.5s, z-index 0.5s 10s;
+  }
 }
 
 body.home #content {

@@ -1,7 +1,19 @@
 {% extends "layouts/base.twig" %}
 
 {% block content %}
-	<script>window.EMOFID.current_page_id = 'archive';</script>
-	{% include('partials/pages/archive/sticky-header.twig') %}
+	<script>
+		window.EMOFID.current_page_id = 'archive';
+		window.EMOFID.sticky_header = true;
+	</script>
+	{% include('components/sticky-header.twig') with {
+		'logo': {
+			'url': 'assets/images/pages/news/news-logo.svg',
+			'alt': 'اخبار و اطلاعیه ها'
+		},
+		'items': [
+			{ title: 'صفحه روابط عمومی', link: '/news/' },
+			{ title: 'آرشیو اخبار', link: '/archive/' },
+		]
+	} %}
 	{% include('partials/pages/archive/list.twig') %}
 {% endblock %}
