@@ -1,7 +1,3 @@
-window.onscroll = function () {
-  stickyHeader()
-};
-
 var header = document.getElementById("header");
 var sticky = 150;
 var lastScrollTop = 0;
@@ -32,3 +28,10 @@ function stickyHeader() {
 
 
 }
+
+if (!window.EMOFID.sticky_header) {
+  window.onscroll = function () {
+    stickyHeader()
+  };
+}
+

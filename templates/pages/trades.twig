@@ -1,8 +1,23 @@
 {% extends "layouts/base.twig" %}
 
 {% block content %}
-	<script>window.EMOFID.current_page_id = 'trades';</script>
-	{% include('partials/pages/trades/sticky-header.twig') %}
+	<script>
+		window.EMOFID.current_page_id = 'trades';
+		window.EMOFID.sticky_header = true;
+	</script>
+
+	{% include('components/sticky-header.twig') with {
+		'logo': {
+			'url': 'assets/images/logo-trades.svg',
+			'alt': 'سامانه های معاملاتی'
+		},
+		'items': [
+			{ title: 'خدمات معاملاتی', link: '#services' },
+			{ title: 'سامانه‌های معاملاتی', link: '#TradesGrids' },
+			{ title: 'بورس ویو', link: '#TradesSingleBlock' },
+			{ title: 'معاملات آتی', link: '#TradesAtiBlock' },
+		]
+	} %}
 	{% include('partials/pages/trades/trades-top.twig') %}
 	{% include('partials/pages/trades/trades-grids.twig') %}
 	{% include('partials/pages/trades/trades-tabs.twig') %}

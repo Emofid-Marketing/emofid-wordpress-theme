@@ -13,11 +13,23 @@ function loadPageModules() {
       import("./investment");
       import("../apps/performance-calculator");
       break;
+    case "trades":
+      import("./trades");
+      break;
     case "branches":
       import("../apps/branches");
       break;
     case "funds":
       import("../apps/funds-table");
+      break;
+    case "archive":
+      import("./archive");
+      break;
+    case "news":
+      import("./news");
+      break;
+    case "single-post":
+      import("./single-post");
       break;
   }
 }

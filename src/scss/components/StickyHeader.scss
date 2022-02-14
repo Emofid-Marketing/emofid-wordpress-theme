@@ -14,6 +14,15 @@
       }
     }
   }
+
+  .mobile-btn {
+    width: 14px;
+    height: 14px;
+    border: none;
+    background: transparent url("../images/icons/chevron-down.svg") no-repeat
+      scroll center/ 100% auto;
+    display: none;
+  }
 }
 
 @import "./StickyHeader.responsive.scss";
