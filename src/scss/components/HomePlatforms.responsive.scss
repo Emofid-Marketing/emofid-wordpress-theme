@@ -40,6 +40,18 @@
     }
 
     .easytrader {
+      .easytrader-shots {
+        width: 240px;
+
+        .desktop {
+          display: none;
+        }
+
+        .mobile {
+          display: inherit;
+        }
+      }
+
       .details-row {
         .symbol {
           margin-bottom: var(--space-4);
