@@ -1,8 +1,8 @@
 import $ from 'jquery';
 
 $(document).ready(function () {
-  $("#play-investment-video-intro-btn").click(function () {
-    var video = $('#investment-video-intro');
+  $("#play-about-video-intro-btn").click(function () {
+    var video = $('#about-video-intro');
     var videoState = video.get(0).paused;
 
     if (videoState) {
