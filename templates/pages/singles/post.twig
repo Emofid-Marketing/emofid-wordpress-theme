@@ -1,7 +1,10 @@
 {% extends "layouts/base.twig" %}
 
 {% block content %}
-	<script>window.EMOFID.current_page_id = 'single-post';</script>
+	<script>
+		window.EMOFID.current_page_id = 'single-post';
+		window.EMOFID.sticky_header = true;
+	</script>
 	{% include('components/sticky-header.twig') with {
 		'logo': {
 			'url': 'assets/images/pages/news/news-logo.svg',
