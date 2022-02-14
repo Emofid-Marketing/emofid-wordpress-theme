@@ -58,9 +58,13 @@
       font-size: var(--size-text-24);
     }
 
-    .swiper-container-free-mode {
-      > .swiper-wrapper {
-        transition-timing-function: linear;
+    .easytrader-shots {
+      width: 768px;
+      max-width: 100%;
+      margin: 0 auto;
+
+      .mobile {
+        display: none;
       }
     }
 
