@@ -1,0 +1,12 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+	<script>
+		window.EMOFID.current_page_id = 'contact';
+		window.EMOFID.sticky_header = false;
+	</script>
+	{% include('contact/partials/images.twig') %}
+	{% include('contact/partials/contacts.twig') %}
+	{% include('contact/partials/branches.twig') %}
+	{% include('contact/partials/companies.twig') %}
+{% endblock %}

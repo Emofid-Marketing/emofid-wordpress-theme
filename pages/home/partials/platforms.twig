@@ -1,0 +1,95 @@
+<section class="Home__platforms py-7">
+    <div class="container">
+        <div class="titles flex-column text-white text-center mb-7">
+            <h2 class="mb-2">مفید آنلاین</h2>
+            <span>معاملات و اوراق بهادار</span>
+        </div>
+        <div class="boxes flex justify-center text-white mb-7">
+            {% for box in boxes %}
+                <div class="item px-4">
+                    <div class="inner flex-column align-center text-center">
+                        <div class="circle circle-{{box.id}} radius-full mb-2"></div>
+                        <span class="label">{{ box.label }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="content flex-column align-center mb-8">
+            <p class="text-white text-center mb-6">
+                اگر علاقه‌مند به فعالیت و خرید و فروش سهام در بازار سرمایه هستید، کارگزاری مفید با ارائه خدمات متنوع در این حوزه مانند سامانه‌های معاملاتی حرفه‌ای، پشتیبانی ۲۴ ساعته، اعتبار معاملاتی، تخفیف کارمزد، دستیارهای معاملاتی و… شما را در مسیر رسیدن به اهداف مالیتان یاری می‌کند
+            </p>
+            <div class="footer flex justify-center align-center">
+                <a class="Button medium ml-6" href="#">دریافت کد بورسی</a>
+                <a class="more text-white flex align-center" href="#">بیشتر بدانید</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="easytrader mb-8">
+        <h3 class="title text-center text-white mb-6">ایزی‌تریدر؛ ساده اما حرفه‌ای</h3>
+        <div class="easytrader-shots">
+            <img class="desktop" src="{{ theme.link }}/assets/images/pages/home/easytrader-shot.png" alt="ایزی تریدر" />
+            <img class="mobile" src="{{ theme.link }}/assets/images/pages/home/easytrader-mobile.png" alt="ایزی تریدر" />
+        </div>
+        <div class="details-row">
+            <div class="container-sm">
+                <div class="row">
+                    <div class="col-lg-4 col-xs-12 flex-column align-center">
+                        <img class="logo mb-4" src="{{theme.link}}/assets/images/easytrader-large.svg" />
+                        <span class="symbol text-white text-center flex">
+                            <strong>Easy</strong>
+                            Trader
+                        </span>
+                    </div>
+                    <div class="col-lg-8 col-xs-12 flex-column align-start justify-center contents text-white">
+                        <p class="mb-4">
+                            ایزی‌تریدر یکی از پرکاربرد‌ترین سامانه‌های معاملاتی آنلاین کارگزاری مفید است. این نرم‌افزار با محیطی ساده، امکاناتی حرفه‌ای را در اختیار معامله‌گران قرار می‌دهد. ایزی‌تریدر در دو نسخه وب و موبایل قابل استفاده است.
+                        </p>
+                        <a class="flex align-center more text-white" href="#">بیشتر بدانید</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grids">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xs-12 flex-column column align-center">
+                    <div class="wrapper">
+                        <div class="top flex align-center mb-4">
+                            <span class="icon icon-hami radius-full ml-3"></span>
+                            <div class="texts text-white">
+                                <h4 class="mb-2">حامی</h4>
+                                <span>با حامی سرمایه شما بیکار نمی‌ماند</span>
+                            </div>
+                        </div>
+                        <div class="main flex-column">
+                            <p class="text-white mb-3">
+                                طرح حامی برای مانده‌حساب بلااستفاده شما نزد کارگزاری سود روزشمار محاسبه کرده و این مبلغ را ماهیانه به شما می‌پردازد.
+                            </p>
+                            <a class="more flex align-center text-white" href="#">با جزئیات طرح حامی بیشتر آشنا شوید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xs-12 flex-column column align-center">
+                    <div class="wrapper">
+                        <div class="top flex align-center mb-4">
+                            <span class="icon icon-karmozd radius-full ml-3"></span>
+                            <div class="texts text-white">
+                                <h4 class="mb-2">تخفیف کارمزد</h4>
+                                <span>۲۵٪ تخفیف کارمزد معاملات</span>
+                            </div>
+                        </div>
+                        <div class="main flex-column">
+                            <p class="text-white mb-3">
+                                شما می‌توانید به اندازه ۲۵ درصد از کارمزد کارگزاری مفید بر روی تمام معاملات خود تخفیف دریافت کنید. تخفیف کارمزد معاملات یکی از پاداش‌های باشگاه مشتریان پلکان است.
+                            </p>
+                            <a class="more flex align-center text-white" href="#">با جزئیات تخفیف کارمزد بیشتر آشنا شوید</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

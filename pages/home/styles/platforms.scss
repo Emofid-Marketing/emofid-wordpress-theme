@@ -1,0 +1,236 @@
+.Home__platforms {
+  background-color: var(--color-mofid-blue-darker);
+
+  .titles {
+    h2 {
+      font-size: var(--size-text-32);
+    }
+
+    span {
+      font-size: var(--size-text-18);
+    }
+  }
+
+  .boxes {
+    .item {
+      .inner {
+        .circle {
+          width: 80px;
+          height: 80px;
+          background-color: var(--color-mofid-blue-dark-middle);
+
+          @for $i from 1 to 6 {
+            &.circle-#{$i} {
+              background-image: url("../images/icons/trader/#{$i}.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    p {
+      width: 750px;
+      max-width: 100%;
+      font-size: var(--size-text-16);
+      line-height: var(--size-line-height-26);
+    }
+
+    .footer {
+      .more {
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          background: url("../images/icons/arrow-left-white.svg") no-repeat
+            scroll center;
+          margin-right: var(--space-2);
+        }
+      }
+    }
+  }
+
+  .easytrader {
+    .title {
+      font-size: var(--size-text-24);
+    }
+
+    .easytrader-shots {
+      width: 768px;
+      max-width: 100%;
+      margin: 0 auto;
+
+      .mobile {
+        display: none;
+      }
+    }
+
+    .details-row {
+      .logo {
+        width: 105px;
+        height: auto;
+      }
+
+      .symbol {
+        font-size: 19px;
+        text-align: left;
+        direction: ltr;
+        font-weight: 100;
+      }
+
+      .contents {
+        p {
+          width: 530px;
+          max-width: 100%;
+          font-size: var(--size-text-16);
+        }
+
+        .more {
+          &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            margin-right: var(--space-2);
+            background: url("../images/icons/arrow-left-white.svg") no-repeat
+              scroll center;
+          }
+        }
+      }
+    }
+  }
+
+  .grids {
+    .icon {
+      width: 80px;
+      height: 80px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &.icon-hami {
+        background-image: url("../images/icons/trader/hami.svg");
+      }
+
+      &.icon-karmozd {
+        background-image: url("../images/icons/trader/karmozd.svg");
+      }
+    }
+
+    .main {
+      p {
+        max-width: 100%;
+        width: 430px;
+        font-size: var(--size-text-16);
+      }
+
+      .more {
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          margin-right: var(--space-2);
+          background: url("../images/icons/arrow-left-white.svg") no-repeat
+            scroll center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Home__platforms {
+    .titles {
+      h2 {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 16px;
+      }
+    }
+    .boxes {
+      flex-wrap: wrap;
+
+      .item {
+        margin-bottom: var(--space-5);
+        padding: 0 var(--space-3);
+        width: 33.3333%;
+
+        .inner {
+          align-items: center;
+
+          .circle {
+            width: 60px;
+            height: 60px;
+          }
+
+          .label {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+
+    .content {
+      p {
+        font-size: 14px;
+        line-height: 30px;
+      }
+    }
+
+    .easytrader {
+      .easytrader-shots {
+        width: 240px;
+
+        .desktop {
+          display: none;
+        }
+
+        .mobile {
+          display: inherit;
+        }
+      }
+
+      .details-row {
+        .symbol {
+          margin-bottom: var(--space-4);
+        }
+
+        .contents {
+          p {
+            font-size: 14px;
+            line-height: 30px;
+            text-align: center;
+          }
+
+          a {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .grids {
+      .wrapper {
+        max-width: 100%;
+      }
+
+      .icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      .column {
+        margin-bottom: var(--space-6);
+      }
+
+      .main {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

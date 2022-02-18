@@ -1,0 +1,41 @@
+<section class="News__slider mb-7">
+    <div class="container-md">
+        <div class="wrapper row">
+            <div class="right col-md-12 col-lg-7 pl-7">
+                {% set post = slider_posts[0] %}
+                <a class="post flex-column" href="{{post.link}}">
+                    <picture class="flex mb-3">
+                        <source srcset="{{ post.thumbnail.src|towebp }}" type="image/webp">
+                        <source srcset="{{ post.thumbnail.src|tojpg }}" type="image/jpeg">
+                        <img class="w-100 h-auto radius-small" src="{{ post.thumbnail.src|tojpg }}" alt="{{ post.title }}">
+                    </picture>
+                    <h2 class="t-20 lh-32 text-dark mb-5">{{ post.title }}</h2>
+                    <p class="t-16 lh-26 text-medium mb-2">{{ post.preview.read_more('') }}</p>
+                    <a class="more flex align-center strong" href="{{ post.link }}">مشاهده</a>
+                </a>
+            </div>
+            <div class="left col-md-12 col-lg-5 hide-scrollbar">
+                <div class="others flex-column">
+                    {% set slider_posts = slider_posts | slice(1) %}
+                    {% for post in slider_posts %}
+                        <div class="item flex align-center mb-4">
+                            <a class="thumbnail" href="{{post.link}}">
+                                <picture class="flex">
+                                    <source srcset="{{ post.thumbnail.src|towebp }}" type="image/webp">
+                                    <source srcset="{{ post.thumbnail.src|tojpg }}" type="image/jpeg">
+                                    <img class="w-100 h-auto radius-small" src="{{ post.thumbnail.src|tojpg }}" alt="{{ post.title }}">
+                                </picture>
+                            </a>
+                            <div class="details flex-1 flex-column pr-3">
+                                <a href="{{ post.link }}" title="{{ post.title }}">
+                                    <h2 class="t-16 lh-26 text-dark mb-2">{{ post.title }}</h2>
+                                </a>
+                                <span class="t-12 lh-18 text-light">{{post.date}}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

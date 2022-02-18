@@ -1,0 +1,27 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+	<script>
+		window.EMOFID.current_page_id = 'investment';
+		window.EMOFID.sticky_header = true;
+	</script>
+
+	{% include('components/sticky-header.twig') with {
+		'logo': {
+			'url': 'assets/images/logo-investment.svg',
+			'alt': 'سرمایه گذاری'
+		},
+		'items': [
+			{ title: 'آشنایی با سرمایه گذاری غیر مستقیم', link: '#' },
+			{ title: 'صندوق های سرمایه گذاری', link: '#' },
+			{ title: 'سبدگردانی اختصاصی', link: '#' },
+		]
+	} %}
+	{% include('investment/partials/intro-video.twig') %}
+	{% include('investment/partials/funds-tabs.twig') %}
+	{% include('investment/partials/calculators.twig') %}
+	{% include('investment/partials/trust.twig') %}
+	{% include('investment/partials/intro-funds.twig') %}
+	{% include('components/learning-grids.twig') %}
+	{% include('investment/partials/portfolio-management.twig') %}
+{% endblock %}

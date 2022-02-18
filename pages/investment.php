@@ -9,6 +9,6 @@ $context = Timber::context();
 $context['fundsGroups'] = $fundsGroups;
 $context['funds'] = $funds;
 
-Timber::render('pages/investment.twig', $context);
+Timber::render('investment/investment.twig', $context);
 
 ?>

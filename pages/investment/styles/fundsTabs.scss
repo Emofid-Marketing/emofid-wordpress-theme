@@ -1,0 +1,140 @@
+.Investment__funds-tabs {
+  .tabs-wrapper {
+    .tabs {
+      .tab {
+        border-bottom: 3px solid var(--color-gray-2);
+
+        .icon {
+          width: 67px;
+          height: auto;
+        }
+
+        &.active {
+          border-bottom-color: var(--color-mofid-green);
+
+          h2 {
+            color: var(--color-mofid-green);
+          }
+        }
+      }
+    }
+
+    .content {
+      .caption {
+        width: 700px;
+        max-width: 100%;
+      }
+
+      .tabs-content {
+        .tab-content-item {
+          .funds-tabs {
+            .fund-name {
+              border-radius: 40px;
+
+              &.active {
+                background-color: var(--fund-color-light);
+                color: var(--fund-color);
+              }
+            }
+          }
+
+          .funds-contents {
+            .bar-item {
+              width: 100px;
+
+              .bar-wrapper {
+                height: 218px;
+                width: 32px;
+                margin-bottom: 10px;
+
+                .bar {
+                  height: 100px;
+                  background-color: var(--fund-color);
+                }
+              }
+
+              .bar-label {
+                height: 54px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Investment__funds-tabs {
+    .texts {
+      .caption {
+        font-size: var(--size-text-14);
+      }
+    }
+    .tabs-wrapper {
+      .tabs {
+        overflow-x: auto;
+
+        .inner {
+          width: 600px;
+
+          .tab {
+            span {
+              display: none;
+            }
+
+            h2 {
+              font-size: var(--size-text-14);
+              text-align: center;
+              width: 90px;
+            }
+          }
+        }
+      }
+
+      .content {
+        .caption {
+          order: 2;
+          padding: 0 var(--space-2);
+        }
+
+        .tabs-content {
+          order: 1;
+          margin-bottom: var(--space-5);
+          width: 100%;
+
+          .tab-content-item {
+            .outer {
+              width: 100%;
+              overflow-x: auto;
+              padding: 0 var(--space-3);
+
+              .funds-tabs {
+                width: fit-content;
+                width: -moz-fit-content;
+                width: -webkit-fit-content;
+                width: -o-fit-content;
+
+                .fund-name {
+                  white-space: nowrap;
+                }
+              }
+            }
+
+            .funds-contents {
+              .bar-item {
+                .bar-wrapper {
+                  width: 26px;
+                }
+
+                .bar-label {
+                  width: 62px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

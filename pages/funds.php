@@ -4,4 +4,4 @@
 
 $context = Timber::context();
 
-Timber::render('pages/funds.twig', $context);
+Timber::render('funds/funds.twig', $context);

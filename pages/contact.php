@@ -4,4 +4,4 @@
 
 $context = Timber::context();
 
-Timber::render('pages/contact.twig', $context);
+Timber::render('contact/contact.twig', $context);

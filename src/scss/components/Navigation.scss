@@ -153,4 +153,116 @@
   }
 }
 
-@import "./Navigation.responsive.scss";
+@media only screen and (max-width: 576px) {
+  .Navigation {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 10px;
+
+    > ul {
+      width: 500px;
+
+      > li {
+        flex-shrink: 0;
+        display: flex;
+        margin-left: var(--space-4) !important;
+
+        &.header-apps-links {
+          display: flex;
+        }
+
+        &:last-child {
+          margin-left: var(--space-3);
+        }
+
+        > a {
+          padding: var(--space-3) 0;
+        }
+
+        > ul {
+          display: none;
+        }
+      }
+    }
+
+    // Menu Active State
+    &.active {
+      padding: 0;
+      flex-direction: column;
+
+      .call-box {
+        display: flex;
+      }
+
+      > ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        padding: 15px 0;
+
+        .easytrader-mobile-link {
+          display: block;
+          margin-bottom: var(--space-3);
+          padding-bottom: var(--space-3);
+          border-bottom: 1px dashed var(--color-gray);
+
+          img {
+            display: block;
+          }
+
+          span {
+            display: block;
+            text-align: center;
+          }
+        }
+
+        > li {
+          width: 100%;
+          margin-left: 0;
+          position: relative;
+          flex-direction: column;
+          align-items: flex-start;
+
+          &.header-apps-links {
+            display: none;
+          }
+
+          > a {
+            padding: var(--space-3);
+          }
+
+          &.menu-item-has-children {
+            &::after {
+              content: "";
+              width: 10px;
+              height: 6px;
+              position: absolute;
+              left: var(--space-3);
+              top: 23px;
+              background: url("../images/icons/chevron-down.svg") no-repeat
+                scroll center / cover;
+              transition: var(--transition);
+            }
+          }
+
+          &.active {
+            > ul {
+              display: flex;
+              opacity: 1;
+              visibility: visible;
+              position: static;
+              width: 100%;
+              box-shadow: none;
+              border-radius: 0;
+              background-color: var(--color-light-bg);
+            }
+
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

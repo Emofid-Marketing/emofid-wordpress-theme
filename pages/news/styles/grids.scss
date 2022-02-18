@@ -1,0 +1,25 @@
+.News__grids {
+  .footer {
+    .more {
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: url("../images/icons/arrow-left.svg") no-repeat scroll
+          center/ cover;
+        margin-right: var(--space-2);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  .News__grids {
+    .wrapper {
+      margin-bottom: var(--space-2);
+    }
+    .post {
+      margin-bottom: var(--space-5);
+    }
+  }
+}

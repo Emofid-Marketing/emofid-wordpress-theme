@@ -1,0 +1,76 @@
+.Trades__tabs {
+  .tabs {
+    .head {
+      .inner {
+        width: 505px;
+        max-width: 100%;
+
+        .tab {
+          border-bottom: 3px solid var(--color-gray-2);
+          padding-bottom: var(--space-2);
+
+          &.active {
+            color: var(--color-mofid-green);
+            border-color: var(--color-mofid-green);
+          }
+        }
+      }
+    }
+  }
+
+  .contents {
+    .more {
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        margin-right: var(--space-2);
+        background: url("../images/icons/arrow-left.svg") no-repeat scroll
+          center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Trades__tabs {
+    h2 {
+      font-size: var(--size-text-20);
+      margin-bottom: var(--space-5);
+    }
+
+    .cover-content {
+      img {
+        max-width: 100%;
+        width: 290px;
+        height: auto;
+      }
+    }
+
+    .tabs {
+      .head {
+        max-width: 100%;
+        overflow-x: auto;
+
+        .inner {
+          max-width: inherit;
+          width: 505px;
+
+          .tab {
+            padding: 0 var(--space-3) var(--space-2);
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .contents {
+        p {
+          font-size: var(--size-text-14);
+          padding: var(--space-3);
+          text-align: center;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

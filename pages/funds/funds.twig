@@ -1,0 +1,10 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+	<script>
+		window.EMOFID.current_page_id = 'funds';
+		window.EMOFID.sticky_header = false;
+	</script>
+	{% include('funds/partials/top.twig') %}
+	{% include('funds/partials/table.twig') %}
+{% endblock %}

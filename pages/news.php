@@ -48,4 +48,4 @@ $context['tags_cloud'] = wp_tag_cloud([
 ]);
 
 
-Timber::render('pages/news.twig', $context);
+Timber::render('news/news.twig', $context);
