@@ -1,0 +1,107 @@
+.Contact__images {
+  .wrapper {
+    .column-1 {
+      width: 505px;
+
+      .data {
+        .label {
+          width: 117px;
+        }
+      }
+
+      .circle {
+        bottom: 0;
+        right: -80px;
+      }
+
+      .cover {
+        z-index: 2;
+      }
+
+      .dots {
+        z-index: 2;
+      }
+    }
+
+    .column-2 {
+      width: 395px;
+      margin-right: -80px;
+
+      .title {
+        margin-right: 110px;
+      }
+
+      .dots {
+        width: 110px;
+        height: auto;
+        margin-right: 110px;
+      }
+
+      .image {
+        width: 300px;
+        z-index: 2;
+      }
+    }
+  }
+
+  .caption {
+    max-width: 100%;
+    width: 740px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Contact__images {
+    padding-top: 0;
+
+    .wrapper {
+      width: 100%;
+      padding: 0 10px;
+      position: relative;
+      padding-top: var(--space-6);
+
+      .column-1 {
+        width: 80%;
+
+        .circle {
+          display: none;
+        }
+
+        .dots {
+          position: absolute;
+          left: 0;
+          top: 40%;
+          transform: rotate(90deg);
+          margin-left: 20px;
+        }
+
+        > div {
+          justify-content: flex-start;
+          padding-right: 10px;
+        }
+      }
+
+      .column-2 {
+        width: 50%;
+
+        .title {
+          position: absolute;
+          right: 0;
+          margin: 0;
+          top: 0;
+          width: 100%;
+          text-align: center;
+          font-weight: 900;
+        }
+
+        .dots {
+          display: none;
+        }
+
+        .image {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

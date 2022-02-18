@@ -1,0 +1,16 @@
+.Funds__top {
+  .cover-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Funds__top {
+    .cover {
+      display: none;
+    }
+    .cover-mobile {
+      display: inherit;
+    }
+  }
+}

@@ -13,10 +13,10 @@
 		{{function('wp_head')}}
 	</head>
 	<body class="{{ body_class }}">
-		{{ include('partials/header.twig') }}
+		{{ include('components/header.twig') }}
 		<div id="content">
 			{% block content %}{% endblock %}
 		</div>
-		{{ include('partials/footer.twig') }}
+		{{ include('components/footer.twig') }}
 	</body>
 </html>

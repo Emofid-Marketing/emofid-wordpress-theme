@@ -1,0 +1,37 @@
+.FooterCTA {
+  .wrapper {
+    width: 560px;
+    max-width: 100%;
+
+    h2 {
+      font-size: var(--size-text-32);
+      color: var(--color-text-darker);
+    }
+
+    p {
+      font-size: var(--size-text-16);
+      color: var(--color-text-darker);
+    }
+
+    .footer {
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .FooterCTA {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .wrapper {
+      h2 {
+        font-size: var(--size-text-20);
+      }
+
+      p {
+        font-size: var(--size-text-14);
+        line-height: 31px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+	<script>
+		window.EMOFID.current_page_id = 'home';
+		window.EMOFID.sticky_header = false;
+	</script>
+	{{ include('home/partials/slider.twig') }}
+	{{ include('home/partials/news.twig') }}
+	{{ include('home/partials/pros.twig') }}
+	{{ include('home/partials/platforms.twig') }}
+	{{ include('components/learning-grids.twig') }}
+	{{ include('home/partials/other-platforms.twig') }}
+	{{ include('home/partials/circles.twig') }}
+	{{ include('components/footer-cta.twig') }}
+	{{ include('home/partials/logos.twig') }}
+{% endblock %}

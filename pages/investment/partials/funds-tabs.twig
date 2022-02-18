@@ -1,0 +1,68 @@
+<section class="Investment__funds-tabs">
+    <picture>
+        <source media="(max-width:768px)" srcset="{{ theme.link }}/assets/images/pages/investment/fund-box-mobile.jpg">
+        <img class="cover w-100 h-auto mb-4" src="{{ theme.link }}/assets/images/pages/investment/fund-box.png">
+    </picture>
+    <div class="container-sm">
+        <div class="texts flex-column mb-7">
+            <p class="title t-20 strong text-center text-darker mb-4">
+                صندوق‌های متنوع برای هر نوع سلیقه‌ای
+            </p>
+            <p class="caption t-16 text-center text-medium lh-26">
+                صندوق‌های سرمایه‌گذاری مزایای بسیاری دارند که از جمله آن‌ها می‌توان به نقدشوندگی مناسب، امکان سرمایه‌گذاری با پول کم، تیم مدیریت حرفه‌ای و صرفه‌جویی در هزینه‌ها اشاره کرد.
+                کارگزاری مفید صندوق‌های سرمایه‌گذاری متنوعی را راه‌اندازی کرده است و هر کدام این صندوق‌ها ریسک متفاوتی دارند. از همین رو طیف گسترده‌ای از سرمایه‌گذاران با توجه به میزان ریسک‌پذیری خود می‌توانند از مزایای صندوق‌های سرمایه‌گذاری بهره‌مند شوند. از سوی دیگر تنوع در صندوق‌های کارگزاری مفید این امکان را فراهم می‌سازد تا سرمایه‌گذاران بتوانند با سرمایه‌گذاری در مجموعه‌ای از صندوق‌ها، ریسک سرمایه‌گذاری خود را تعدیل کنند.
+            </p>
+        </div>
+    </div>
+
+    <div class="container-md">
+        <div class="tabs-wrapper flex-column">
+            <div class="tabs flex-column hide-scrollbar">
+                <div class="inner row">
+                    {% for fundsGroup in fundsGroups %}
+                    <div class="tab col-xs-3 flex-column align-center cursor-pointer py-3" data-tab-type="1" data-tab-id="{{fundsGroup.id}}">
+                        <img class="icon mb-3" src="{{theme.link}}/assets/images/funds/fund-{{fundsGroup.id}}.png" />
+                        <h2 class="t-16 lh-30 text-darker">{{ fundsGroup.title }}</h2>
+                        <span class="t-12 lh-26 text-medium">{{ fundsGroup.subtitle }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="content flex-column align-center py-4">
+                <p class="caption text-center t-14 lh-26 text-medium mb-6">
+                    ترکیب دارایی در صندوق‌های سرمایه‌گذاری متفاوت از یکدیگر است. دارایی صندوق‌ها می‌تواند ترکیبی از سهام، اوراق با درآمد ثابت، گواهی سپرده سکه طلا و... باشد. ترکیب متفاوت از این دارایی‌ها ریسک و بازدهی مورد انتظار متفاوتی را منجر می‌شود.
+                </p>
+                <div class="tabs-content">
+                    {% for fundsGroup in fundsGroups %}
+                        <div class="tab-content-item" data-content-type="1" data-content-id="{{fundsGroup.id}}">
+                            <div class="outer hide-scrollbar">
+                                <div class="funds-tabs flex justify-center strong mb-3">
+                                    {% for fund in fundsGroup.funds %}
+                                        <div class="fund-name fund-{{fund.label}} t-12 lh-32 text-darker px-3 mx-1 cursor-pointer transition" data-tab-type="fg-{{fundsGroup.id}}" data-tab-id="{{ fund.id }}">صندوق {{ fund.title }}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="funds-contents">
+                                {% for fund in fundsGroup.funds %}
+                                    <div class="funds-content-item fund-{{fund.label}}" data-content-type="fg-{{fundsGroup.id}}" data-content-id="{{ fund.id }}">
+                                        <div class="bars-wrapper flex justify-space-between">
+                                            {% for darayi in fund.darayi %}
+                                                <div class="bar-item flex-column align-center justify-end">
+                                                    <div class="bar-wrapper flex-column justify-end">
+                                                        <span class="percent text-center t-12 lh-18 text-darker">{{ darayi.value }}%</span>
+                                                        <div class="bar radius-large w-100" style="height: {{ darayi.value * 2 }}px;"></div>
+                                                    </div>
+                                                    <span class="bar-label t-12 lh-18 text-center text-light">{{ darayi.label }}</span>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

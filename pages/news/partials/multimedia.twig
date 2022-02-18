@@ -1,0 +1,24 @@
+<section class="News__multimedia mb-8">
+    <div class="container-md">
+        <h2 class="t-20 lh-32 text-darker mb-6">اخبار چند رسانه ای</h2>
+        <div class="wrapper row">
+            {% for post in multimedia_posts %}
+                <div class="post col-lg-6 col-md-12">
+                    <div class="inner flex-column">
+                        <a class="thumbnail flex mb-3 relative radius-small overflow-hidden" href="{{ post.link }}" title="{{ post.title }}">
+                            <picture class="flex">
+                                <source srcset="{{ post.thumbnail.src|towebp }}" type="image/webp">
+                                <source srcset="{{ post.thumbnail.src|tojpg }}" type="image/jpeg">
+                                <img class="w-100 h-auto" src="{{ post.thumbnail.src|tojpg }}" alt="{{ post.title }}">
+                            </picture>
+                        </a>
+                        <a class="mb-2" href="{{ post.link }}" title="{{ post.title }}">
+                            <h3 class="t-16 lh-26 text-dark">{{ post.title }}</h3>
+                        </a>
+                        <span class="t-12 lh-18 text-light">{{ post.date }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

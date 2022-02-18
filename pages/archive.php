@@ -18,4 +18,4 @@ $args = array(
 $context['posts'] = new Timber\PostQuery($args);
 $context['pagination'] = $context['posts']->pagination(3);
 
-Timber::render('pages/archive.twig', $context);
+Timber::render('archive/archive.twig', $context);

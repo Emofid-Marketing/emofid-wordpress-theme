@@ -1,0 +1,27 @@
+<section class="News__grids mb-7">
+    <div class="container-md">
+        <h2 class="t-20 lh-32 text-darker mb-6">پربازدیدترین خبرها</h2>
+        <div class="wrapper row mb-6">
+            {% for post in posts %}
+                <div class="post col-lg-4 col-md-12">
+                    <div class="inner flex-column">
+                        <a class="flex mb-3" href="{{ post.link }}" title="{{ post.title }}">
+                            <picture class="flex">
+                                <source srcset="{{ post.thumbnail.src|towebp }}" type="image/webp">
+                                <source srcset="{{ post.thumbnail.src|tojpg }}" type="image/jpeg">
+                                <img class="w-100 h-auto radius-small" src="{{ post.thumbnail.src|tojpg }}" alt="{{ post.title }}">
+                            </picture>
+                        </a>
+                        <a class="mb-2" href="{{ post.link }}" title="{{ post.title }}">
+                            <h3 class="t-16 lh-26 text-dark">{{ post.title }}</h3>
+                        </a>
+                        <span class="t-12 lh-18 text-light">{{ post.date }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="footer flex justify-center">
+            <a class="more flex align-center t-14 lh-22 strong" href="{{ site.link }}/archive/">مشاهده همه اخبار</a>
+        </div>
+    </div>
+</section>
