@@ -72,11 +72,15 @@
       }
     }
     .tabs-wrapper {
+      position: relative;
+
       .tabs {
         overflow-x: auto;
+        width: 100vw;
+        margin-right: calc((100vw - 100%) / -2);
 
         .inner {
-          width: 600px;
+          width: 560px;
 
           .tab {
             span {
@@ -89,6 +93,16 @@
               width: 90px;
             }
           }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 166px;
+          width: 100px;
+          left: calc((100vw - 100%) / -2);
+          top: 0;
+          background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
         }
       }
 
