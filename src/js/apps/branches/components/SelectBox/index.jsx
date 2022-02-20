@@ -31,7 +31,7 @@ function SelectBox() {
 
   useEffect(async () => {
     let response = await fetch(
-      `https://emofid.arsamnet.com/api/cities?name=${inputValue}`
+      `https://portal.emofid.com/api/cities?name=${inputValue}`
     );
     if (response.ok) {
       response = await response.json();

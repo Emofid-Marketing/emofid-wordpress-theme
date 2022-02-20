@@ -15,7 +15,7 @@ function Table() {
 
   useEffect(async () => {
     let response = await fetch(
-      `https://emofid.arsamnet.com/api/branches?city_id=${DataStore.active_city_id}`
+      `https://portal.emofid.com/api/branches?city_id=${DataStore.active_city_id}`
     );
     response = await response.json();
     DataStore.setActiveCityName(response.city_name);

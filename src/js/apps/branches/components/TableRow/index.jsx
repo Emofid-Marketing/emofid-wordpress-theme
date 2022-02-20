@@ -6,9 +6,7 @@ function TableRow({ branch }) {
   const { id, name, thumbnail, address, phone, fax } = branch;
 
   async function handleRowClick() {
-    let response = await fetch(
-      `https://emofid.arsamnet.com/api/branches/${id}`
-    );
+    let response = await fetch(`https://portal.emofid.com/api/branches/${id}`);
     response = await response.json();
     DataStore.setActiveBranch(response);
   }
