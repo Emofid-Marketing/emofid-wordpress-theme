@@ -9,6 +9,11 @@
                     {% endfor %}
                 </div>
             </div>
+
+            {% if cta %}
+                <a class="cta Button blue medium" alt="{{ cta.title }}" href="{{ cta.url }}">{{ cta.title }}</a>
+            {% endif %}
+
             <button data-module-id="second-menu-button" class="mobile-btn mr-auto"></button>
         </div>
     </div>
