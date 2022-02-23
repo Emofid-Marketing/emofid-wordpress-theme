@@ -34,6 +34,16 @@
       }
     }
   }
+
+  .tab-header {
+    img {
+        margin-left: var(--space-5);
+    }
+
+    div {
+        margin-bottom: 0 !important;
+    }
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -48,5 +58,11 @@
         padding: 0 10px;
       }
     }
+
+    .tab-header {
+      img {
+          margin-left: 0;
+      }
+    } 
   }
 }
