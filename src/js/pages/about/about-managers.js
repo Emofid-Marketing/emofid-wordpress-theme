@@ -1,11 +1,20 @@
-import Swiper from 'swiper';
+import Swiper, { Scrollbar } from 'swiper';
 import $ from 'jquery';
 
 var managersSwiper = new Swiper(".managers", {
-  slidesPerView: 5,
+  slidesPerView: 1.6,
   spaceBetween: 25,
   scrollbar: {
     el: '.manager-scrollbar',
+    hide: false,
+    draggable: true,
+  },
+  modules: [Scrollbar],
+  breakpoints: {
+    576: {
+      slidesPerView: 5,
+      spaceBetween: 25
+    }
   }
 });
 
@@ -17,12 +26,6 @@ managersSwiper.on('slideChange', function () {
     $(".managers").removeClass("no-before");
   }
 });
-
-/*
-managersSwiper.on('reachBeginning', function(){
-    $(".managers").addClass("no-before");
-});
-*/
 
 managersSwiper.on('reachEnd', function () {
   $(".managers").addClass("no-after");

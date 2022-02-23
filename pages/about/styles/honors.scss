@@ -29,9 +29,8 @@
     }
 
     .honors-scrollbar {
-      width: 76%;
-      left: 14%;
-      margin-bottom: 7px;
+      flex: 1;
+      margin-left: var(--space-2);
       height: 3px;
     }
 
@@ -56,5 +55,15 @@
           center;
       }
     }
+  }
+
+  .slider-footer {
+    width: 740px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .swiper-scrollbar-drag {
+    background-color: var(--color-mofid-green);
   }
 }

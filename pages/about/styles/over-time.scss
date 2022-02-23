@@ -22,11 +22,12 @@
             width: 18px;
             height: 18px;
             right: 0px;
-            background-color: var(--color-gray-2);
+            background-color: var(--color-white);
             top: 60px;
             border-radius: 50%;
             z-index: 1;
             display: block;
+            border: 2px solid var(--color-mofid-green);
           }
 
           &.active {
@@ -60,28 +61,42 @@
 
 @media only screen and (max-width: 576px) {
   .About__over-time {
+    margin-bottom: var(--space-7);
+
+    h2 {
+      font-size: 18px;
+    }
+
     .tabs {
+      position: relative;
+
       .head {
-        max-width: 100%;
+        display: block;
+        width: 100vw;
+        margin: 0 calc((100vw - 100%) / -2);
         overflow-x: auto;
 
-        .inner {
-          max-width: inherit;
-          width: 505px;
+        &::after {
+          content: "";
+          height: 118px;
+          width: 80px;
+          background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+          top: 0;
+          left: calc((100vw - 100%) / -2);
+          position: absolute;
+          z-index: 1;
+        }
 
-          .tab {
-            padding: 0 var(--space-3) var(--space-2);
-            white-space: nowrap;
-          }
+        .inner {
+          width: 1142px;
         }
       }
+    }
 
-      .contents {
+    .right {
+      .inner {
         p {
-          font-size: var(--size-text-14);
-          padding: var(--space-3);
-          text-align: center;
-          margin-bottom: 0;
+          font-size: 14px;
         }
       }
     }
