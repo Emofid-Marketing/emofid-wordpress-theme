@@ -14,3 +14,38 @@
     }
   }
 }
+
+@media only screen and (max-width: 576px) {
+  .About__social-responsibility {
+    margin-bottom: var(--space-7);
+
+    h3 {
+      font-size: var(--size-text-18);
+      text-align: center;
+    }
+
+    p {
+      font-size: var(--size-text-14);
+      text-align: center;
+    }
+
+    .box {
+      .logo {
+        width: 60px;
+      }
+
+      h3 {
+        font-size: var(--size-text-14);
+      }
+
+      p {
+        font-size: 12px;
+        margin-bottom: var(--space-4);
+      }
+
+      .more {
+        align-self: center;
+      }
+    }
+  }
+}

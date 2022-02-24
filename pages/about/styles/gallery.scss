@@ -1,0 +1,84 @@
+.About__gallery {
+  .item {
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: url("../../src/images/icons/pin-dark.svg") no-repeat scroll
+        center/ auto 100%;
+      margin-left: var(--space-2);
+    }
+
+    &.active {
+      &::before {
+        background-image: url("../../src/images/icons/pin.svg");
+      }
+
+      background-color: var(--color-mofid-green-light);
+      color: var(--color-mofid-green);
+    }
+  }
+
+  .slider-footer {
+    width: 500px;
+    max-width: 100%;
+  }
+
+  .gallery-scrollbar {
+    flex: 1;
+    margin-left: var(--space-2);
+    height: 3px;
+  }
+
+  .next-gallery {
+    background-color: var(--color-gray-light);
+    cursor: pointer;
+    z-index: 1000;
+    position: inherit;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    padding-top: 7px;
+    float: left;
+    left: 10%;
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      margin-right: var(--space-2);
+      background: url("../images/icons/arrow-left.svg") no-repeat scroll center;
+    }
+  }
+
+  .swiper-scrollbar-drag {
+    background: var(--color-mofid-green);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .About__gallery {
+    h2 {
+      font-size: 18px;
+    }
+
+    .left {
+      order: 2;
+      padding: 0;
+      overflow-x: auto;
+    }
+
+    .scroller {
+      width: 600px;
+      flex-direction: revert;
+    }
+
+    .right {
+      margin-bottom: var(--space-5);
+    }
+
+    .item {
+      padding: var(--space-2) var(--space-3);
+    }
+  }
+}

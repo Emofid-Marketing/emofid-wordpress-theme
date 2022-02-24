@@ -1,5 +1,7 @@
-.About__circles {
-  height: 344px;
+.StatisticsCircles {
+  height: 524px;
+  background: url("../images/circles-background.svg") no-repeat scroll center /
+    cover;
 
   .circle-item {
     width: 200px;
@@ -18,11 +20,14 @@
         }
       }
     }
+
+    label {
+    }
   }
 }
 
 @media only screen and (max-width: 576px) {
-  .About__circles {
+  .StatisticsCircles {
     padding: var(--space-3) 0;
 
     .wrapper {

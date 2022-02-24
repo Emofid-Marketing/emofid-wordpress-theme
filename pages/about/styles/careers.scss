@@ -1,28 +1,36 @@
 .About__careers {
-  .collapse-wrapper {
-    .collapse-item {
-      h3 {
-        padding: 15px;
-        position: relative;
-        font-size: 14px;
-        line-height: 22px;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        border-radius: 4px;
-      }
-
-      .content {
-        font-size: 14px;
-        line-height: 26px;
-        display: none;
-        padding: 20px 15px;
-
-        p {
-          margin-bottom: 16px;
-          padding-right: 13px;
-          position: relative;
-        }
+  .collapse-item {
+    h3 {
+      &::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: var(--space-4);
+        top: 50%;
+        transform: translateY(-50%);
+        background: url("../../src/images/icons/chevron-down-gray.svg")
+          no-repeat scroll center / 100% auto;
+        transition: var(--transition);
       }
     }
+
+    &.active {
+      h3 {
+        &::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      .collapse-content {
+        max-height: 1000px;
+      }
+    }
+  }
+
+  .collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
   }
 }

@@ -1,4 +1,4 @@
-.Contact__contacts {
+.ContactCards {
   .wrapper {
     .cols {
       .col {
@@ -61,12 +61,10 @@
 }
 
 @media only screen and (max-width: 576px) {
-  .Contact__contacts {
+  .ContactCards {
     margin-bottom: var(--space-6);
 
     .wrapper {
-      padding: 0 10px;
-
       h2 {
         font-size: var(--size-text-18);
       }
