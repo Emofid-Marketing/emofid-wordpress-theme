@@ -8,11 +8,11 @@
 	{% include('components/sticky-header.twig') with {
 		'logo': {
 			'url': 'assets/images/pages/news/news-logo.svg',
+			'link': site.link ~ '/news/',
 			'alt': 'اخبار و اطلاعیه ها'
 		},
 		'items': [
-			{ title: 'صفحه روابط عمومی', link: '/news/' },
-			{ title: 'آرشیو اخبار', link: '/archive/' },
+			{ title: 'آرشیو اخبار', link: site.link ~ '/archive/' },
 		]
 	} %}
 	{% include('archive/partials/list.twig') %}
