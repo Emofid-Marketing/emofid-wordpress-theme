@@ -22,6 +22,7 @@ function Modal() {
           className={classNames("w-100", "h-auto")}
           src={`${window.EMOFID.theme_url}/assets/images/pages/funds/funds-modal-cover.png`}
         />
+        <span className={styles.closeButton} onClick={clickOutsideModal}></span>
         <div
           className={classNames(
             styles.content,
@@ -34,7 +35,8 @@ function Modal() {
         >
           <h2 className="t-18 text-darker mb-3">اپلیکیشن مفید</h2>
           <p className="t-14 text-medium mb-4">
-            با استفاده از اپلیکیشن مفید می‌توانید از طریق تلفن همراه خود خرید واحد‌های صندوق را انجام دهید.
+            با استفاده از اپلیکیشن مفید می‌توانید از طریق تلفن همراه خود خرید
+            واحد‌های صندوق را انجام دهید.
           </p>
           <div className={classNames(styles.downloads, "flex")}>
             <a className={classNames(styles.android, "mx-2")} href="https://play.google.com/store/apps/details?id=com.emofid.rnmofid&hl=en&gl=US"></a>

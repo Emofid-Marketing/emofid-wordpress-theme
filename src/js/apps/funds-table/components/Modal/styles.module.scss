@@ -29,6 +29,37 @@
     overflow: hidden;
     background-color: #fff;
     transition: var(--transition);
+
+    .closeButton {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 20px;
+      top: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+    
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 2px;
+        background-color: var(--color-mofid-blue);
+        top: 9px;
+        left: 4px;
+        border-radius: 2px;
+      }
+    
+      &::before {
+        transform: rotate(-45deg);
+      }
+    
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
   }
 
   .downloads {
