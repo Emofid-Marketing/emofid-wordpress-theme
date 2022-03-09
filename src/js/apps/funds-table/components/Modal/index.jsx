@@ -22,6 +22,9 @@ function Modal() {
           className={classNames("w-100", "h-auto")}
           src={`${window.EMOFID.theme_url}/assets/images/pages/funds/funds-modal-cover.png`}
         />
+        <span className={classNames("closeButton")}
+          onClick={clickOutsideModal}>
+        </span>
         <div
           className={classNames(
             styles.content,
