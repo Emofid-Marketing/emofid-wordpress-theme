@@ -36,12 +36,8 @@ function Modal() {
           <p className="t-14 text-medium mb-4">
             با استفاده از اپلیکیشن مفید می‌توانید از طریق تلفن همراه خود خرید واحد‌های صندوق را انجام دهید.
           </p>
-          <a className="Button outline blue medium mb-4" href="#">
-            بیشتر بدانید
-          </a>
           <div className={classNames(styles.downloads, "flex")}>
-            <a className={classNames(styles.android, "mx-2")} href="#"></a>
-            <a className={classNames(styles.ios, "mx-2")} href="#"></a>
+            <a className={classNames(styles.android, "mx-2")} href="https://play.google.com/store/apps/details?id=com.emofid.rnmofid&hl=en&gl=US"></a>
           </div>
         </div>
       </div>
