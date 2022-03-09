@@ -133,6 +133,7 @@
         p {
           font-size: var(--size-text-14);
           text-align: center;
+          height: 100%;
         }
 
         .left {
@@ -142,6 +143,18 @@
               100% auto,
             url("../images/easy-bg.svg") no-repeat scroll center / auto 100%;
           margin-bottom: var(--space-5);
+        }
+
+        .footer {
+          flex-direction: column;
+
+          a {
+            margin-left: 0;
+          }
+
+          .more {
+            margin-top: var(--space-3);
+          }
         }
       }
     }
