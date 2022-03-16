@@ -8,10 +8,13 @@
         color: var(--color-mofid-blue);
 
         .phone {
-          &:after {
+          &::after {
             content: "";
-            width: 24px;
+            width: 29px;
             height: 24px;
+            background: url("../images/icons/footer-up-247.svg") no-repeat
+              scroll center/ cover;
+            margin-right: var(--space-2);
           }
         }
       }
@@ -133,12 +136,15 @@
 
           .phone {
             margin-bottom: var(--space-3);
+            margin-right: 0;
+            justify-content: center;
           }
         }
 
         .caption {
           margin: 0;
           text-align: center;
+          justify-content: center;
         }
       }
     }
