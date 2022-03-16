@@ -8,6 +8,10 @@ require_once(__DIR__ . '/config/version.php');
 require_once(__DIR__ . '/config/composer.php');
 
 
+/* Require Cron Jobs */
+require_once(__DIR__ . '/config/crons.php');
+
+
 /* Require Timber Templates */
 require_once(__DIR__ . '/config/timber.php');
 

@@ -50,7 +50,13 @@
 
     .class-item {
       border-bottom: 1px solid var(--color-gray-light);
-      display: none;
+
+      .image {
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
 
       .content {
         .time {
