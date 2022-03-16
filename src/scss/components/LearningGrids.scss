@@ -198,12 +198,16 @@
           .title {
             font-size: var(--size-text-14);
           }
+          .level {
+            display: none;
+          }
           .view {
             position: static;
             width: fit-content;
             width: -moz-fit-content;
             width: -webkit-fit-content;
             width: -o-fit-content;
+            transform: none;
           }
         }
       }

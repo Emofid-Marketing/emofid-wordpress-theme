@@ -114,8 +114,11 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+
       img {
-        width: 140px;
+        width: 115px;
         height: auto;
         margin-left: var(--space-3);
       }
