@@ -5,7 +5,15 @@
   --color-mofid-blue-dark-middle: #083647;
   --color-mofid-blue-dark: #003b52;
   --color-mofid-blue: #004c6a;
+  --color-mofid-blue-hover: #4d8297;
+  --color-mofid-blue-active: #003c57;
+  --color-mofid-blue-outline-hover: #e0eaed;
+  --color-mofid-blue-outline-active: #b3c9d2;
   --color-mofid-green: #00a796;
+  --color-mofid-green-hover: #4dc1b6;
+  --color-mofid-green-active: #007f6f;
+  --color-mofid-green-outline-hover: #e0f4f2;
+  --color-mofid-green-outline-active: #b3e5e0;
   --color-mofid-green-top: #d0f0f2;
   --color-mofid-green-medium: #eef8f7;
   --color-mofid-green-light: #effbff;
@@ -23,10 +31,11 @@
   --color-duo: #ecf1f9;
   --color-success: #00c851;
   --color-error: #ff5c63;
+  --color-disabled: #d2d6de;
 
-  --color-amour: #FAF2F8;
-  --color-sherpa-blue: #003A52;
-  --color-plum: #832C73;
+  --color-amour: #faf2f8;
+  --color-sherpa-blue: #003a52;
+  --color-plum: #832c73;
 
   /* funds colors */
   --color-pishtaz: #e73a2e;

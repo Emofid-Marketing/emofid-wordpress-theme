@@ -1,53 +1,74 @@
 .Button {
-  background-color: var(--color-mofid-green);
-  color: var(--color-white);
-  padding: var(--space-1) var(--space-4);
-  border-radius: var(--radius-small);
-  border: 2px solid var(--color-mofid-green);
-  cursor: pointer;
+  --button-theme-color: var(--color-mofid-green);
+  --button-theme-hover-color: var(--color-mofid-green-hover);
+  --button-theme-active-color: var(--color-mofid-green-active);
+  --button-theme-hover-outline-color: var(--color-mofid-green-outline-hover);
+  --button-theme-active-outline-color: var(--color-mofid-green-outline-active);
 
+  font-size: var(--size-text-14);
+  line-height: 24px;
+  padding: 7px 23px;
+  background-color: var(--button-theme-color);
+  color: var(--color-white);
+  border-radius: var(--radius-small);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--button-theme-color);
+  transition: var(--transition-fast);
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: var(--button-theme-hover-color);
+    border-color: var(--button-theme-hover-color);
+  }
+
+  &:active {
+    background-color: var(--button-theme-active-color);
+    border-color: var(--button-theme-active-color);
+  }
+
+  // colors
+  &.blue {
+    --button-theme-color: var(--color-mofid-blue);
+    --button-theme-hover-color: var(--color-mofid-blue-hover);
+    --button-theme-active-color: var(--color-mofid-blue-active);
+    --button-theme-hover-outline-color: var(--color-mofid-blue-outline-hover);
+    --button-theme-active-outline-color: var(--color-mofid-blue-outline-active);
+  }
+
+  // themes
   &.outline {
     background-color: transparent;
-    color: var(--color-mofid-green);
-  }
+    color: var(--button-theme-color);
 
-  &.blue {
-    background-color: var(--color-mofid-blue);
-    border-color: var(--color-mofid-blue);
+    &:hover {
+      background-color: var(--button-theme-hover-outline-color);
+      border-color: var(--button-theme-hover-outline-color);
+    }
 
-    &.outline {
-      background-color: transparent;
-      color: var(--color-mofid-blue);
+    &:active {
+      background-color: var(--button-theme-active-outline-color);
+      border-color: var(--button-theme-active-outline-color);
     }
   }
 
-  &.gray {
-    background-color: var(--color-gray-light);
-    border-color: var(--color-gray-light);
-    color: var(--color-mofid-green);
-
-    &.outline {
-      background-color: transparent;
-      color: var(--color-gray-light);
-    }
+  // sizes
+  &.large {
+    padding: 11px 23px;
   }
 
   &.medium {
-    padding: var(--space-2) var(--space-4);
+    padding: 7px 23px;
   }
 
-  &.sherpa-blue {
-    background-color: var(--color-sherpa-blue);
-    border-color: var(--color-sherpa-blue);
+  &.small {
+    padding: 3px 15px;
   }
-}
 
-@media only screen and (max-width: 576px) {
-  .Button {
-    padding: var(--space-1) var(--space-2);
-
-    &.medium {
-      padding: var(--space-2) var(--space-3);
-    }
+  // disabled
+  &[disabled] {
+    background-color: var(--color-disabled);
+    cursor: not-allowed;
   }
 }
