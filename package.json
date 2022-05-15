@@ -35,6 +35,8 @@
   "dependencies": {
     "classnames": "^2.3.1",
     "flexboxgrid": "^6.3.1",
+    "highcharts": "^10.0.0",
+    "jalali-moment": "^3.3.11",
     "jquery": "^3.6.0",
     "mobx": "^6.3.3",
     "mobx-react-lite": "^3.2.1",

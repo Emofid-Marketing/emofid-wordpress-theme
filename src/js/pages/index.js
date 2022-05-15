@@ -12,6 +12,7 @@ function loadPageModules() {
     case "investment":
       import("./investment");
       import("../apps/performance-calculator");
+      import("../apps/advanced-calculator");
       break;
     case "trades":
       import("./trades");

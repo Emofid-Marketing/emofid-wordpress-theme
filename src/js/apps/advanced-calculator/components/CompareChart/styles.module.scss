@@ -1,0 +1,26 @@
+.CompareChart {
+  display: flex;
+  flex-direction: column;
+
+  .caption {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 32px;
+  }
+
+  .checkRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 260px;
+    color: #fff;
+    margin: 24px auto 0;
+  }
+
+  .checkItem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
