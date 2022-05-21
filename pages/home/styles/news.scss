@@ -4,10 +4,11 @@
       width: 450px;
       max-width: 100%;
 
-      p {
+      h2 {
         font-size: var(--size-text-16);
         line-height: var(--size-line-height-32);
         color: var(--color-text-medium);
+        font-weight: normal;
       }
 
       .boxes {

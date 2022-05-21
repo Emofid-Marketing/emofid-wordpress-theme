@@ -84,6 +84,10 @@
         border-radius: var(--radius-small);
         overflow: hidden;
 
+        p {
+          line-height: var(--space-5);
+        }
+
         input {
           background-color: var(--color-gray-light);
           border: 1px solid var(--color-gray);
@@ -96,11 +100,12 @@
         button {
           width: 140px;
           left: 0;
-          top: 0;
+          top: var(--space-5);
           background-color: var(--color-mofid-green);
           color: var(--color-white);
           border: none;
           height: 39px;
+          border-radius: var(--radius-small) 0 0 var(--radius-small);
         }
       }
     }
