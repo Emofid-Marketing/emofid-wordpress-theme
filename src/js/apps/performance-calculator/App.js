@@ -21,7 +21,7 @@ function App() {
       let thisFund = {
         id: fundCode,
         title: staticInfo.faName,
-        iconName: staticInfo.enName,
+        iconName: staticInfo.enName.toLowerCase(),
         fundType: staticInfo.fundType,
         risk: 4,
         ratios: {
