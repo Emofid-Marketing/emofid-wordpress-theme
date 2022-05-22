@@ -1,12 +1,15 @@
 import React from "react";
 import classNames from "classnames";
-import funds from "../../data/funds";
+import CalculatorStore from "../../store/calculator";
 import styles from "./styles.module.scss";
 import InputBox from "../InputBox/index.jsx";
 import PriceViewBox from "../PriceViewBox/index.jsx";
 import CaptionBox from "../CaptionBox/index.jsx";
+import { observer } from "mobx-react-lite";
 
 function Calculator({ fundId }) {
+  const funds = CalculatorStore.funds;
+
   const index = funds
     .map(function (fund) {
       return fund.id;
@@ -61,4 +64,4 @@ function Calculator({ fundId }) {
   );
 }
 
-export default Calculator;
+export default observer(Calculator);

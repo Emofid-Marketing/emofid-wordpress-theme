@@ -22,7 +22,7 @@ function InputBox() {
         initValue={calculator.years}
         handler={(value) => calculator.setYears(value)}
         min={1}
-        max={7}
+        max={5}
         step={2}
         suffix="سال اخیر"
         className="mb-5"

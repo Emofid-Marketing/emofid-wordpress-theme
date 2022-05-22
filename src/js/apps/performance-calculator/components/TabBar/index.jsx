@@ -1,12 +1,12 @@
 import classNames from "classnames";
 import React, { useState } from "react";
 import calculator from "../../store/calculator";
-import funds from "../../data/funds";
 import TabBarItem from "../TabBarItem/index.jsx";
 import styles from "./styles.module.scss";
 
 function TabBar() {
-  const [activeTabId, setActiveTabId] = useState(1);
+  const funds = calculator.funds;
+  const [activeTabId, setActiveTabId] = useState("10600");
 
   function handleSelect(id) {
     setActiveTabId(id);
