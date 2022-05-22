@@ -24,22 +24,6 @@
       scroll center/ 100% auto;
     display: none;
   }
-
-  .cta {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    transition: all 0.15s ease-in-out;
-  }
-
-  &.sticked {
-    .cta {
-      position: inherit;
-      visibility: visible;
-      opacity: 1;
-    }
-  }
 }
 
 @media only screen and (max-width: 768px) {

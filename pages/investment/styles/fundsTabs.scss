@@ -1,4 +1,12 @@
 .Investment__funds-tabs {
+  .texts {
+    ul {
+      li {
+        list-style: square;
+        margin-right: 1rem;
+      }
+    }
+  }
   .tabs-wrapper {
     .tabs {
       .tab {

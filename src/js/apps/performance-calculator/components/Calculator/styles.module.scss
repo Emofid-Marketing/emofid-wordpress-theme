@@ -21,6 +21,10 @@
   .Calculator {
     padding-bottom: 0 !important;
 
+    .data {
+      margin-bottom: var(--space-5);
+    }
+
     .innerData {
       flex-direction: column;
       position: relative;
@@ -29,7 +33,6 @@
     .fundAttr {
       margin-left: 0;
       margin-bottom: 20px;
-      padding-right: 30px;
 
       &:last-child {
         margin-bottom: 0;
