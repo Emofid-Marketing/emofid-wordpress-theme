@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import calculator from "./store/calculator";
 import CalculatorBox from "./components/CalculatorBox/index.jsx";
+import Loading from "./components/Loading/index.jsx";
 
 function App() {
 
@@ -42,7 +43,7 @@ function App() {
     getOnlineData();
   }, []);
 
-  if (loading) return "Loading";
+  if (loading) return <Loading />;
 
   return (
     <Fragment>
