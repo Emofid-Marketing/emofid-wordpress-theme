@@ -91,10 +91,10 @@
         .tab-view-item {
           .items {
             width: 100%;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
 
             li {
-              width: 50%;
               margin: var(--space-2) 0;
             }
           }
