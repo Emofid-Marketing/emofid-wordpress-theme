@@ -11,3 +11,14 @@ function _emofid_scripts() {
 }
 
 add_action('wp_enqueue_scripts', '_emofid_scripts');
+
+
+
+/* deregister styles */
+function _emofid_deregister_styles() {
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'dashicons' );
+    wp_dequeue_style( 'post-views-counter-frontend' );
+}
+
+add_action( 'wp_print_styles', '_emofid_deregister_styles', 100 );
