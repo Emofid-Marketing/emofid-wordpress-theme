@@ -55,9 +55,30 @@
                 width: 32px;
                 margin-bottom: 10px;
 
+                .percent {
+                  flex-shrink: 0;
+                  width: 50px;
+                  transform: translateX(25%);
+                }
+
                 .bar {
                   height: 100px;
                   background-color: var(--fund-color);
+
+                  animation-name: anime;
+                  animation-duration: 1s;
+                  animation-fill-mode: forwards;
+                  animation-iteration-count: 1;
+                }
+
+                @keyframes anime {
+                  from {
+                    max-height: 0px;
+                  }
+
+                  to {
+                    max-height: 200px;
+                  }
                 }
               }
 

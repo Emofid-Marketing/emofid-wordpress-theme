@@ -53,13 +53,13 @@
                                 {% for fund in fundsGroup.funds %}
                                     <div class="funds-content-item fund-{{fund.label}}" data-content-type="fg-{{fundsGroup.id}}" data-content-id="{{ fund.id }}">
                                         <div class="bars-wrapper flex justify-space-between">
-                                            {% for darayi in fund.darayi %}
+                                            {% for darayi in function('getAssetsComposition', fund.code) %}
                                                 <div class="bar-item flex-column align-center justify-end">
                                                     <div class="bar-wrapper flex-column justify-end">
                                                         <span class="percent text-center t-12 lh-18 text-darker">{{ darayi.value }}%</span>
                                                         <div class="bar radius-large w-100" style="height: {{ darayi.value * 2 }}px;"></div>
                                                     </div>
-                                                    <span class="bar-label t-12 lh-18 text-center text-light">{{ darayi.label }}</span>
+                                                    <span class="bar-label t-12 lh-18 text-center text-light">{{ darayi.title }}</span>
                                                 </div>
                                             {% endfor %}
                                         </div>

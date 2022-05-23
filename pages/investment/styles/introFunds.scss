@@ -34,6 +34,19 @@
             }
           }
 
+          .option {
+            .value {
+              display: flex;
+              align-items: center;
+
+              .price-label {
+                font-size: 10px;
+                width: 30px;
+                margin-right: 0.5rem;
+              }
+            }
+          }
+
           .logo {
             width: 84px;
             height: 84px;
@@ -80,6 +93,13 @@
             overflow: hidden;
             .top {
               border-bottom: 1px solid var(--color-gray-light);
+
+              .details {
+                width: 250px;
+                max-width: 100%;
+                margin: 0 auto;
+              }
+
               .heading {
                 a {
                   &::after {

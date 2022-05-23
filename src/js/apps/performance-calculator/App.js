@@ -6,6 +6,12 @@ import Loading from "./components/Loading/index.jsx";
 function App() {
 
   const [loading, setLoading] = useState(true);
+  const riskValues = {
+    "سهامی": 4,
+    "سهامی با تقسیم سود": 4,
+    "مختلط": 2,
+    "با درآمد ثابت": 1,
+  };
 
   async function getOnlineData() {
     const fundsList = [];
@@ -23,7 +29,7 @@ function App() {
         title: staticInfo.faName,
         iconName: staticInfo.enName.toLowerCase(),
         fundType: staticInfo.fundType,
-        risk: 4,
+        risk: riskValues[staticInfo.fundType],
         ratios: {
           "1": return1Y / 100,
           "3": return3Y / 100,
