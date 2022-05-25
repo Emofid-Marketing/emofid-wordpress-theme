@@ -41,13 +41,13 @@ function TableRow({ fund, performanceRage }) {
       })}
       id={`fund-${fundCode}`}
     >
-      <div className={styles.cell}>
+      <a className={styles.cell} href={fundLink} target="_blank">
         <img
           className={styles.fundIcon}
           src={`${window.EMOFID.theme_url}/assets/images/funds/mofid/${iconName}.svg`}
         />
         <span className={styles.fundName}>صندوق {title}</span>
-      </div>
+      </a>
       <div className={styles.cell}>{type}</div>
       <div className={styles.cell}>{year}</div>
       <div className={styles.cell}>{totalFund}</div>

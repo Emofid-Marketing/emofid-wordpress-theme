@@ -5,6 +5,22 @@
 		window.EMOFID.current_page_id = 'funds';
 		window.EMOFID.sticky_header = false;
 	</script>
+	{% include('components/sticky-header.twig') with {
+		'logo': {
+			'url': 'assets/images/logo-investment.svg',
+			'alt': 'سبدگردان مفید'
+		},
+		'items': [
+			{ title: 'آشنایی با سرمایه‌گذاری غیر مستقیم', link: site.link ~ '/investment/' },
+		],
+		'cta': {
+			title: 'مشاوره رایگان سرمایه گذاری',
+			url: 'https://www.emofid.com/forms/investmentform/'
+		},
+		'styles': {
+			noMargin: true,
+		}
+	} %}
 	{% include('funds/partials/top.twig') %}
 	{% include('funds/partials/table.twig') %}
 {% endblock %}

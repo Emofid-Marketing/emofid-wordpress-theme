@@ -21,6 +21,7 @@ function loadPageModules() {
       import("../apps/branches");
       break;
     case "funds":
+      import("./funds");
       import("../apps/funds-table");
       break;
     case "archive":
