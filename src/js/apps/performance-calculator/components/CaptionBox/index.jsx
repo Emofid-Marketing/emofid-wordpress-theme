@@ -24,7 +24,8 @@ function CaptionBox() {
         <strong>{calculator.getFundData().title}</strong>
         سرمایه‌گذاری کرده بودید، با کسب
         <strong>
-          {calculator.getFundData().ratios[calculator.years] * 100}%
+          {(calculator.getFundData().ratios[calculator.years] * 100).toFixed(2)}
+          %
         </strong>
         درصد، بازدهی سرمایه شما به مبلغ
         <strong>{formatNumber(calculator.getFundValue())} تومان</strong>
