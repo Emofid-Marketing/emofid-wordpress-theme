@@ -23,6 +23,10 @@
 	{% include('trades/partials/tabs.twig') %}
 	{% include('trades/partials/single.twig') %}
 	{% include('trades/partials/ati.twig') %}
-	{% include('components/learning-grids.twig') %}
+	{% include('components/learning-grids.twig') with {
+		'styles': {
+			'paddingBottom': true,
+		}
+	} %}
 	{% include('components/footer-cta.twig') %}
 {% endblock %}
