@@ -44,6 +44,14 @@
       }
     }
 
+    .image {
+      picture {
+        img {
+          height: auto;
+        }
+      }
+    }
+
     p {
       line-height: var(--size-line-height-26);
       font-size: var(--size-text-16);
