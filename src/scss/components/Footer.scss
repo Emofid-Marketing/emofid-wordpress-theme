@@ -16,8 +16,9 @@
         }
       }
 
-      .email {
+      .email-phone {
         color: var(--color-text-darker);
+        margin-right: auto;
 
         .phone {
           &::after {
@@ -136,12 +137,11 @@
             font-weight: bold;
             margin-bottom: var(--space-2);
           }
+        }
 
-          .phone {
-            margin-bottom: var(--space-3);
-            margin-right: 0;
-            justify-content: center;
-          }
+        .email-phone {
+          margin-right: 0;
+          margin-top: var(--space-3);
         }
 
         .caption {
