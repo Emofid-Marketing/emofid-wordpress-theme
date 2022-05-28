@@ -1,4 +1,9 @@
 .Home__logos {
+  h2 {
+    font-size: var(--size-text-32);
+    color: var(--color-text-darker);
+  }
+  
   .wrapper {
     width: 998px;
     max-width: 100%;

@@ -6,6 +6,18 @@
       .support {
         font-size: var(--size-text-16);
         color: var(--color-mofid-blue);
+        flex-direction: column;
+
+        span {
+          &:last-child {
+            font-size: smaller;
+            text-align: center;
+          }
+        }
+      }
+
+      .email {
+        color: var(--color-text-darker);
 
         .phone {
           &::after {
@@ -16,6 +28,10 @@
               scroll center/ cover;
             margin-right: var(--space-2);
           }
+        }
+
+        .value {
+          font-weight: bold;
         }
       }
     }
@@ -62,27 +78,13 @@
         }
       }
 
-      .email {
-        color: var(--color-text-darker);
-
-        .label {
-          color: var(--color-text-darker);
-
-          &:before {
-            content: "";
-            width: 20px;
-            height: 20px;
-          }
-        }
-
-        .value {
-          font-weight: bold;
-        }
-      }
-
       .newsletter {
         border-radius: var(--radius-small);
         overflow: hidden;
+
+        p {
+          line-height: var(--space-5);
+        }
 
         input {
           background-color: var(--color-gray-light);
@@ -96,11 +98,12 @@
         button {
           width: 140px;
           left: 0;
-          top: 0;
+          top: var(--space-5);
           background-color: var(--color-mofid-green);
           color: var(--color-white);
           border: none;
           height: 39px;
+          border-radius: var(--radius-small) 0 0 var(--radius-small);
         }
       }
     }
