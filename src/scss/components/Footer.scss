@@ -96,15 +96,17 @@
           padding-left: 150px;
         }
 
-        button {
-          width: 140px;
-          left: 0;
-          top: var(--space-5);
-          background-color: var(--color-mofid-green);
-          color: var(--color-white);
-          border: none;
-          height: 39px;
-          border-radius: var(--radius-small) 0 0 var(--radius-small);
+        .newsletter-form {
+          button {
+            width: 140px;
+            left: 0;
+            top: var(--space-5);
+            background-color: var(--color-mofid-green);
+            color: var(--color-white);
+            border: none;
+            height: 39px;
+            border-radius: var(--radius-small) 0 0 var(--radius-small);
+          }
         }
       }
     }
@@ -184,8 +186,16 @@
         .newsletter {
           margin-top: var(--space-6);
 
-          input {
-            width: 100%;
+          .newsletter-form {
+            position: absolute;
+
+            input {
+              width: 100%;
+            }
+  
+            button {
+              top: 0;
+            }  
           }
         }
       }
