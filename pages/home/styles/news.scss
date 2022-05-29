@@ -1,7 +1,7 @@
 .Home__news {
   .right {
     .texts {
-      width: 450px;
+      width: 100%;
       max-width: 100%;
 
       h2 {
@@ -11,9 +11,12 @@
       }
 
       .boxes {
+        flex-wrap: wrap;
+
         .item {
-          width: 110px;
+          width: 25%;
           margin-left: var(--space-4);
+          margin-bottom: var(--space-4);
 
           .circle {
             width: 96px;
