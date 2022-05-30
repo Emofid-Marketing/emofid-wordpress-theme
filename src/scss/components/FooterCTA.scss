@@ -32,6 +32,16 @@
         font-size: var(--size-text-14);
         line-height: 31px;
       }
+
+      .footer {
+        flex-direction: column;
+
+        .Button {
+          width: max-content;
+          align-self: center;
+          margin: 0 0 var(--space-3);
+        }
+      }
     }
   }
 }

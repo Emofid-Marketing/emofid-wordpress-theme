@@ -1,18 +1,22 @@
 .Home__news {
   .right {
     .texts {
-      width: 450px;
+      width: 100%;
       max-width: 100%;
 
-      p {
+      h2 {
         font-size: var(--size-text-16);
         line-height: var(--size-line-height-32);
         color: var(--color-text-medium);
       }
 
       .boxes {
+        flex-wrap: wrap;
+
         .item {
-          width: 110px;
+          width: 25%;
+          margin-left: var(--space-4);
+          margin-bottom: var(--space-4);
 
           .circle {
             width: 96px;
@@ -123,6 +127,15 @@
           font-size: 14px;
           text-align: center;
           max-width: 325px;
+        }
+
+        .boxes {
+          flex-wrap: wrap;
+
+          .item {
+            width: 50%;
+            margin-left: 0;
+          }
         }
       }
     }

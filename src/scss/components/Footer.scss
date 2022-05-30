@@ -6,6 +6,19 @@
       .support {
         font-size: var(--size-text-16);
         color: var(--color-mofid-blue);
+        flex-direction: column;
+
+        span {
+          &:last-child {
+            font-size: smaller;
+            text-align: center;
+          }
+        }
+      }
+
+      .email-phone {
+        color: var(--color-text-darker);
+        margin-right: auto;
 
         .phone {
           &::after {
@@ -16,6 +29,10 @@
               scroll center/ cover;
             margin-right: var(--space-2);
           }
+        }
+
+        .value {
+          font-weight: bold;
         }
       }
     }
@@ -62,27 +79,13 @@
         }
       }
 
-      .email {
-        color: var(--color-text-darker);
-
-        .label {
-          color: var(--color-text-darker);
-
-          &:before {
-            content: "";
-            width: 20px;
-            height: 20px;
-          }
-        }
-
-        .value {
-          font-weight: bold;
-        }
-      }
-
       .newsletter {
         border-radius: var(--radius-small);
         overflow: hidden;
+
+        p {
+          line-height: var(--space-5);
+        }
 
         input {
           background-color: var(--color-gray-light);
@@ -93,14 +96,17 @@
           padding-left: 150px;
         }
 
-        button {
-          width: 140px;
-          left: 0;
-          top: 0;
-          background-color: var(--color-mofid-green);
-          color: var(--color-white);
-          border: none;
-          height: 39px;
+        .newsletter-form {
+          button {
+            width: 140px;
+            left: 0;
+            top: var(--space-5);
+            background-color: var(--color-mofid-green);
+            color: var(--color-white);
+            border: none;
+            height: 39px;
+            border-radius: var(--radius-small) 0 0 var(--radius-small);
+          }
         }
       }
     }
@@ -133,12 +139,11 @@
             font-weight: bold;
             margin-bottom: var(--space-2);
           }
+        }
 
-          .phone {
-            margin-bottom: var(--space-3);
-            margin-right: 0;
-            justify-content: center;
-          }
+        .email-phone {
+          margin-right: 0;
+          margin-top: var(--space-3);
         }
 
         .caption {
@@ -181,8 +186,16 @@
         .newsletter {
           margin-top: var(--space-6);
 
-          input {
-            width: 100%;
+          .newsletter-form {
+            position: relative;
+
+            input {
+              width: 100%;
+            }
+  
+            button {
+              top: 0;
+            }  
           }
         }
       }

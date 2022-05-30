@@ -19,7 +19,7 @@
           height: 80px;
           background-color: var(--color-mofid-blue-dark-middle);
 
-          @for $i from 1 to 6 {
+          @for $i from 1 to 7 {
             &.circle-#{$i} {
               background-image: url("../images/icons/trader/#{$i}.svg");
               background-repeat: no-repeat;
