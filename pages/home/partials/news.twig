@@ -46,7 +46,7 @@
                                     <picture>
                                         <source srcset="{{ post.thumbnail.src('medium')|towebp }}" type="image/webp">
                                         <source srcset="{{ post.thumbnail.src('medium')|tojpg }}" type="image/jpeg">
-                                        <img class="w-100 h-auto radius-small" src="{{ post.thumbnail.src|tojpg }}" alt="{{ post.title }}">
+                                        <img class="w-100 h-auto radius-small" src="{{ post.thumbnail.src('medium')|tojpg }}" alt="{{ post.title }}">
                                     </picture>
                                 </div>
                                 <div class="col-lg-8 col-xs-8 flex-column content">
