@@ -35,3 +35,7 @@ require_once(__DIR__ . '/config/post-types.php');
 /* Utils */
 require_once(__DIR__ . '/config/utils.php');
 
+
+/* Security */
+require_once(__DIR__ . '/config/security.php');
+
