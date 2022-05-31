@@ -38,7 +38,11 @@
                         {% for post in posts %}
                             <a class="item row mb-3" href="{{post.link}}">
                                 <div class="col-lg-4 col-xs-4 image">
-                                    <img alt="{{post.title}}" src="{{post.thumbnail.src}}" />
+                                    <picture>
+                                        <source srcset="{{ post.thumbnail.src('medium')|towebp }}" type="image/webp">
+                                        <source srcset="{{ post.thumbnail.src('medium')|tojpg }}" type="image/jpeg">
+                                        <img class="w-100 h-auto radius-small" src="{{ post.thumbnail.src('medium')|tojpg }}" alt="{{ post.title }}">
+                                    </picture>
                                 </div>
                                 <div class="col-lg-8 col-xs-8 flex-column content">
                                     <span class="title mb-2">{{post.title}}</span>
