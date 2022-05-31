@@ -7,7 +7,7 @@
     <div class="wrapper flex wrap justify-space-between mx-auto">
         {% for partner in partners %}
             <div class="flex-column align-center partner-item text-center">
-                <img src="{{theme.link}}/assets/images/partners/{{ partner.id }}.svg" />
+                <img src="{{theme.link}}/assets/images/partners/{{ partner.id }}.svg" alt="{{ partner.label }}" width="110" height="110" />
                 <span>{{ partner.label }}</span>
             </div>
         {% endfor %}
