@@ -21,29 +21,12 @@
           .circle {
             width: 96px;
             height: 96px;
-            background-color: var(--color-mofid-blue);
-            font-size: 36px;
-            font-weight: bold;
-            line-height: 106px;
-            color: #fff;
-            text-align: center;
-
-            .i-user {
-              &::before {
-                content: "";
-                width: 13px;
-                height: 13px;
-                background-color: var(--color-white);
-                border-radius: 50%;
-                margin-bottom: 1px;
-              }
-
-              &::after {
-                content: "";
-                width: 24px;
-                height: 16px;
-                background-color: var(--color-white);
-                border-radius: 50% 50% 0 0;
+  
+            @for $i from 1 to 7 {
+              &.circle-#{$i} {
+                background-image: url("../images/icons/home/#{$i}.svg");
+                background-repeat: no-repeat;
+                background-position: center;
               }
             }
           }
