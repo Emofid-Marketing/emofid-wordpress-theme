@@ -4,7 +4,7 @@ import "./vars";
 // global modules
 import "./modules/global/tabs";
 import "./modules/stiky-mobile-header";
-import "./modules/pjax";
+// import "./modules/pjax";
 
 
 // pages modules
