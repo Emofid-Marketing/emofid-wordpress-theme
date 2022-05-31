@@ -20,11 +20,13 @@ class CronJob {
 
 
     function set_last_update() {
+
+        $oldOptions = get_option('_emofid_crons_last_updates');
+        $oldOptions[$this->id] = time();
+
         update_option(
             '_emofid_crons_last_updates',
-            [
-                $this->id => time(),
-            ]
+            $oldOptions
         );
     }
 
