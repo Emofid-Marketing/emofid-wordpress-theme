@@ -28,7 +28,13 @@
     <div class="easytrader mb-8">
         <h3 class="title text-center text-white mb-6">ایزی‌تریدر؛ ساده اما حرفه‌ای</h3>
         <div class="easytrader-shots">
-            <img class="desktop" src="{{ theme.link }}/assets/images/pages/home/easytrader-shot.png" alt="ایزی تریدر" />
+            
+            <picture class="desktop">
+                <source srcset="{{ theme.link }}/assets/images/pages/home/easytrader-shot.webp" type="image/webp">
+                <source srcset="{{ theme.link }}/assets/images/pages/home/easytrader-shot.png" type="image/png">
+                <img src="{{ theme.link }}/assets/images/pages/home/easytrader-shot.png" alt="ایزی تریدر" width="1752" height="1015">
+            </picture>
+
             <img class="mobile" src="{{ theme.link }}/assets/images/pages/home/easytrader-mobile.png" alt="ایزی تریدر" />
         </div>
         <div class="details-row">

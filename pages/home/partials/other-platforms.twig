@@ -3,8 +3,19 @@
         <div class="text-center">
             <h2 class="mb-5">سایر سامانه‌های کارگزاری مفید</h2>
             <div class="cover mb-4 flex justify-center">
-                <img src="{{ theme.link }}/assets/images/bourse-view.png" data-content-type="1" data-content-id="1">
-                <img src="{{ theme.link }}/assets/images/pellekan.png" data-content-type="1" data-content-id="2">
+
+                <picture data-content-type="1" data-content-id="1">
+                    <source srcset="{{ theme.link }}/assets/images/bourse-view.webp" type="image/webp">
+                    <source srcset="{{ theme.link }}/assets/images/bourse-view.png" type="image/png">
+                    <img alt="بورس ویو" src="{{ theme.link }}/assets/images/bourse-view.png" width="711" height="374">
+                </picture>
+
+                <picture data-content-type="1" data-content-id="2">
+                    <source srcset="{{ theme.link }}/assets/images/pellekan.webp" type="image/webp">
+                    <source srcset="{{ theme.link }}/assets/images/pellekan.png" type="image/png">
+                    <img alt="پلکان" src="{{ theme.link }}/assets/images/pellekan.png" width="711" height="374">
+                </picture>
+                
             </div>
             <div class="flex-column tab-view">
                 <div class="tabs flex justify-center">

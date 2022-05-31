@@ -35,7 +35,12 @@
                 </div>
             </div>
             <div class="col-lg-6 col-xs-12 left flex justify-center align-end">
-                <img class="cover-image" alt="{{site.title}}" src="{{theme.link}}/assets/images/home-pros-1.jpg" />
+
+                <picture class="cover-image">
+                    <source srcset="{{theme.link}}/assets/images/home-pros-1.webp" type="image/webp">
+                    <source srcset="{{theme.link}}/assets/images/home-pros-1.jpg" type="image/jpg">
+                    <img alt="{{site.title}}" src="{{theme.link}}/assets/images/home-pros-1.jpg" width="577" height="595">
+                </picture>
             </div>
         </div>
     </div>
