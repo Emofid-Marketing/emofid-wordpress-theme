@@ -118,7 +118,10 @@
 
   .left {
     .cover-image {
-      border-radius: var(--radius-small);
+      img {
+        height: auto;
+        border-radius: var(--radius-small);
+      }
     }
   }
 }
