@@ -35,8 +35,29 @@
     }
   }
 
+  .full-screen-btn {
+    width: 24px;
+    height: 24px;
+    top: 30px;
+    right: 30px;
+    background-image: url("../../src/images/full-screen-btn.svg");
+    display: none;
+    cursor: pointer;
+  }
+
   video {
     object-fit: cover;
+  }
+
+  .right {
+    .inner {
+      ul {
+        li {
+          list-style: square;
+          margin-right: 1rem;
+        }
+      }
+    }
   }
 }
 
