@@ -1,19 +1,25 @@
-<section class="Home__slider">
-    <div class="slide slide-1 flex align-end">
-        <div class="container">
-            <div class="row">
-                <div class="right col-lg-7 col-xs-12 flex align-center justify-center">
-                    <div class="texts flex-column align-start">
-                        <h2 class="mb-1">مفید سرمایه‌گذاری کنیم</h2>
-                        <p class="mb-3">
-                            کارگزاری مفید با ارائه خدمات متنوع در حوزه بازار سرمایه در تلاش است تا مسیر رسیدن به اهداف مالی را برای سرمایه‌گذاران هموار کند.
-                        </p>
-                        <a class="Button blue outline medium" href="https://www.emofid.com/forms/investmentform/">مشاوره رایگان سرمایه‌گذاری</a>
-                    </div>
-                </div>
-                <div class="left col-lg-5 col-xs-12 flex align-end justify-center">
-                    <img src="{{theme.link}}/assets/images/slider-1.png" alt="{{site.description}}" width="504" height="403">
-                </div>
+<section class="Home__slider mt-3">
+    <div class="container mobile-no-padding">
+        <div class="slide flex relative w-100 radius-small overflow-hidden">
+
+            <picture class="background flex">
+                <source srcset="{{ theme.link }}/assets/images/pages/home/slide-1.webp" type="image/webp">
+                <source srcset="{{ theme.link }}/assets/images/pages/home/slide-1.jpg" type="image/jpeg">
+                <img class="w-100" src="{{ theme.link }}/assets/images/pages/home/slide-1.jpg" alt="کارگزاری مفید" width="1920" height="803">
+            </picture>
+
+            <picture class="background-mobile flex">
+                <source srcset="{{ theme.link }}/assets/images/pages/home/slide-1-m.webp" type="image/webp">
+                <source srcset="{{ theme.link }}/assets/images/pages/home/slide-1-m.jpg" type="image/jpeg">
+                <img class="w-100" src="{{ theme.link }}/assets/images/pages/home/slide-1-m.jpg" alt="کارگزاری مفید" width="750" height="1020">
+            </picture>
+
+            <div class="cover absolute flex-column justify-end align-start p-6">
+                <h2 class="mb-3 t-32">مفید سرمایه‌گذاری کنیم</h2>
+                <p class="mb-4 t-16 lh-26">
+                    کارگزاری مفید با ارائه خدمات متنوع در حوزه بازار سرمایه در تلاش است تا مسیر رسیدن به اهداف مالی را برای سرمایه‌گذاران هموار کند.
+                </p>
+                <a class="Button white medium" href="https://www.emofid.com/forms/investmentform/">مشاوره رایگان سرمایه‌گذاری</a>
             </div>
         </div>
     </div>

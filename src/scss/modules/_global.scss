@@ -32,6 +32,14 @@ select {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 1142px) {
+  .container {
+    &.mobile-no-padding {
+      padding: 0;
+    }
+  }
+}
+
 .container-md {
   width: 1142px;
   max-width: 100%;
@@ -75,10 +83,6 @@ select {
     z-index: inherit;
     transition: opacity 0.5s, z-index 0.5s 10s;
   }
-}
-
-body.home #content {
-  padding-top: 0;
 }
 
 @media only screen and (max-width: 48em) {
