@@ -37,6 +37,14 @@
     --button-theme-active-outline-color: var(--color-mofid-blue-outline-active);
   }
 
+  &.sherpa-blue {
+    --button-theme-color: var(--color-sherpa-blue);
+    --button-theme-hover-color: var(--color-mofid-blue-hover);
+    --button-theme-active-color: var(--color-mofid-blue-active);
+    --button-theme-hover-outline-color: var(--color-mofid-blue-hover);
+    --button-theme-active-outline-color: var(--color-mofid-blue-active);
+  }
+
   // themes
   &.outline {
     background-color: transparent;
