@@ -167,6 +167,7 @@
     .footer {
       flex-wrap: wrap;
       justify-content: center;
+      flex-direction: column;
 
       > a {
         margin-left: 0;

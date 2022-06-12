@@ -197,10 +197,10 @@
             input {
               width: 100%;
             }
-  
+
             button {
               top: 0;
-            }  
+            }
           }
         }
       }
@@ -209,6 +209,13 @@
     .bottom {
       p {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .version {
+          margin-top: 0.25rem;
+        }
       }
     }
   }
