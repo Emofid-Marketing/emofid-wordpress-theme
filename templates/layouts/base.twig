@@ -11,12 +11,57 @@
 			window.EMOFID.theme_url = "{{ theme.link }}";
 		</script>
 		{{function('wp_head')}}
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-N93FHFC');</script>
+		<!-- End Google Tag Manager -->
+
 	</head>
 	<body class="{{ body_class }}">
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-N93FHFC"
+				height="0"
+				width="0"
+				style="display:none;visibility:hidden"
+			></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
 		{{ include('components/header.twig') }}
 		<div id="content">
 			{% block content %}{% endblock %}
 		</div>
 		{{ include('components/footer.twig') }}
+
+		<!-- Start of Rocket.Chat Livechat Script -->
+		<script type="text/javascript">
+			(function (w, d, s, u) {
+				w.RocketChat = function (c) {
+					w.RocketChat._.push(c);
+					w.RocketChat(function () {
+						this.initialize({
+							theme: {
+								title: "خوش آمدید", // default widget title when the status of service is onl/* i */ne
+								offlineTitle: "سرویس در دسترس نمی‌باشد ", // default widget title when the status of service is online
+							},
+							language: 'fa',
+						});
+					});
+				};
+				w.RocketChat._ = [];
+				w.RocketChat.url = u;
+				var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+				j.async = true;
+				j.src = 'https://chatbot.emofid.com/livechat/rocketchat-livechat.min.js?_=201903270000';
+				h.parentNode.insertBefore(j, h);
+			})(window, document, 'script', 'https://chatbot.emofid.com/livechat');
+		</script>
 	</body>
 </html>
