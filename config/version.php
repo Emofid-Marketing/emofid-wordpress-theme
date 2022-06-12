@@ -1,6 +1,11 @@
 <?php
 
-$version = '0.6.13';
+$major = 0;
+$minor = 6;
+
+$version = file_get_contents(
+    get_template_directory() . "/version"
+);
 
 
 if (!defined('_EMF_VERSION')) {
@@ -13,5 +18,7 @@ if (!defined('_EMF_VERSION')) {
 }
 
 function get_current_version() {
-    return _EMF_VERSION;
+    global $major, $minor;
+    $patch = _EMF_VERSION;
+    return "{$major}.{$minor}.{$patch}";
 }
