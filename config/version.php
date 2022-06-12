@@ -1,7 +1,7 @@
 <?php
 
 $major = 0;
-$minor = 6;
+$minor = 7;
 
 $version = file_get_contents(
     get_template_directory() . "/version"
