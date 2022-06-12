@@ -2,12 +2,15 @@ import Swiper, { Scrollbar } from 'swiper';
 import $ from 'jquery';
 
 var managersSwiper = new Swiper(".managers", {
+  centeredSlides: false,
+  loop: false,
   slidesPerView: 1.6,
   spaceBetween: 25,
   scrollbar: {
     el: '.manager-scrollbar',
     hide: false,
     draggable: true,
+    dragSize: 100,
   },
   modules: [Scrollbar],
   breakpoints: {
