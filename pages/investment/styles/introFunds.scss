@@ -5,6 +5,7 @@
       overflow-x: auto;
       padding-top: 50px;
       padding-bottom: 10px;
+      scroll-behavior: smooth;
 
       &.active {
         .inner {
@@ -195,6 +196,29 @@
         }
       }
     }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      width: 32px;
+      height: 32px;
+      background: white url("../../src/images/icons/arrow-left.svg") no-repeat
+        scroll center/ 16px auto;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      box-shadow: var(--shadow-small-center);
+      z-index: 1;
+
+      &.next {
+        right: 32px;
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      &.prev {
+        left: 32px;
+        transform: translateY(-50%);
+      }
+    }
   }
 }
 
@@ -209,12 +233,26 @@
     .wrapper {
       position: relative;
 
+      .nav-btn {
+        &.next {
+          right: 0;
+          border-radius: 0 50% 50% 0;
+          border-left: 0;
+        }
+
+        &.prev {
+          left: 0;
+          border-radius: 0 50% 50% 0;
+          border-left: 0;
+        }
+      }
+
       .scroller {
         .inner {
           padding: 0 !important;
 
           .item {
-            width: 290px;
+            width: calc(100vw - 32px);
 
             .option {
               margin: 0 var(--space-3) !important;
@@ -223,13 +261,7 @@
         }
 
         &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 50px;
-          height: 420px;
-          background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+          display: none;
         }
       }
     }
