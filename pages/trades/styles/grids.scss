@@ -74,6 +74,12 @@
       order: 0;
     }
 
+    .trade-grids-header {
+      p {
+        font-size: var(--size-text-14);
+      }
+    }
+  
     .grid-item {
       max-width: calc(100vw);
       margin-right: calc((100vw - 100%) / -2);
@@ -108,7 +114,7 @@
 
         .right,
         .left {
-          width: 100%;
+          width: 100% !important;
           padding: 0;
         }
 
