@@ -5,8 +5,12 @@
 		window.EMOFID.current_page_id = 'contact';
 		window.EMOFID.sticky_header = false;
 	</script>
+	{% include('components/contact-cards.twig') with {
+		'param': {
+			'class': ' mt-7'
+		}
+	} %}
 	{% include('contact/partials/images.twig') %}
-	{% include('components/contact-cards.twig') %}
 	{% include('contact/partials/branches.twig') %}
 	{% include('contact/partials/companies.twig') %}
 {% endblock %}
