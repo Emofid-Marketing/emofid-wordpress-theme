@@ -1,69 +1,31 @@
 .About__honors {
-  .swiper.honors {
-    width: 100%;
-    overflow: hidden;
+  background-color: #002027;
 
-    .swiper-wrapper {
-      width: 100%;
+  .wrapper {
+    .texts {
+      width: 530px;
+      max-width: 100%;
+    }
 
-      .swiper-slide {
-        cursor: pointer;
-        justify-content: center;
+    .certs {
+      img {
+        width: calc(50% - 2rem);
+        height: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .About__honors {
+    .wrapper {
+      .certs {
+        flex-direction: column;
 
         img {
-          width: 100%;
-          height: auto;
-        }
-
-        .more {
-          &::after {
-            content: "";
-            width: 10px;
-            height: 10px;
-            margin-right: var(--space-2);
-            background: url("../images/icons/arrow-left.svg") no-repeat scroll
-              center;
-          }
+          width: calc(100% - 1rem);
         }
       }
     }
-
-    .honors-scrollbar {
-      flex: 1;
-      margin-left: var(--space-2);
-      height: 3px;
-    }
-
-    .next-honor {
-      background-color: var(--color-gray-light);
-      cursor: pointer;
-      z-index: 1000;
-      position: inherit;
-      width: 24px;
-      height: 24px;
-      border-radius: 24px;
-      padding-top: 7px;
-      float: left;
-      left: 10%;
-
-      &::after {
-        content: "";
-        width: 10px;
-        height: 10px;
-        margin-right: var(--space-2);
-        background: url("../images/icons/arrow-left.svg") no-repeat scroll
-          center;
-      }
-    }
-  }
-
-  .slider-footer {
-    width: 740px;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .swiper-scrollbar-drag {
-    background-color: var(--color-mofid-green);
   }
 }
