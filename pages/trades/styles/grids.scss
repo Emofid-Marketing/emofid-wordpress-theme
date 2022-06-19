@@ -65,6 +65,11 @@
 
 @media only screen and (max-width: 576px) {
   .Trades__grids {
+    .grid-desc {
+      padding: 0 var(--space-3);
+      font-size: var(--size-text-14);
+    }
+
     h2 {
       font-size: var(--size-text-20);
       order: 0;
