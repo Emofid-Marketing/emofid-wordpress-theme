@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     if (!$('.pros-wrapper > .item').length) return;
 
-    setInterval(function () {
+    var prosInterval = setInterval(function () {
 
         var j = (i % items) + 1;
 
@@ -17,5 +17,12 @@ $(document).ready(function () {
         i++;
 
     }, window.EMOFID.home_pros_delay);
+
+    $(`.pros-wrapper > .item`).click(function () {
+        var clickedItem = $(`.pros-wrapper > .item`).index(this)+1;
+        clearInterval(prosInterval);
+        $(`.pros-wrapper > .item`).removeClass("active");
+        $(`.pros-wrapper > .item:nth-child(${clickedItem})`).addClass("active");
+    });
 
 });
