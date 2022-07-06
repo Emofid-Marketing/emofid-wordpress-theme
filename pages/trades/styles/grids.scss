@@ -19,9 +19,9 @@
       h3 {
         &::before {
           content: "";
-          width: 30px;
-          height: 20px;
-          background: url("../images/icons/trades/logo-mofidtrader.png") no-repeat scroll center/30px 20px;
+          width: 18px;
+          height: 18px;
+          background: url("../images/icons/trades/logo-mofidtrader.png") no-repeat scroll center/18px 18px;
           margin-left: var(--space-2);
           display: inline-flex;
         }
@@ -32,9 +32,9 @@
       h3 {
         &::before {
           content: "";
-          width: 18px;
-          height: 18px;
-          background: url("../images/icons/trades/logo-plus.png") no-repeat scroll center/18px 18px;
+          width: 30px;
+          height: 20px;
+          background: url("../images/icons/trades/logo-plus.png") no-repeat scroll center/30px 20px;
           margin-left: var(--space-2);
           display: inline-flex;
         }
