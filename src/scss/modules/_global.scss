@@ -33,7 +33,8 @@ select {
 }
 
 @media only screen and (max-width: 1142px) {
-  .container {
+  .container,
+  .container-md {
     &.mobile-no-padding {
       padding: 0;
     }

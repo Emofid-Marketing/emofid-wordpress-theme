@@ -1,0 +1,36 @@
+.Jobs__abouts {
+  .outer {
+    width: 50%;
+  }
+  .box {
+    &:nth-child(1) {
+      background-color: #e8f7f7;
+    }
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Jobs__abouts {
+    .wrapper {
+      flex-direction: column;
+
+      .outer {
+        width: 100%;
+        padding: 0;
+      }
+
+      .box {
+        margin-bottom: 1rem;
+
+        img {
+          width: 190px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
