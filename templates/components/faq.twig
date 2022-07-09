@@ -1,0 +1,19 @@
+<section class="Faq mb-7">
+    <div class="container-sm">
+        <h3 class="t-24 text-darker text-center mb-7">سوالات متداول</h3>
+        <div class="flex-column">
+            {% for item in items %}
+                <div class="collapse-item flex-column">
+                    <h4 class="collapse-head relative t-16 px-4 py-3 cursor-pointer">
+                        {{ item.question }}
+                    </h4>
+                    <div class="collapse-body flex">
+                        <p class="inner t-14 text-darker px-4 py-3">
+                            {{ item.answer }}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

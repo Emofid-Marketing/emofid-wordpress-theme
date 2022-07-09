@@ -1,0 +1,147 @@
+.Jobs__pros {
+  .gallery {
+    .item {
+      width: 33.333%;
+    }
+  }
+
+  .tooltip-wrapper {
+    .info-icon {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      background: url("../../src/images/icons/info-green.svg") no-repeat scroll
+        center/ auto 100%;
+      margin-right: 0.4rem;
+
+      &:hover {
+        + .tooltip {
+          opacity: 1;
+          visibility: visible;
+          z-index: inherit;
+          top: 22px;
+        }
+      }
+    }
+  }
+
+  .tooltip {
+    width: 254px;
+    top: 28px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    transform: translateX(45%);
+    font-weight: 500;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all 0.15s ease-in-out;
+
+    .address {
+      border-bottom: 1px solid var(--color-gray-light);
+
+      &::before {
+        content: "";
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+        background: url("../../src/images/icons/pin-dark.svg") no-repeat scroll
+          center/ auto 100%;
+        margin-left: 0.75rem;
+      }
+    }
+
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: "";
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: var(--color-gray);
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+
+  .pos-item {
+    .title {
+      font-weight: 500;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+    }
+
+    &:nth-child(1) {
+      .icon {
+        background-image: url("../../src/images/icons/jobs/pos-1.svg");
+      }
+    }
+
+    &:nth-child(2) {
+      .icon {
+        background-image: url("../../src/images/icons/jobs/pos-2.svg");
+      }
+    }
+
+    &:nth-child(3) {
+      .icon {
+        background-image: url("../../src/images/icons/jobs/pos-3.svg");
+      }
+    }
+
+    &:nth-child(4) {
+      .icon {
+        background-image: url("../../src/images/icons/jobs/pos-4.svg");
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Jobs__pros {
+    margin-bottom: var(--space-7);
+
+    .gallery-outer {
+      overflow-x: auto;
+      overflow-y: visible;
+
+      .gallery {
+        min-width: 800px;
+
+        .item {
+          padding: 0 var(--space-2);
+        }
+      }
+    }
+
+    .tooltip-wrapper {
+      display: none;
+    }
+
+    .possibilities {
+      flex-wrap: wrap;
+      padding: 0 0.5rem;
+
+      .pos-item {
+        width: 50%;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.Jobs__intro {
+  .play-btn {
+    width: 126px;
+    height: 126px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    bottom: -63px;
+    right: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      width: 104px;
+      height: 104px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    button {
+      width: 84px;
+      height: 84px;
+      border: none;
+      z-index: 1;
+      background: #fff url("../../src/images/icons/play.svg") no-repeat scroll
+        center/ 25px auto;
+
+      &.paused {
+        background: #fff url("../../src/images/icons/pause.svg") no-repeat
+          scroll center / 30px auto;
+      }
+    }
+  }
+
+  .full-screen-btn {
+    width: 24px;
+    height: 24px;
+    top: 30px;
+    right: 30px;
+    background-image: url("../../src/images/full-screen-btn.svg");
+    display: none;
+    cursor: pointer;
+  }
+
+  video {
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Jobs__intro {
+    padding: 0;
+    margin-bottom: var(--space-6);
+
+    .right {
+      padding: 0;
+
+      ul {
+        display: none;
+      }
+
+      .caption {
+        display: none;
+      }
+    }
+
+    .left {
+      margin-top: var(--space-3);
+    }
+
+    .video-wrapper {
+      width: 100vw;
+      margin: 0 calc((100vw - 100%) / -2);
+
+      .inner {
+        border-radius: 0;
+      }
+    }
+
+    h1 {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+    }
+
+    .play-btn {
+      width: 96px;
+      height: 96px;
+      bottom: -48px;
+
+      &::before {
+        width: 80px;
+        height: 80px;
+      }
+
+      button {
+        width: 64px;
+        height: 64px;
+        background-size: 18px auto;
+
+        &.paused {
+          background-size: 20px auto;
+        }
+      }
+    }
+  }
+}

@@ -30,6 +30,9 @@ function loadPageModules() {
     case "news":
       import("./news");
       break;
+    case "jobs":
+      import("./jobs");
+      break;
     case "single-post":
       import("./single-post");
       break;
