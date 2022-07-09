@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "./static/css/main.ebc01cb0.css",
+    "main.js": "./static/js/main.309e31d5.js",
+    "main.js.map": "./static/js/main.309e31d5.js.map",
+    "index.html": "./index.html",
+    "static/css/main.ebc01cb0.css.map": "./static/css/main.ebc01cb0.css.map",
+    "static/js/main.309e31d5.js.LICENSE.txt": "./static/js/main.309e31d5.js.LICENSE.txt",
+    "static/media/Location.929d0cc8.svg": "./static/media/Location.929d0cc8.svg",
+    "static/media/account.9013e70b.svg": "./static/media/account.9013e70b.svg",
+    "static/media/arrowDown.cc4c50ee.svg": "./static/media/arrowDown.cc4c50ee.svg",
+    "static/media/briefcase.d612a2a7.svg": "./static/media/briefcase.d612a2a7.svg",
+    "static/media/certificate.6aad6267.svg": "./static/media/certificate.6aad6267.svg",
+    "static/media/check-circle.5d8c375e.svg": "./static/media/check-circle.5d8c375e.svg",
+    "static/media/chevron-left.b02f20cd.svg": "./static/media/chevron-left.b02f20cd.svg",
+    "static/media/childe.45d18caf.svg": "./static/media/childe.45d18caf.svg",
+    "static/media/cloud-upload.5983b88b.svg": "./static/media/cloud-upload.5983b88b.svg",
+    "static/media/content-copy.56d1ec41.svg": "./static/media/content-copy.56d1ec41.svg",
+    "static/media/family.0984409d.svg": "./static/media/family.0984409d.svg",
+    "static/media/file-certificate.37961cbd.svg": "./static/media/file-certificate.37961cbd.svg",
+    "static/media/information-outline.731fa0d1.svg": "./static/media/information-outline.731fa0d1.svg",
+    "static/media/information.6d0a2705.svg": "./static/media/information.6d0a2705.svg",
+    "static/media/instagram.897a6210.svg": "./static/media/instagram.897a6210.svg",
+    "static/media/military.33f712d4.svg": "./static/media/military.33f712d4.svg",
+    "static/media/plus-box.d007826d.svg": "./static/media/plus-box.d007826d.svg",
+    "static/media/refresh.f2e68069.svg": "./static/media/refresh.f2e68069.svg",
+    "static/media/ring.715a9c46.svg": "./static/media/ring.715a9c46.svg",
+    "static/media/school.047d9481.svg": "./static/media/school.047d9481.svg",
+    "static/media/telegram.840b53f0.svg": "./static/media/telegram.840b53f0.svg",
+    "static/media/trash-can-outline.28d1a306.svg": "./static/media/trash-can-outline.28d1a306.svg",
+    "static/media/upload.ae960001.svg": "./static/media/upload.ae960001.svg"
+  },
+  "entrypoints": [
+    "static/css/main.ebc01cb0.css",
+    "static/js/main.309e31d5.js"
+  ]
+}
