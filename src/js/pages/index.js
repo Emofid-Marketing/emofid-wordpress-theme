@@ -36,6 +36,9 @@ function loadPageModules() {
     case "single-post":
       import("./single-post");
       break;
+    case "search":
+      import("./search");
+      break;
   }
 }
 
