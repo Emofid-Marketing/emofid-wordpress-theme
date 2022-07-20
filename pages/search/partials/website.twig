@@ -1,0 +1,32 @@
+<section class="Search__website">
+    <div class="container-sm">
+        <div class="wrapper flex-column">
+            <h2 class="title t-24 mb-6">
+                نتایج جستجو
+                {% if keyword %}برای «{{ keyword }}»{% endif %}
+            </h2>
+            <div class="panel flex-column">
+                <div class="header flex mb-5">
+                    <div class="item">
+                        <span class="label">سایت</span>
+                        <span class="badge">{{ count }} مورد</span>
+                    </div>
+                </div>
+                <div class="body flex-column px-3 mb-7">
+
+                    {% for post in posts %}
+                    <div class="post flex-column py-4">
+                        <a href="{{ post.link }}">
+                            <h3 class="flex align-center t-20 text-darker mb-3">{{ post.title }}</h3>
+                        </a>
+                        <p class="t-16 lh-26 text-lighter pr-5">
+                            {{ post.preview.length(30).read_more('') }}
+                        </p>
+                    </div>
+                    {% endfor %}
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
