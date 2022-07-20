@@ -49,6 +49,7 @@
         background: url("../../src/images/icons/help-green.svg") no-repeat
           scroll center / 100% auto;
         margin-left: 0.5rem;
+        flex-shrink: 0;
       }
     }
   }
