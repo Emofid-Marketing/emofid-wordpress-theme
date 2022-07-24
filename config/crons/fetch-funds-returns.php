@@ -22,6 +22,7 @@ new CronJob([
                 $result["response"],
                 false
             );
+            w3tc_flush_all();
         }
     }
 ]);
