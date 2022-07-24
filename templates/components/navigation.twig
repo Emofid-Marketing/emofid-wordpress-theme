@@ -12,7 +12,7 @@
                         {% for child in item.children %}
                             <li>
                                 <a class="flex align-center radius-small" href="{{ child.link }}">
-                                    <img src="{{ Image(child.meta('submenu-icon')).src }}" />
+                                    <img src="{{ Image(child.meta('submenu-icon')).src }}" width="40" height="40" alt="{{ child.title }}" />
                                     <div class="content flex-column">
                                         <span class="title t-14 text-darker mb-1">{{ child.title }}</span>
                                         <span class="caption t-12 text-lighter">
