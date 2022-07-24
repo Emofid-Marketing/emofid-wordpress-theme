@@ -1,21 +1,43 @@
-import $ from 'jquery';
+function prosSlider() {
 
-$(document).ready(function () {
+  var activeIndex = 1;
+  var items = document.querySelectorAll('.pros-wrapper > .item');
+  var itemsCount = items.length;
 
-    var i = 1;
-    var items = $(`.pros-wrapper > .item`).length;
+  if (!itemsCount) return;
 
-    if (!$('.pros-wrapper > .item').length) return;
+  function setAutoInterval() {
+    return setInterval(function () {
 
-    setInterval(function () {
+      var j = (activeIndex % itemsCount) + 1;
 
-        var j = (i % items) + 1;
+      items.forEach((item) => {
+        item.classList.remove('active');
+      });
 
-        $(`.pros-wrapper > .item`).removeClass("active");
-        $(`.pros-wrapper > .item:nth-child(${j})`).addClass("active");
+      document.querySelector(`.pros-wrapper > .item:nth-child(${j})`).classList.add('active');
 
-        i++;
+      activeIndex++;
 
     }, window.EMOFID.home_pros_delay);
+  }
 
-});
+  var autoInterval = setAutoInterval();
+
+
+  // click events
+  items.forEach((item, index) => {
+    item.addEventListener('click', function () {
+      clearInterval(autoInterval);
+      activeIndex = index;
+      items.forEach((thisItem) => {
+        thisItem.classList.remove('active');
+      });
+      items[index].classList.add('active');
+      autoInterval = setAutoInterval();
+    });
+  });
+
+}
+
+prosSlider();
