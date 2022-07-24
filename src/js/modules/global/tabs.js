@@ -26,7 +26,10 @@ tabs.forEach((tab) => {
   });
 
   // default active tab
-  document.querySelector(`[data-tab-type]:first-child`).classList.add("active");
+  var firstTabs = document.querySelectorAll(`[data-tab-type]:first-child`);
+  firstTabs.forEach((firstTab) => {
+    firstTab.classList.add('active');
+  });
 
   var activeContentsFirstChilds = document.querySelectorAll(`[data-content-type]:first-child`);
   activeContentsFirstChilds.forEach((activeContentsFirstChild) => {
