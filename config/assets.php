@@ -7,7 +7,7 @@ function _emofid_scripts() {
         '_emofid-styles',
         get_template_directory_uri() . '/assets/dist/css/app.min.css',
         array(),
-        _EMF_VERSION
+        get_current_version()
     );
 
     // job page assets
@@ -16,14 +16,14 @@ function _emofid_scripts() {
             '_emofid-job-font-styles',
             get_template_directory_uri() . '/assets/externals/jobs/font/IRANSansFa/css/fontiran.css',
             array(),
-            _EMF_VERSION
+            get_current_version()
         );
 
         wp_enqueue_style(
             '_emofid-job-styles',
             get_template_directory_uri() . '/assets/externals/jobs/static/css/main.ebc01cb0.css',
             array(),
-            _EMF_VERSION
+            get_current_version()
         );
     }
 
@@ -32,7 +32,7 @@ function _emofid_scripts() {
         '_emofid-scripts',
         get_template_directory_uri() . '/assets/dist/js/app.min.js',
         array(),
-        _EMF_VERSION,
+        get_current_version(),
         true
     );
 
