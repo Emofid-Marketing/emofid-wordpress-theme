@@ -1,23 +1,35 @@
-import $ from 'jquery';
+var tabs = document.querySelectorAll('[data-tab-type]');
 
-$(document).ready(function () {
-
-  $("[data-tab-type]").click(function () {
-    var tabType = $(this).attr("data-tab-type");
-    var tabId = $(this).attr("data-tab-id");
+tabs.forEach((tab) => {
+  tab.addEventListener('click', function () {
+    var tabType = this.getAttribute("data-tab-type");
+    var tabId = this.getAttribute("data-tab-id");
 
     //activate tab item
-    $(`[data-tab-type="${tabType}"]`).removeClass("active");
-    $(`[data-tab-type="${tabType}"][data-tab-id="${tabId}"]`).addClass("active");
-
+    var thisTypeTabs = document.querySelectorAll(`[data-tab-type="${tabType}"]`);
+    thisTypeTabs.forEach((thisTab) => {
+      thisTab.classList.remove('active');
+    });
+    document.querySelector(`[data-tab-type="${tabType}"][data-tab-id="${tabId}"]`).classList.add('active');
 
     // display tab content
-    $(`[data-content-type="${tabType}"]`).hide();
-    $(`[data-content-type="${tabType}"][data-content-id="${tabId}"]`).show();
+    var thisTypeContents = document.querySelectorAll(`[data-content-type="${tabType}"]`);
+    thisTypeContents.forEach((thisContent) => {
+      thisContent.style.display = "none";
+    });
+
+    var activeContents = document.querySelectorAll(`[data-content-type="${tabType}"][data-content-id="${tabId}"]`);
+    activeContents.forEach((activeContent) => {
+      activeContent.style.display = "block";
+    });
+
   });
 
-
   // default active tab
-  $(`[data-tab-type]:first-child`).addClass("active");
-  $(`[data-content-type]:first-child`).show();
+  document.querySelector(`[data-tab-type]:first-child`).classList.add("active");
+
+  var activeContentsFirstChilds = document.querySelectorAll(`[data-content-type]:first-child`);
+  activeContentsFirstChilds.forEach((activeContentsFirstChild) => {
+    activeContentsFirstChild.style.display = "block";
+  });
 });
