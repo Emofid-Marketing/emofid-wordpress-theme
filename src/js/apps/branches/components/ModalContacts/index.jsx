@@ -6,6 +6,78 @@ import styles from "./styles.module.scss";
 function ModalContacts() {
   const { working_hours, contacts, socials } = DataStore.active_branch;
 
+  const phone = contacts.phone ? (
+    <div className="flex align-center mb-3">
+      <div
+        className={classNames(
+          styles.phone,
+          "t-16",
+          "text-dark",
+          "ml-2",
+          "flex",
+          "align-center"
+        )}
+      >
+        تلفن:
+      </div>
+      <div className="t-14 text-medium">{contacts.phone}</div>
+    </div>
+  ) : null;
+
+  const fax = contacts.fax ? (
+    <div className="flex align-center mb-3">
+      <div
+        className={classNames(
+          styles.fax,
+          "t-16",
+          "text-dark",
+          "ml-2",
+          "flex",
+          "align-center"
+        )}
+      >
+        نمابر:
+      </div>
+      <div className="t-14 text-medium">{contacts.fax}</div>
+    </div>
+  ) : null;
+
+  const telegram = socials.telegram ? (
+    <div className="flex align-center mb-3">
+      <a
+        className={classNames(
+          styles.telegram,
+          "t-14",
+          "ml-2",
+          "flex",
+          "align-center"
+        )}
+        href={socials.telegram}
+        targe="_blank"
+      >
+        ارتباط با تلگرام
+      </a>
+    </div>
+  ) : null;
+
+  const whatsapp = socials.whatsapp ? (
+    <div className="flex align-center mb-3">
+      <a
+        className={classNames(
+          styles.whatsapp,
+          "t-14",
+          "ml-2",
+          "flex",
+          "align-center"
+        )}
+        href={socials.whatsapp}
+        targe="_blank"
+      >
+        ارتباط با واتساپ
+      </a>
+    </div>
+  ) : null;
+
   return (
     <div className={classNames(styles.ModalContacts, "flex-column", "mx-auto")}>
       <div
@@ -24,36 +96,8 @@ function ModalContacts() {
       </div>
       <div className="row">
         <div className="col-xs-12 col-md-6 flex-column">
-          <div className="flex align-center mb-3">
-            <div
-              className={classNames(
-                styles.phone,
-                "t-16",
-                "text-dark",
-                "ml-2",
-                "flex",
-                "align-center"
-              )}
-            >
-              تلفن:
-            </div>
-            <div className="t-14 text-medium">{contacts.phone}</div>
-          </div>
-          <div className="flex align-center mb-3">
-            <div
-              className={classNames(
-                styles.fax,
-                "t-16",
-                "text-dark",
-                "ml-2",
-                "flex",
-                "align-center"
-              )}
-            >
-              نمابر:
-            </div>
-            <div className="t-14 text-medium">{contacts.fax}</div>
-          </div>
+          {phone}
+          {fax}
         </div>
         <div
           className={classNames(
@@ -63,36 +107,8 @@ function ModalContacts() {
             "flex-column"
           )}
         >
-          <div className="flex align-center mb-3">
-            <a
-              className={classNames(
-                styles.telegram,
-                "t-14",
-                "ml-2",
-                "flex",
-                "align-center"
-              )}
-              href={socials.telegram}
-              targe="_blank"
-            >
-              ارتباط با تلگرام
-            </a>
-          </div>
-          <div className="flex align-center mb-3">
-            <a
-              className={classNames(
-                styles.whatsapp,
-                "t-14",
-                "ml-2",
-                "flex",
-                "align-center"
-              )}
-              href={socials.whatsapp}
-              targe="_blank"
-            >
-              ارتباط با واتساپ
-            </a>
-          </div>
+          {telegram}
+          {whatsapp}
         </div>
       </div>
     </div>

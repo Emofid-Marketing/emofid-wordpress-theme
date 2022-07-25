@@ -27,7 +27,9 @@ function ModalPersons() {
     <div className={classNames(styles.ModalPersons, "py-6")}>
       <div className={classNames(styles.wrapper, "flex-column", "mx-auto")}>
         <h2 className="t-16 text-dark text-center mb-5">همکاران شعبه</h2>
-        <div className={classNames(styles.persons, "flex")}>{personsList}</div>
+        <div className={classNames(styles.persons, "flex", "wrap")}>
+          {personsList}
+        </div>
       </div>
     </div>
   );
