@@ -39,3 +39,7 @@ require_once(__DIR__ . '/config/utils.php');
 /* Security */
 require_once(__DIR__ . '/config/security.php');
 
+
+/* APIs */
+require_once(__DIR__ . '/config/api.php');
+

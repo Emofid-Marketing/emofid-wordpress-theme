@@ -1,0 +1,107 @@
+.Toast {
+  position: fixed;
+  bottom: 10px;
+  width: 340px;
+  max-width: calc(100% - 30px);
+  background: #0a4356;
+  z-index: 99999;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 1rem;
+  line-height: 1.8;
+  color: #fff;
+  border-radius: var(--radius-small);
+  transition: all 0.1s ease-in-out;
+  overflow: hidden;
+  animation-name: fadeIn;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.1s;
+
+  @keyframes fadeIn {
+    from {
+      transform: translateY(calc(100% + 10px));
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.25);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    width: 40%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation-name: timer;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes timer {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  &.theme-success {
+    background-color: #289d50;
+  }
+
+  &.theme-error {
+    background-color: #e14839;
+  }
+
+  .close {
+    position: absolute;
+    left: 1rem;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 2px;
+      background-color: white;
+    }
+
+    &::before {
+      top: 6px;
+      transform: rotate(45deg);
+      right: 2px;
+    }
+
+    &::after {
+      top: 6px;
+      transform: rotate(-45deg);
+      left: 2px;
+    }
+  }
+}
