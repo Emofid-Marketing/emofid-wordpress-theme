@@ -9,6 +9,7 @@
 			window.EMOFID = {};
 			window.EMOFID.home_url = "{{ site.url }}";
 			window.EMOFID.theme_url = "{{ theme.link }}";
+			window.EMOFID.api_url = window.EMOFID.home_url + "/wp-json/wp/v2";
 		</script>
 		{{function('wp_head')}}
 

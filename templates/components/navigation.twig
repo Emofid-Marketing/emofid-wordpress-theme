@@ -5,7 +5,7 @@
             <span>ورود به ایزی تریدر</span>
         </a>
         {% for item in header_menu.items %}
-            <li class="ml-5 {{ item.classes|join(' ') }}">
+            <li class="ml-4 {{ item.classes|join(' ') }}">
                 <a href="{{ item.link }}">{{ item.title }}</a>
                 {% if item.children %}
                     <ul class="overflow-hidden">
@@ -35,10 +35,13 @@
                 {% endif %}
             </li>
         {% endfor %}
-        <li class="header-apps-links">
-            <a class="easytrader" href="https://d.easytrader.emofid.com/">ایزی تریدر</a>
-        </li>
     </ul>
+
+    <form class="mobile-search-form relative" action="{{ site.link }}">
+        <input type="text" placeholder="عبارت مورد نظر خود را جستجو کنید" name="s" />
+        <button type="submit"></button>
+    </form>
+
     <div class="call-box align-center">
         <div class="box flex justify-space-between align-center mx-auto p-3">
             <div class="flex-column align-center">
