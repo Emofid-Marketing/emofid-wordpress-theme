@@ -1,0 +1,128 @@
+.HeaderSearch {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: all 0.15s ease-in-out;
+
+  &::before {
+    content: "";
+    width: 38px;
+    height: 32px;
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../images/icons/search-gray.svg") no-repeat scroll 13px
+      center / 16px auto;
+    z-index: 1;
+    border-left: 1px solid #ddd;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: inherit;
+  }
+
+  &.focused {
+    input[type="text"] {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom: none;
+    }
+
+    &::before {
+      border-color: transparent;
+    }
+  }
+
+  input[type="text"] {
+    position: absolute;
+    right: 0;
+    top: -4px;
+    width: 100%;
+    height: calc(100% + 8px);
+    border-radius: var(--radius-small);
+    box-shadow: 0px 1px 5px -3px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-atlas-light);
+    padding: 0.5rem 4rem 0.5rem 7rem;
+    color: #717888;
+    transition: all 0.2s ease-in-out;
+  }
+
+  button[type="submit"] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.5rem;
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #717888;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      width: 11px;
+      height: 11px;
+      background: url("../images/icons/arrow-left-gray.svg") no-repeat scroll
+        center/ 100% auto;
+      margin-right: 0.4rem;
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 41px;
+    width: 100%;
+    background: #fff;
+    padding: 0 44px 16px 16px;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: var(--color-atlas-light);
+    border-radius: 0 0 var(--radius-small) var(--radius-small);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &.focused {
+    .dropdown {
+      opacity: 1;
+      z-index: inherit;
+      visibility: visible;
+    }
+  }
+
+  .section {
+    margin-bottom: 1rem;
+
+    .label {
+      font-size: 12px;
+      color: var(--color-text-lighter);
+      margin-bottom: 0.75rem;
+    }
+
+    .items {
+      > a {
+        font-size: 14px;
+        color: var(--color-text-darker);
+        margin-bottom: 10px;
+
+        &:hover {
+          color: var(--color-mofid-green);
+        }
+      }
+    }
+  }
+}

@@ -1,16 +1,22 @@
 <header id="header" class="Header">
-	<div class="container">
+	<div class="xcontainer-fluid">
 		<div class="flex align-center">
 			<a class="logo" href="{{site.link}}" title="{{site.title}}" title="{{site.title}}">
-				<img src="{{theme.link}}/assets/images/logo.svg" class="ml-5" width="177" height="27" alt="{{site.title}}">
+				<img src="{{theme.link}}/assets/images/logo.svg" class="logo-normal ml-5" width="177" height="27" alt="{{site.title}}">
+				<img src="{{theme.link}}/assets/images/logo-vertical.svg" class="logo-mobile" width="64" height="30" alt="{{site.title}}">
 			</a>
-			<div class="nav-wrapper flex align-center">
-				<button class="mobile-nav-btn">
-					<span></span>
-				</button>
-				{{ include('components/navigation.twig') }}
+			<div class="header-content relative flex align-center pl-2">
+				<div class="nav-wrapper flex align-center">
+					<button class="mobile-nav-btn">
+						<span></span>
+					</button>
+					{{ include('components/navigation.twig') }}
+				</div>
+				<a class="phone mr-auto flex align-center" href="tel:+98218700" title="تماس با کارگزاری مفید">021-8700</a>
+				<button id="header-search-button" class="search-btn mr-3 flex" aria-label="Search Button"></button>
+
+				{{ include('components/header-search.twig') }}
 			</div>
-			<a class="phone mr-4 flex align-center" href="tel:+98218700" title="تماس با کارگزاری مفید">021-8700</a>
 			{{ include('components/header-auth.twig') }}
 		</div>
 	</div>

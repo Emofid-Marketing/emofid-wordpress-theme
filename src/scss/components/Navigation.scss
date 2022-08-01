@@ -4,6 +4,29 @@
       position: relative;
       line-height: 35px;
 
+      &.easytrader-btn {
+        > a {
+          background-color: #f2f5f6;
+          border-radius: var(--radius-small);
+          padding: 0.5rem 1rem;
+          display: flex;
+          align-items: center;
+
+          &::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            background: url("../images/icons/easytrader.svg") no-repeat scroll
+              center/100% auto;
+            margin-left: var(--space-1);
+          }
+        }
+      }
+
+      &.tel-btn {
+        display: none;
+      }
+
       &.header-apps-links {
         display: none;
         align-items: center;
@@ -151,21 +174,80 @@
       }
     }
   }
+  .mobile-search-form {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    display: none;
+
+    input {
+      width: 100%;
+      border-radius: var(--radius-small);
+      border: 1px solid #dce1e6;
+      padding: 0.75rem 1rem;
+      font-size: 12px;
+      transition: all 0.15s ease-in-out;
+
+      &:focus {
+        border-color: var(--color-mofid-green);
+      }
+    }
+
+    button[type="submit"] {
+      position: absolute;
+      left: 24px;
+      border: none;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      background: url("../images/icons/arrow-left-green.svg") no-repeat scroll
+        center/ 12px auto;
+    }
+  }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: $tablet) {
   .Navigation {
     overflow-x: auto;
     overflow-y: hidden;
     padding: 0 10px;
+    flex: 1;
 
     > ul {
       width: 500px;
+
+      &::after {
+        content: "";
+        width: 24px;
+        height: 32px;
+        background: transparent;
+        display: flex;
+        flex-shrink: 0;
+      }
 
       > li {
         flex-shrink: 0;
         display: flex;
         margin-left: var(--space-4) !important;
+
+        &.tel-btn {
+          display: inherit;
+
+          > a {
+            display: flex;
+            align-items: center;
+
+            &::after {
+              content: "";
+              width: 16px;
+              height: 16px;
+              background: url("../images/icons/phone.svg") no-repeat scroll
+                center/ 100% auto;
+              margin-right: 0.25rem;
+            }
+          }
+        }
 
         &.header-apps-links {
           display: flex;
@@ -195,11 +277,24 @@
         display: flex;
       }
 
+      .mobile-search-form {
+        display: inherit;
+      }
+
+      .easytrader-btn,
+      .tel-btn {
+        display: none;
+      }
+
       > ul {
         flex-direction: column;
         width: 100%;
         align-items: flex-start;
         padding: 15px 0;
+
+        &::after {
+          display: none;
+        }
 
         .easytrader-mobile-link {
           display: block;
@@ -262,6 +357,18 @@
               transform: rotate(180deg);
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .Navigation {
+    ul {
+      li {
+        > a {
+          font-size: 12px;
         }
       }
     }

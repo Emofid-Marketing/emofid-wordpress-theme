@@ -1,4 +1,6 @@
 .HeaderAuth {
+  flex-shrink: 0;
+
   .easy-trader {
     &::before {
       content: "";
@@ -8,28 +10,22 @@
       margin-left: var(--space-2);
     }
   }
+}
 
-  .search-btn {
-    background-color: transparent;
-    border: none;
+@media only screen and (max-width: $tablet) {
+  .HeaderAuth {
+    margin-right: auto;
 
-    &::before {
-      content: "";
-      width: 16px;
-      height: 16px;
-      background: url("../images/icons/search.svg") no-repeat scroll center;
+    .easy-trader {
+      display: none;
     }
   }
 }
 
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: $mobile) {
   .HeaderAuth {
-    .easy-trader {
-      display: none;
-    }
-
-    .search-btn {
-      display: none;
+    .Button {
+      font-size: 12px;
     }
   }
 }
