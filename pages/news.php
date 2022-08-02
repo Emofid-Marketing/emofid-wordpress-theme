@@ -26,7 +26,7 @@ $context['slider_posts'] = Timber::get_posts( $slider_posts );
 /* Posts */
 $posts = array(
     'post_type' => 'post',
-    'posts_per_page' => 3,
+    'posts_per_page' => 10,
 );
 
 $context['posts'] = Timber::get_posts( $posts );
