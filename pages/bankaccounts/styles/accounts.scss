@@ -1,0 +1,64 @@
+.bankaccounts__accounts {
+    h2 {
+        color: var(--color-text-medium);
+    }
+
+    table {
+        margin-top: 18px;
+        width: 100%;
+
+        tr:nth-child(odd) {
+            background: #FAFAFB;
+        }
+
+        tr:nth-child(even) {
+            border-top: 1px solid #DCE1E6;
+        }
+
+        th {
+            font-size: 12px;
+            color: #2C2F33;
+            line-height: 18px;
+            padding: 12px 0;
+            background: #FFFFFF;
+            border: 0;
+            text-align: right;
+            padding-right: 28px;
+        }
+
+        td {
+            font-size: 12px;
+            line-height: 50px;
+            padding-right: 28px;
+            color: #6E7780;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .bankaccounts__accounts {
+        table {
+            display: block;
+            margin-top: 0;
+
+            tr {
+                background: #FFFFFF !important;
+            }
+
+            td {
+                border: none;
+                position: relative;
+                padding-right: 50%;
+            }
+
+            td:before {
+                position: absolute;
+                top: 0;
+                right: 6px;
+                width: 45%;
+                padding-left: 10px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
