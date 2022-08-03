@@ -31,33 +31,84 @@
             line-height: 50px;
             padding-right: 28px;
             color: #6E7780;
+
+            .clipbord-btn {
+                background: #FFFFFF;
+                border: 1px solid #DCE1E6;
+                color: #6E7780;
+                padding: 8px 12px;
+                font-size: 12px;
+                margin-right: 8px;
+
+                &:before {
+                    content: "";
+                    width: 13px;
+                    height: 15px;
+                    background: url("../../src/images/icons/copyto.svg") no-repeat scroll
+                      center;
+                    margin-left: var(--space-2);
+                    display: inline-block;
+                    margin-bottom: -5px;
+                }
+            }
         }
     }
 }
 
 @media only screen and (max-width: 576px) {
     .bankaccounts__accounts {
+        table,
+        th,
+        tr,
+        td {
+            display: block;
+        }
+
         table {
             display: block;
             margin-top: 0;
 
+            thead {
+                display:none;
+            }
+
             tr {
                 background: #FFFFFF !important;
-            }
+                padding: 4%;
 
-            td {
-                border: none;
-                position: relative;
-                padding-right: 50%;
-            }
+                td {
+                    border: none;
+                    padding-right: 0;
+                    display: inline-block;
+                    line-height: 28px;
+                    color: #2C2F33;
+    
+                    &:before {
+                        content: attr(data-label);
+                        float: right;
+                        width: 100%;
+                        color: #6E7780;
+                    }
+                }
 
-            td:before {
-                position: absolute;
-                top: 0;
-                right: 6px;
-                width: 45%;
-                padding-left: 10px;
-                white-space: nowrap;
+                td:nth-child(1),
+                td:nth-child(2),
+                td:nth-child(3) {
+                    width: 32%;
+                }
+
+                td:nth-child(4),
+                td:nth-child(5) {
+                    width: 100%;
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .iban-acc {
+            td:nth-child(1),
+            td:nth-child(2) {
+                width: 100%;
             }
         }
     }
