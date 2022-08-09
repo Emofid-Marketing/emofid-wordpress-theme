@@ -39,7 +39,10 @@ function loadPageModules() {
     case "search":
       import("./search");
       break;
-  }
+    case "bankaccounts":
+      import("./bankaccounts");
+      break;
+    }
 }
 
 loadPageModules();

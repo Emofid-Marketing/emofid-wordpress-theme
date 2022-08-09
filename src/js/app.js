@@ -6,6 +6,7 @@ import "./modules/global/tabs";
 import "./modules/stiky-mobile-header";
 import "./modules/newsletter";
 import "./modules/header-search";
+import "./modules/collapsible";
 // import "./modules/pjax";
 
 
