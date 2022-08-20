@@ -16,7 +16,5 @@ add_filter('xmlrpc_enabled', '__return_false');
 
 // disable API CORS headers( Because Server handles it )
 add_action( 'rest_api_init', function() {
-
 	remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
-
 }, 15 );
