@@ -13,6 +13,7 @@ function get_dynamic_data() {
 
     $pages = [
         '741' => 'home',
+        '41' => 'investment',
     ];
 
     $page_name = $pages[get_the_ID()];
