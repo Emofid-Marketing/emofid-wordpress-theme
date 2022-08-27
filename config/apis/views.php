@@ -12,7 +12,7 @@ register_rest_field(
 function get_dynamic_data() {
 
     $pages = [
-        '113' => 'home',
+        '741' => 'home',
     ];
 
     $page_name = $pages[get_the_ID()];
