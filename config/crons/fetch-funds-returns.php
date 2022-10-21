@@ -22,7 +22,8 @@ new CronJob([
                 $result["response"],
                 false
             );
-            w3tc_flush_all();
+
+            if (function_exists('w3tc_flush_all')) w3tc_flush_all();
         }
     }
 ]);

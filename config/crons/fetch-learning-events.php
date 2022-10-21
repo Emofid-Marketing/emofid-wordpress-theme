@@ -18,7 +18,8 @@ new CronJob([
                 "_emofid_learning_current_week_events",
                 $result["response"]
             );
-            w3tc_flush_all();
+
+            if (function_exists('w3tc_flush_all')) w3tc_flush_all();
         }
     }
 ]);
