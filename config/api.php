@@ -14,3 +14,6 @@ require_once(__DIR__ . '/apis/announcement.php');
 
 /* Search */
 require_once(__DIR__ . '/apis/search.php');
+
+/* Investment Advice Form */
+require_once(__DIR__ . '/apis/investment-advice.php');
