@@ -14,7 +14,11 @@ new CronJob([
         ]);
         $result = $request->send();
 
-        array_splice($result["response"], 0, 1);
+        foreach( $result["response"] as $index => $fund) {
+            if( !$fund->title ) {
+                array_splice($result["response"], $index, 1);
+            }
+        }
 
         if( $result["status"] === 200 ) {
             update_option(

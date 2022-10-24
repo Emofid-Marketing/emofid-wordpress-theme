@@ -12,6 +12,9 @@ require_once(__DIR__ . '/apis/posts.php');
 /* Announcement */
 require_once(__DIR__ . '/apis/announcement.php');
 
+/* Fund */
+require_once(__DIR__ . '/apis/fund.php');
+
 /* Search */
 require_once(__DIR__ . '/apis/search.php');
 

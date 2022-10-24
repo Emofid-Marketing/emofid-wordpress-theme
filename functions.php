@@ -8,6 +8,10 @@ require_once(__DIR__ . '/config/version.php');
 require_once(__DIR__ . '/config/composer.php');
 
 
+/* Require Libraries */
+require_once(__DIR__ . '/config/libs.php');
+
+
 /* Require Cron Jobs */
 require_once(__DIR__ . '/config/crons.php');
 
