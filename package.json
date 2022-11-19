@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "npx webpack --watch --mode=development",
     "build": "npx webpack --mode=production",
-    "release": "npm run build && node .release"
+    "release": "npm run build && node .release",
+    "pack": "node .release"
   },
   "repository": {
     "type": "git",
