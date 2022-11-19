@@ -4,3 +4,35 @@ Author: Mofid Securities
 Author URI: https://www.emofid.com/
 Version: 1.0
 */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper h1 {
+  text-align: center;
+}
+
+.wrapper ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.wrapper ul > li {
+  margin: 0 2rem;
+}
+
+.version {
+  margin-bottom: 4rem;
+}
