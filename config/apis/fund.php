@@ -14,27 +14,28 @@ function get_fund_data() {
     $fundsReturns = get_option("_emofid_funds_returns");
 
     foreach ($fundsReturns as $fund ) {
-        if( $fund->fundCode === get_field("fund_id") ) {
+        if( $fund["fundCode"] === get_field("fund_id") ) {
             $fundData = [
                 "fund_types" => [
-                    $fund->staticInfo->fundType,
+                    $fund["staticInfo"]["fundType"],
                 ],
-                "last_update_date" => jdate("j F Y", strtotime($fund->lastNavDate)),
-                "subscription_price" => $fund->subscriptionNav,
-                "cancel_price" => $fund->cancelNav,
-                "aum" => $fund->aum,
-                "investors_number" => $fund->currentInvestorsNumber,
+                "last_update_date" => jdate("j F Y", strtotime($fund["lastNavDate"])),
+                "subscription_price" => $fund["subscriptionNav"],
+                "cancel_price" => $fund["cancelNav"],
+                "aum" => $fund["aum"],
+                "investors_number" => $fund["currentInvestorsNumber"],
                 "returns" => [
-                    "return1M" => $fund->return1M,
-                    "return3M" => $fund->return3M,
-                    "return6M" => $fund->return6M,
-                    "return1Y" => $fund->return1Y,
-                    "return3Y" => $fund->return3Y,
-                    "return5Y" => $fund->return5Y,
+                    "return1M" => $fund["return1M"],
+                    "return3M" => $fund["return3M"],
+                    "return6M" => $fund["return6M"],
+                    "return1Y" => $fund["return1Y"],
+                    "return3Y" => $fund["return3Y"],
+                    "return5Y" => $fund["return5Y"],
                 ]
             ];
         }
     }
+
 
     return array_merge([
         "icon" => get_field("fund_icon")["url"],

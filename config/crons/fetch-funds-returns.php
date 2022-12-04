@@ -8,27 +8,70 @@ new CronJob([
     'interval' => 86400, // 86400 seconds = 1 day
     'handler' => function() {
 
+        // Authentication
         $request = new Fetch([
-            "method" => "get",
-            "url" => "https://fundsapi.emofid.com/api/Investment/Returns",
+            "method" => "POST",
+            "url" => "https://auth.bambocore.ir/api/v1/clients/authorize",
+            "body" => [
+                "username" => "emofid",
+                "password" => "aLYUktF+PX%kC+V"
+            ]
         ]);
+
         $result = $request->send();
+        $result = $result["response"];
 
-        foreach( $result["response"] as $index => $fund) {
-            if( !$fund->title ) {
-                array_splice($result["response"], $index, 1);
-            }
+        if( !$result->success || !$result->data ) return;
+        
+        $token = $result->data;
+
+        // echo $token;
+
+        // Get funds data
+        $request = new Fetch([
+            "method" => "GET",
+            "url" => "https://fund.bambocore.ir/api/v1/funds",
+            "header" => [
+                "client-token: Bearer $token",
+            ]
+        ]);
+
+        $result = $request->send();
+        $result = $result["response"];
+
+        if( !$result->success || !$result->data ) return;
+
+        // organize data
+        $funds = [];
+
+        foreach( $result->data as $fund ) {
+
+            $profits = json_decode(json_encode($fund->profits), true);
+
+            $funds[] = [
+                'fundCode' => $fund->code,
+                'staticInfo' => [
+                    'fundType' => $fund->fundTypeTitle 
+                ],
+                'lastNavDate' => $fund->lastSync,
+                'subscriptionNav' => $fund->issuanceNav,
+                "cancelNav" => $fund->redemptionNav,
+                "aum" => $fund->totalNetAssetValue,
+                "currentInvestorsNumber" => $fund->totalInvestor,
+                "return1M" => $profits["months"]["1"],
+                "return3M" => $profits["months"]["3"],
+                "return6M" => $profits["months"]["6"],
+                "return1Y" => $profits["years"]["1"],
+                "return3Y" => $profits["years"]["3"],
+                "return5Y" => $profits["years"]["5"],
+            ];
         }
 
-        if( $result["status"] === 200 ) {
-            update_option(
-                "_emofid_funds_returns",
-                $result["response"],
-                false
-            );
-
-            if (function_exists('w3tc_flush_all')) w3tc_flush_all();
-        }
+        update_option(
+            "_emofid_funds_returns",
+            $funds,
+            false
+        );
     }
 ]);
 
