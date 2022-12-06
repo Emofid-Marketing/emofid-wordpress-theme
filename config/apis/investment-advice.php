@@ -102,18 +102,16 @@ function convertPersianToEnglish($string) {
 
 function sendToXRM( $mobile, $location ) {
 
-    $ApiAddress = "https://xrmservice.emofid.com/XrmApi/Marketing/CreateConsultation";
-    $AppId = "E273F129-1937-EC11-AE33-005056AA7F0E";
+    $ApiAddress = "https://xrmwebapi.emofid.com/api/v1/Leads";
+    $AppId = "e701a05c-9ae7-ea11-8374-005056aa1985";
 
     $postdata = '
         {
-            "ApplicationId": "' . $AppId . '",
-            "xrmLead": {
-                "mobileNumber": "' . $mobile . '",
-                "campaignCodeName": "next_emofid",
-                "TrafficSource": "' . $location . '"
+            "lead": {
+                "applicationId": "' . $AppId . '",
+                "mobileNumber": "' . $mobile . '"
             },
-            "xrmConsultationSchedule": {}
+            "duplicationCheckHour": 0
         }
     ';
 
