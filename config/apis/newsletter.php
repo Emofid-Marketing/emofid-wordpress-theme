@@ -37,6 +37,7 @@ function newsletter_store_email( WP_REST_Request $request ) {
     ];
 
     return [
-        'status' => true
+        'status' => true,
+        'message' => 'عضویت شما در خبرنامه با موفقیت انجام شد.'
     ];
 }
