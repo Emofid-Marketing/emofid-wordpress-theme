@@ -20,3 +20,6 @@ require_once(__DIR__ . '/apis/search.php');
 
 /* Investment Advice Form */
 require_once(__DIR__ . '/apis/investment-advice.php');
+
+/* Suggestion Form */
+require_once(__DIR__ . '/apis/suggestion.php');

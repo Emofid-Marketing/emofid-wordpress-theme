@@ -14,7 +14,7 @@ function investment_advice_store_mobile( WP_REST_Request $request ) {
     $table_name = $wpdb->prefix . 'emofid_advice_requests';
 
     $body = json_decode($request->get_body());
-    $mobile = convertPersianToEnglish($body->mobile);
+    $mobile = convertPersianCharsToEnglish($body->mobile);
     $location = $body->location || "";
 
     // validate mobile number
@@ -73,7 +73,7 @@ function thisIPIsSpammer( $mobile ) {
         FROM $table_name
         WHERE
         user_ip = '$userIP' AND
-        reg_date > $yesterday
+        reg_date > '$yesterday'
     ");
 
     $is_duplicate = false;
@@ -88,15 +88,6 @@ function thisIPIsSpammer( $mobile ) {
     ) return false;
 
     return true;
-}
-
-
-function convertPersianToEnglish($string) {
-    $persian = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
-    $english = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-
-    $output= str_replace($persian, $english, $string);
-    return $output;
 }
 
 
