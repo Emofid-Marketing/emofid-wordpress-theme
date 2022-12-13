@@ -110,6 +110,12 @@ function formDataIsValid( $body ) {
         'error' => 'متن توضیحات وارد شده بسیار کوتاه است',
     ];
 
+    if(strlen($body->content) > 500) return [
+        'status' => false,
+        'error' => 'طول توضیحات وارد شده طولانی تر از حد مجاز است!',
+    ];
+
+
     return [
         'status' => true
     ];
