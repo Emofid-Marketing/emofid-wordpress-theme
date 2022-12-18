@@ -10,7 +10,7 @@ new CronJob([
 
         $request = new Fetch([
             "method" => "get",
-            "url" => "https://fundsapi.emofid.com/api/Investment/AssetComposition",
+            "url" => "http://fundsapi.emofid.com/api/Investment/AssetComposition",
         ]);
         $result = $request->send();
 
