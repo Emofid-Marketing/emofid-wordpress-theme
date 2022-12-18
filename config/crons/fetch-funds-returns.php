@@ -11,7 +11,7 @@ new CronJob([
         // Authentication
         $request = new Fetch([
             "method" => "POST",
-            "url" => "https://auth.bambocore.ir/api/v1/clients/authorize",
+            "url" => "http://auth.bambocore.ir/api/v1/clients/authorize",
             "body" => [
                 "username" => "emofid",
                 "password" => "aLYUktF+PX%kC+V"
@@ -30,7 +30,7 @@ new CronJob([
         // Get funds data
         $request = new Fetch([
             "method" => "GET",
-            "url" => "https://fund.bambocore.ir/api/v1/funds",
+            "url" => "http://fund.bambocore.ir/api/v1/funds",
             "header" => [
                 "client-token: Bearer $token",
             ]
