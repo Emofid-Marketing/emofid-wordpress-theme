@@ -18,7 +18,7 @@ function suggestion_form_store( WP_REST_Request $request ) {
     $validate = formDataIsValid( $body );
 
     if( !$validate['status'] ) return [
-        'status' => 'false',
+        'status' => false,
         'error' => $validate['error']
     ];
 
