@@ -25,7 +25,7 @@ function suggestion_form_store( WP_REST_Request $request ) {
     if( thisSuggestionIPIsSpammer() ) {
         return [
             'status' => false,
-            'message' => 'از ارسال بیش از حد فرم خودداری کنید!'
+            'error' => 'از ارسال بیش از حد فرم خودداری کنید!'
         ];
     }
 
