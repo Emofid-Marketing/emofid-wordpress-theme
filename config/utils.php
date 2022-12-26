@@ -22,3 +22,7 @@ require_once( __DIR__ . "/utils/validateNationalCode.php" );
 
 // convert persian chars to english
 require_once( __DIR__ . "/utils/convertPersianCharsToEnglish.php" );
+
+
+// validate captcha response token
+require_once( __DIR__ . "/utils/validateCaptcha.php" );

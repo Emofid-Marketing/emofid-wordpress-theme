@@ -15,6 +15,12 @@ function suggestion_form_store( WP_REST_Request $request ) {
 
     $body = json_decode($request->get_body());
 
+    // check captcha
+    if( !validateCaptcha( $body->captcha ) ) return [
+        'status' => false,
+        'error' => 'کد امنیتی وارد شده اشتباه است'
+    ];
+
     $validate = formDataIsValid( $body );
 
     if( !$validate['status'] ) return [
