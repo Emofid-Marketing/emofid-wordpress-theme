@@ -23,3 +23,6 @@ require_once(__DIR__ . '/apis/investment-advice.php');
 
 /* Suggestion Form */
 require_once(__DIR__ . '/apis/suggestion.php');
+
+/* Funds history */
+require_once(__DIR__ . '/apis/funds-history.php');
