@@ -28,7 +28,7 @@ function get_fund_history( WP_REST_Request $request ) {
     ) {
         $req = new Fetch([
             "method" => "POST",
-            "url" => "https://auth.bambocore.ir/api/v1/clients/authorize",
+            "url" => "http://auth.bambocore.ir/api/v1/clients/authorize",
             "body" => [
                 "username" => "emofid",
                 "password" => "aLYUktF+PX%kC+V"
@@ -65,7 +65,7 @@ function get_bambo_fund_history( $token, $fundCode ) {
 
     $request = new Fetch([
         "method" => "GET",
-        "url" => "https://fund.bambocore.ir/api/v1/funds/$fundCode/history",
+        "url" => "http://fund.bambocore.ir/api/v1/funds/$fundCode/history",
         "header" => [
             "client-token: Bearer $token",
         ]

@@ -16,6 +16,7 @@ function get_fund_data() {
     foreach ($fundsReturns as $fund ) {
         if( $fund["fundCode"] === get_field("fund_id") ) {
             $fundData = [
+                "fundCode" => $fund["fundCode"],
                 "fund_types" => [
                     $fund["staticInfo"]["fundType"],
                 ],

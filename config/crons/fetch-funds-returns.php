@@ -46,7 +46,7 @@ new CronJob([
 
         foreach( $result->data as $fund ) {
 
-            $profits = json_decode(json_encode($fund->profits), true);
+            $profits = json_decode(json_encode($fund->returns), true);
 
             $funds[] = [
                 'fundCode' => $fund->code,
