@@ -1,7 +1,5 @@
 <?php
 
-// print_r( $_SESSION );
-
 add_action( 'rest_api_init', function () {
     register_rest_route( 'investment-advice/v1', '/store', array(
       'methods' => 'POST',
