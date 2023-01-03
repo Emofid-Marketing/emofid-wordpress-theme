@@ -17,6 +17,7 @@ function get_fund_data() {
         if( $fund["fundCode"] === get_field("fund_id") ) {
             $fundData = [
                 "fundCode" => $fund["fundCode"],
+                "startDate" => formatDate($fund["startDate"]),
                 "fund_types" => [
                     $fund["staticInfo"]["fundType"],
                 ],
@@ -45,3 +46,19 @@ function get_fund_data() {
     ], $fundData);
 }
 
+
+function formatDate( $gregorianDate ) {
+    $dateArray = explode(
+        "-",
+        explode(
+            "T",
+            $gregorianDate
+        )[0]
+    );
+
+    return gregorian_to_jalali(
+        $dateArray[0],
+        $dateArray[1],
+        $dateArray[2]
+    )[0];
+}

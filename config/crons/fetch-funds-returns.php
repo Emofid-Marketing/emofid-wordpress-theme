@@ -50,6 +50,7 @@ new CronJob([
 
             $funds[] = [
                 'fundCode' => $fund->code,
+                'startDate' => $fund->startDate,
                 'staticInfo' => [
                     'fundType' => $fund->fundTypeTitle 
                 ],
