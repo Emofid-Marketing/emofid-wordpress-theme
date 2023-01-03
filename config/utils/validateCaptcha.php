@@ -2,7 +2,7 @@
 
 function validateCaptcha( $token ) {
     $data = array(
-        'secret' => "0x0000000000000000000000000000000000000000",
+        'secret' => "0x033Ca3FBf903cBD12E6c9fd172309216502fb952",
         'response' => $token
     );
 
