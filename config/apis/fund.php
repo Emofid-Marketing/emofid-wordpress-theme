@@ -27,12 +27,12 @@ function get_fund_data() {
                 "aum" => $fund["aum"],
                 "investors_number" => $fund["currentInvestorsNumber"],
                 "returns" => [
-                    "return1M" => $fund["return1M"],
-                    "return3M" => $fund["return3M"],
-                    "return6M" => $fund["return6M"],
-                    "return1Y" => $fund["return1Y"],
-                    "return3Y" => $fund["return3Y"],
-                    "return5Y" => $fund["return5Y"],
+                    "return1M" => round($fund["return1M"], 2),
+                    "return3M" => round($fund["return3M"], 2),
+                    "return6M" => round($fund["return6M"], 2),
+                    "return1Y" => round($fund["return1Y"], 2),
+                    "return3Y" => round($fund["return3Y"], 2),
+                    "return5Y" => round($fund["return5Y"], 2)
                 ]
             ];
         }
